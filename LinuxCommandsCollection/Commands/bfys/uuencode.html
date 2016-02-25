@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>.编码压缩打包</p>
+<div  class="category">语　　法：</div>
+<p>uuencode [<span class="args">-hv</span>] [<span class="args">sourcefile</span>] targetfile <br />
+</p>
+<div  class="category">补充说明：</div>
+<p>早期在许多 <span class="args">unix </span>系统的传送协定只能传送七位元字元，并不支援二进位档案，像中文文字档就有用到八位元，所以无法完整地送到另一架机器上。 <span class="args">uuencode   </span>指令，可以将二进位档转换成七位元的档案，传送到另一架机器上再以 <span class="args">uudecode </span>还原。最常见的是用在以电子邮件传送二进位档。<span class="args">uuencode </span>编码后的资料都以   <span class="args">begin </span>开始，以 <span class="args">end </span>作为结束。</p>
+
+<div  class="category">参　数：</div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+    <tr>
+      <td><table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+          <tr>
+            <td>　　<span class="args">h </span>列出指令使用格式 (help) <br />
+              　　
+              <span class="args">v </span>列出版本讯息 (version) <br />
+              　　
+              <br />
+              　　
+              范例：<br />
+              　　
+              <br />
+              　　
+              将 source<span class="args">.dat </span>编码后存成 file<span class="args">.uud </span>档。由于   <span class="args">uuencode </span>会将编码后的资料在荧幕上列出，所以必须将资料导入 file<span class="args">.uud </span>中，而 target<span class="args">.dat </span>是 file<span class="args">.uud   </span>还原后的档案名字，而不是编码后的档案。 <br />
+              　　 
+              uuencode source.dat target.dat &gt; file.uud <br />
+              　　
+              <br />
+              　　
+              执行指令后，由标准输入装置读入资料，简单地说是由键盘输入后在荧幕显示的资料，按 Crtl + <span class="args">d </span>键后就会被编码，输出至   file<span class="args">.uud </span>中。由于程序是以行为处理单位，若无法跳出程序，请多按几次 Ctrl + <span class="args">d </span>直到程序结束为止。 <br />
+              　　
+              <br />
+              　　 
+              uuencode   target.dat &gt; file.uud <br />
+              　　
+              <br />
+              　　
+              类似上一个指令，不过使用一个导入的技巧，将 source<span class="args">.dat </span>压缩后的资料传送给   <span class="args">uuencode </span>处理之后，存成 file<span class="args">.uud </span>档。 file<span class="args">.uud </span>档还原后就是 source.dat<span class="args">.Z </span>档。 <br />
+              　　
+              <br />
+              　　   
+              compress -c source.dat | uuencode source.dat.Z &gt; file.uud <br />
+              　　
+              <br />
+              　　
+              显示版本讯息后，结束执行程序。 <br />
+              　　
+              <br />
+              　　 
+              uuencode -v </td>
+          </tr>
+        </tbody>
+      </table></td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<div  class="category">示例：</div>
+<code>
+　   将 source.dat 编码后存成 file.uud 档。由于 uuencode 会将编码后的资料在荧幕上列出，所以必须将资料导入 file.uud 中，而 target.dat 是 file.uud 还原后的档案名字，而不是编码后的档案。 
+
+　　uuencode source.dat target.dat > file.uud 
+　　
+　　执行指令后，由标准输入装置读入资料，简单地说是由键盘输入后在荧幕显示的资料，按 Crtl + d 键后就会被编码，输出至 file.uud 中。由于程序是以行为处理单位，若无法跳出程序，请多按几次 Ctrl + d 直到程序结束为止。 
+　　
+　　uuencode target.dat > file.uud 
+</code>
+</body></html>

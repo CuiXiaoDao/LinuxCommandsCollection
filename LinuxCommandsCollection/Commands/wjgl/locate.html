@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>查找文件。</p>
+<div  class="category">语　　法：</div>
+<p>locate [<span class="args">-d</span> &lt;数据库文件&gt;][<span class="args">--help</span>][<span class="args">--version</span>][范本样式...]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">locate</span>指令用于查找符合条件的文件，它会去保存文件与目录名称的数据库内，查找合乎范本样式条件的文件或目录。</p>
+
+<div  class="category">参　　数：</div>
+<p>　<span class="args">-d</span>&lt;数据库文件&gt;或<span class="args">--database=</span>&lt;数据库文件&gt;  设置<span class="args">locate</span>指令使用的数据库。<span class="args">locate</span>指令预设的数据库位于/var/lib/<span class="args">slocate</span>目录里，文件名为slocate<span class="args">.db</span>，您可使用这个参数另行指定。 <br />
+  　
+  <span class="args">--help</span> 　在线帮助。 <br />
+  　
+<span class="args">--version</span> 　显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+搜索etc目录下所有以sh开头的文件：
+locate /etc/sh
+
+搜索用户主目录下，所有以m开头的文件：
+locate ~/m
+
+搜索用户主目录下，所有以m开头的文件，并且忽略大小写：
+locate -i ~/m
+</code>
+</body></html>

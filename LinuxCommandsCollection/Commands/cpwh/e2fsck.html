@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>检查<span class="args">ext2</span>文件系统的正确性。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>e2fsck [<span class="args">-acCdfFnprsStvVy</span>][<span class="args">-b</span> &lt;superblock&gt;][<span class="args">-B</span> &lt;区块大小&gt;][<span class="args">-l</span> &lt;文件&gt;][<span class="args">-L</span> &lt;文件&gt;][设备名称]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">e2fsck</span>执行后的传回值及代表意义如下。<br />
+
+    
+  <span class="args">0</span>     没有任何错误发生。<br />
+
+    
+  <span class="args">1</span>     文件系统发生错误，并且已经修正。<br />
+
+    
+  <span class="args">2</span>     文件系统发生错误，并且已经修正。<br />
+
+    
+  <span class="args">4</span>     文件系统发生错误，但没有修正。<br />
+
+    
+  <span class="args">8</span>     运作时发生错误。<br />
+
+    
+  <span class="args">16</span>    使用的语法发生错误。<br />
+
+    
+  <span class="args">128</span>   共享的函数库发生错误。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  <span class="args">-a</span>   不询问使用者意见，便自动修复文件系统。<br />
+    
+  <span class="args">-b</span>&lt;superblock&gt;   指定<span class="args">superblock</span>，而不使用预设的superblock。<br />
+    
+  <span class="args">-B</span>&lt;区块大小&gt;   指定区块的大小，单位为字节。<br />
+    
+  <span class="args">-c</span>   一并执行<span class="args">badblocks</span>，以标示损坏的区块。<br />
+    
+  <span class="args">-C</span>   将检查过程的信息完整记录在<span class="args">file descriptor</span>中，使得整个检查过程都能完整监控。<br />
+    
+  <span class="args">-d</span>   显示排错信息。<br />
+    
+  <span class="args">-f</span>   即使文件系统没有错误迹象，仍强制地检查正确性。<br />
+    
+  <span class="args">-F</span>   执行前先清除设备的缓冲区。<br />
+    
+  <span class="args">-l</span>&lt;文件&gt;   将文件中指定的区块加到损坏区块列表。<br />
+    
+  <span class="args">-L</span>&lt;文件&gt;   先清除损坏区块列表，再将文件中指定的区块加到损坏区块列表。因此损坏区块列表的区块跟文件中指定的区块是一样的。<br />
+    
+  <span class="args">-n</span>   以只读模式开启文件系统，并采取非互动方式执行，所有的问题对话均设置以&quot;no&quot;回答。<br />
+    
+  <span class="args">-p</span>   不询问使用者意见，便自动修复文件系统。<br />
+    
+  <span class="args">-r</span>   此参数只为了兼容性而存在，并无实际作用。<br />
+    
+  <span class="args">-s</span>   如果文件系统的字节顺序不适当，就交换字节顺序，否则不做任何动作。<br />
+    
+  <span class="args">-S</span>   不管文件系统的字节顺序，一律交换字节顺序。<br />
+    
+  <span class="args">-t</span>   显示时间信息。<br />
+    
+  <span class="args">-v</span>   执行时显示详细的信息。<br />
+    
+  <span class="args">-V</span>   显示版本信息。<br />
+    
+<span class="args">-y</span>   采取非互动方式执行，所有的问题均设置以&quot;yes&quot;回答。</p>
+<div  class="category">示例：</div>
+<code>
+抱歉暂无示例。
+</code>
+</body></html>

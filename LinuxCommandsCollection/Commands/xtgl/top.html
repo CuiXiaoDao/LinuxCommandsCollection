@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>显示，管理执行中的程序。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>top [<span class="args">bciqsS</span>][<span class="args">d</span> &lt;间隔秒数&gt;][<span class="args">n</span> &lt;执行次数&gt;]<br />
+  <br />
+</p>
+<div  class="category">补充说明：</div>
+<p>执行<span class="args">top</span>指令可显示目前正在系统中执行的程序，并通过它所提供的互动式界面，用热键加以管理。<br />
+  <br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>　<span class="args">b 　</span>使用批处理模式。 <br />
+  　
+  <span class="args">c</span> 　列出程序时，显示每个程序的完整指令，包括指令名称，路径和参数等相关信息。 <br />
+  　
+  <span class="args">d</span>&lt;间隔秒数&gt; 　设置<span class="args">top</span>监控程序执行状况的间隔时间，单位以秒计算。 <br />
+  　
+  <span class="args">i</span> 　执行<span class="args">top</span>指令时，忽略闲置或是已成为<span class="args">Zombie</span>的程序。 <br />
+  　
+  <span class="args">n</span>&lt;执行次数&gt; 　设置监控信息的更新次数。 <br />
+  　
+  <span class="args">q</span> 　持续监控程序执行的状况。 <br />
+  　
+  <span class="args">s</span> 　使用保密模式，消除互动模式下的潜在危机。 <br />
+  　
+<span class="args">S</span> 　使用累计模式，其效果类似<span class="args">ps</span>指令的&quot;-S&quot;参数。</p>
+<div  class="category">示例：</div>
+<code>
+top - 09:44:56 up 16 days, 21:23,  1 user,  load average: 9.59, 4.75, 1.92
+Tasks: 145 total,   2 running, 143 sleeping,   0 stopped,   0 zombie
+Cpu(s): 99.8%us,  0.1%sy,  0.0%ni,  0.2%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Mem:   4147888k total,  2493092k used,  1654796k free,   158188k buffers
+Swap:  5144568k total,       56k used,  5144512k free,  2013180k cached
+</code>
+</body></html>

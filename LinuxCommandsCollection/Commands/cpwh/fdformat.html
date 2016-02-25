@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>...</p>
+<div  class="category">语　　法：</div>
+<p>fdformat [<span class="args">-n</span>] device <br />
+</p>
+<div  class="category">补充说明：</div>
+<p>...</p>
+
+<div  class="category">参　　数：</div>
+<p>对指定的软碟机装置进行低阶格式化。使用这个指令对软碟格式化的时候，最好指定像是下面的装置： <br />
+  　　
+  <br />
+  　　
+  /dev/<span class="args">fd0d360 </span>磁碟机 A:   ，磁片为 360<span class="args">KB </span>磁碟 <br />
+  　　
+  /dev/<span class="args">fd0h1440 </span>磁碟机 A: ，磁片为 1.4<span class="args">MB </span>磁碟 <br />
+  　　
+  /dev/<span class="args">fd1h1200 </span>磁碟机   B: ，磁片为 1.2<span class="args">MB </span>磁碟 <br />
+  　　
+如果使用像是 /dev/<span class="args">fd0   </span>之类的装置，如果里面的磁碟不是标准容量，格式化可能会失败。在这种情况之下，使用者可以用 <span class="args">setfdprm </span>指令先行指定必要参数。</p>
+<div  class="category">示例：</div>
+<code>
+fdformat -n /dev/fd0h1440 　　 
+　　将磁碟机 A 的磁片格式化成 1.4MB 的磁片。并且省略确认的步骤。
+</code>
+</body></html>

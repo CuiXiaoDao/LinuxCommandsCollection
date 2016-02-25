@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>压缩或解压缩文件。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>lha [<span class="args">-acdfglmnpqtuvx</span>][<span class="args">-a</span> &lt;0/1/2&gt;/u&lt;/0/1/2&gt;][<span class="args">-</span>&lt;a/c/u&gt;d][<span class="args">-</span>&lt;e/x&gt;i][<span class="args">-</span>&lt;a/u&gt;o][<span class="args">-</span>&lt;e/x&gt;<span class="args">w=</span>&lt;目的目录&gt;][<span class="args">-</span>&lt;a/u&gt;z][压缩文件][文件...] 或 lha [<span class="args">-acdfglmnpqtuvx</span>][<span class="args">-a</span> &lt;0/1/2&gt;/u&lt;/0/1/2&gt;][<span class="args">-</span>&lt;a/c/u&gt;d][<span class="args">-</span>&lt;e/x&gt;i][<span class="args">-</span>&lt;a/u&gt;o][<span class="args">-</span>&lt;e/x&gt;<span class="args">w=</span>&lt;目的目录&gt;][<span class="args">-</span>&lt;a/u&gt;z][压缩文件][目录...]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">lha</span>是从<span class="args">lharc</span>演变而来的压缩程序，文件经它压缩后，会另外产生具有&quot;.lzh&quot;扩展名的压缩文件。<br />
+</p>
+
+<div  class="category">参　数：</div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+    <tr>
+      <td>   <span class="args">-a</span>或<span class="args">a   </span>压缩文件，并加入到压缩文件内。<br />
+          
+        <span class="args">-a</span>&lt;0/1/2&gt;/u&lt;/0/1/2&gt;   压缩文件时，采用不同的文件头。<br />
+          
+        <span class="args">-c</span>或<span class="args">c   </span>压缩文件，重新建构新的压缩文件后，再将其加入。<br />
+          
+        <span class="args">-d</span>或<span class="args">d   </span>从压缩文件内删除指定的文件。<br />
+          
+        <span class="args">-</span>&lt;a/c/u&gt;<span class="args">d</span>或&lt;a/c/u&gt;<span class="args">d   </span>压缩文件，然后将其加入，重新建构，更新压缩文件或，删除原始文件，也就是把文件移到压缩文件中。<br />
+          
+        <span class="args">-e</span>或<span class="args">e   </span>解开压缩文件。<br />
+          
+        <span class="args">-f</span>或<span class="args">f   </span>强制执行<span class="args">lha</span>命令，在解压时会直接覆盖已有的文件而不加以询问。<br />
+          
+        <span class="args">-g</span>或<span class="args">g   </span>使用通用的压缩格式，便于解决兼容性的问题。<br />
+          
+        <span class="args">-</span>&lt;e/x&gt;<span class="args">i</span>或&lt;e/x&gt;<span class="args">i   </span>解开压缩文件时，忽略保存在压缩文件内的文件路径，直接将其解压后存放在现行目录下或是指定的目录中。<br />
+          
+        <span class="args">-l</span>或<span class="args">l   </span>列出压缩文件的相关信息。<br />
+          
+        <span class="args">-m</span>或<span class="args">m   </span>此参数的效果和同时指定&quot;-ad&quot;参数相同。<br />
+          
+        <span class="args">-n</span>或<span class="args">n   </span>不执行指令，仅列出实际执行会进行的动作。<br />
+          
+        <span class="args">-</span>&lt;a/u&gt;<span class="args">o</span>或&lt;a/u&gt;<span class="args">o   </span>采用<span class="args">lharc</span>兼容格式，将压缩后的文件加入，更新压缩文件。<br />
+          
+        <span class="args">-p</span>或<span class="args">p   </span>从压缩文件内输出到标准输出设备。<br />
+          
+        <span class="args">-q</span>或<span class="args">q   </span>不显示指令执行过程。<br />
+          
+        <span class="args">-t</span>或<span class="args">t   </span>检查备份文件内的每个文件是否正确无误。<br />
+          
+        <span class="args">-u</span>或<span class="args">u   </span>更换较新的文件到压缩文件内。<br />
+          
+        <span class="args">-u</span>&lt;/0/1/2&gt;或u&lt;/0/1/2&gt;   在文件压缩时采用不同的文件头，然后更新到压缩文件内。<br />
+          
+        <span class="args">-v</span>或<span class="args">v   </span>详细列出压缩文件的相关信息。<br />
+          
+        <span class="args">-</span>&lt;e/x&gt;<span class="args">w=</span>&lt;目的目录&gt;或&lt;e/x&gt;<span class="args">w=</span>&lt;目的目录&gt;   指定解压缩的目录。<br />
+          
+        <span class="args">-x</span>或<span class="args">x   </span>解开压缩文件。<br />
+          
+      <span class="args">-</span>&lt;a/u&gt;<span class="args">z</span>或&lt;a/u&gt;<span class="args">z   </span>不压缩文件，直接把它加入，更新压缩文件。</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<div  class="category">示例：</div>
+<code>
+压缩指定文件filename:
+bzip2 filename
+解压指定的文件filename.bz2:
+bzip2 -d filename.bz2
+</code>
+</body></html>

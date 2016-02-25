@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>重新开机。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>dreboot [<span class="args">-dfinw</span>]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p>执行<span class="args">reboot</span>指令可让系统停止运作，并重新开机。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  <span class="args">-d</span> 　重新开机时不把数据写入记录文件/var/tmp/<span class="args">wtmp</span>。本参数具有&quot;-n&quot;参数的效果。 <br />
+    
+  <span class="args">-f</span> 　强制重新开机，不调用<span class="args">shutdown</span>指令的功能。 <br />
+    
+  <span class="args">-i</span> 　在重开机之前，先关闭所有网络界面。 <br />
+    
+  <span class="args">-n</span> 　重开机之前不检查是否有未结束的程序。 <br />
+    
+<span class="args">-w</span> 　仅做测试，并不真的将系统重新开机，只会把重开机的数据写入/var/<span class="args">log</span>目录下的<span class="args">wtmp</span>记录文件。</p>
+<div  class="category">示例：</div>
+<code>
+reboot        //重开机。
+reboot -w     //做个重开机的模拟（只有纪录并不会真的重开机）。
+</code>
+</body></html>

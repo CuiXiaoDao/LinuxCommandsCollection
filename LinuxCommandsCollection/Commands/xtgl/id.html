@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>显示用户的<span class="args">ID</span>，以及所属群组的ID。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>id [<span class="args">-gGnru</span>][<span class="args">--help</span>][<span class="args">--version</span>][用户名称]<br />
+  <br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">id</span>会显示用户以及所属群组的实际与有效<span class="args">ID</span>。若两个<span class="args">ID</span>相同，则仅显示实际<span class="args">ID</span>。若仅指定用户名称，则显示目前用户的ID。<br />
+  <br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>　<span class="args">-g</span>或<span class="args">--group 　</span>显示用户所属群组的ID。 <br />
+  　
+  <span class="args">-G</span>或<span class="args">--groups 　</span>显示用户所属附加群组的ID。 <br />
+  　
+  <span class="args">-n</span>或<span class="args">--name 　</span>显示用户，所属群组或附加群组的名称。 <br />
+  　
+  <span class="args">-r</span>或<span class="args">--real 　</span>显示实际ID。 <br />
+  　
+  <span class="args">-u</span>或<span class="args">--user 　</span>显示用户ID。 <br />
+  　
+  <span class="args">-help</span> 　显示帮助。 <br />
+  　
+<span class="args">-version</span> 　显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+[root@localhost ~]# id
+uid=0(root) gid=0(root) groups=0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel)
+
+解释：用户root的UID号码 = 0，GID号码 = 0。用户root是下面组的成员：
+• root组GID号是：0
+• bin组GID号是：1
+• daemon组GID号是：2
+• sys组GID号是：3
+• adm组GID号是：4
+• disk组GID号是：6
+• wheel组GID号是：10
+
+打印用户名、UID 和该用户所属的所有组，要这么做，我们可以使用 -a 选项：
+[root@localhost ~]# id -a
+uid=0(root) gid=0(root) groups=0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel)
+
+输出所有不同的组ID ，有效的，真实的和补充的，我们可以使用 -G 选项来实现：
+[root@localhost ~]# id -G
+0 1 2 3 4 6 10
+
+结果只会显示GID号。你可以和/etc/group文件比较。下面是/etc/group文件的示例内容：
+
+只输出有效的组ID，通过使用 -g 选项来只输出有效组ID：
+[root@localhost ~]# id -g
+0
+
+输出特定用户信息，我们可以输出特定的用户信息相关的UID和GID。只需要在id命令后跟上用户名：
+[root@localhost ~]# id www
+uid=500(www) gid=500(www) groups=500(www)
+</code>
+</body></html>

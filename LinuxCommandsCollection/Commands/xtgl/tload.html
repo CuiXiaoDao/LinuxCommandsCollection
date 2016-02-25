@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">
+  <p>功能说明：显示系统负载状况。
+    <br />
+    <br />
+</p>
+</div>
+<div  class="category">语　　法：</div>
+<p>tload [<span class="args">-V</span>][<span class="args">-d</span> &lt;间隔秒数&gt;][<span class="args">-s</span> &lt;刻度大小&gt;][终端机编号]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">tload</span>指令使用<span class="args">ASCII</span>字符简单地以文字模式显示系统负载状态。假设不给予终端机编号，则会在执行<span class="args">tload</span>指令的终端机显示负载情形。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>　<span class="args">-d</span>&lt;间隔秒数&gt; 　设置<span class="args">tload</span>检测系统负载的间隔时间，单位以秒计算。 <br />
+  　
+  <span class="args">-s</span>&lt;刻度大小&gt; 　设置图表的垂直刻度大小，单位以列计算。 <br />
+  　
+<span class="args">-V</span> 　显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+使用tload命令查看系统负载情况：
+
+tload -d 1
+0.08, 0.02,0.01
+0.04, 0.01, 0.00
+0.04, 0.01, 0.00
+0.04, 0.01,0.00
+0.06, 0.02, 0.00
+</code>
+</body></html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p><span class="args">UUCP</span>文件传输服务程序。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>uucico [<span class="args">-cCDefqvwz</span>][<span class="args">-i</span>&lt;类型&gt;][<span class="args">-I</span>&lt;文件&gt;][<span class="args">-p</span>&lt;连接端口号码&gt;][-][<span class="args">-rl</span>][<span class="args">-s</span>&lt;主机&gt;][<span class="args">-S</span>&lt;主机&gt;][<span class="args">-u</span>&lt;用户&gt;][<span class="args">-x</span>&lt;类型&gt;][<span class="args">--help</span>]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">uucico</span>是用来处理<span class="args">uucp</span>或<span class="args">uux</span>送到队列的文件传输工具。<span class="args">uucico</span>有两种工作模式：主动模式和附属模式。当在主动模式下时，<span class="args">uucico</span>会调用远端主机；在附属模式下时，<span class="args">uucico</span>则接受远端主机的调用。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>   <span class="args">-c</span>或<span class="args">--quiet   </span>当不执行任何工作时，不要更改记录文件的内容及更新目前的状态。<br />
+    
+  <span class="args">-C</span>或<span class="args">--ifwork   </span>当有工作要执行时，才调用<span class="args">-s</span>或<span class="args">-S</span>参数所指定主机。<br />
+    
+  <span class="args">-D</span>或<span class="args">--nodetach   </span>不要与控制终端机离线。<br />
+    
+  <span class="args">-e</span>或<span class="args">--loop   </span>在附属模式下执行，并且出现要求登入的提示画面。<br />
+    
+  <span class="args">-f</span>或<span class="args">--force   </span>当执行错误时，不等待任何时间即重新调用主机。<br />
+    
+  <span class="args">-i</span>&lt;类型&gt;或<span class="args">--stdin</span>&lt;类型&gt;   当使用到标准输入设备时，指定连接端口的类型。<br />
+    
+  <span class="args">-I</span>&lt;文件&gt;<span class="args">--config</span>&lt;文件&gt;   指定使用的配置文件。<br />
+    
+  <span class="args">-l</span>或<span class="args">--prompt   </span>出现要求登入的提示画面。<br />
+    
+  <span class="args">-p</span>&lt;连接端口号码&gt;或<span class="args">-port</span>&lt;连接端口号码&gt;   指定连接端口号码。<br />
+    
+  <span class="args">-q</span>或<span class="args">--quiet   </span>不要启动<span class="args">uuxqt</span>服务程序。<br />
+    
+  <span class="args">-r0</span>或<span class="args">--slave   </span>以附属模式启动。<br />
+    
+  <span class="args">-s</span>&lt;主机&gt;或<span class="args">--system</span>&lt;主机&gt;   调用指定的主机。<br />
+    
+  <span class="args">-u</span>&lt;用户&gt;或<span class="args">--login</span>&lt;用户&gt;   指定登入的用户帐号，而不允许输入任意的登入帐号。<br />
+    
+  <span class="args">-v</span>或<span class="args">--version   </span>显示版本信息，并且结束程序。<br />
+    
+  <span class="args">-w</span>或<span class="args">--wait   </span>在主动模式下，当执行调用动作时，则出现要求登入的提示画面。<br />
+    
+  <span class="args">-x</span>&lt;类型&gt;或<span class="args">-X</span>&lt;类型&gt;或outgoing<span class="args">-debug</span>&lt;类型&gt;   启动指定的排错模式。<br />
+    
+  <span class="args">-z</span>或<span class="args">--try-next   </span>当执行不成功时，尝试下一个选择而不结束程序。<br />
+    
+<span class="args">--help</span>   显示帮助，并且结束程序。</p>
+<div  class="category">示例：</div>
+<code>
+抱歉暂无示例。
+</code>
+</body></html>

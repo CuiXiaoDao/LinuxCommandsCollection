@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>备份文件系统。
+</p>
+<div  class="category">语　　法：</div>
+<p>dump [<span class="args">-cnu</span>][<span class="args">-0123456789</span>][<span class="args">-b</span> &lt;区块大小&gt;][<span class="args">-B</span> &lt;区块数目&gt;][<span class="args">-d</span> &lt;密度&gt;][<span class="args">-f</span> &lt;设备名称&gt;][<span class="args">-h</span> &lt;层级&gt;][<span class="args">-s</span> &lt;磁带长度&gt;][<span class="args">-T</span> &lt;日期&gt;][目录或文件系统] 或 dump [<span class="args">-wW</span>]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">dump</span>为备份工具程序，可将目录或整个文件系统备份至指定的设备，或备份成一个大文件。<br />
+</p>
+
+<div  class="category">参　数：</div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+    <tr>
+      <td>
+　 <span class="args">-0123456789</span> 　备份的层级。 <br />
+        　
+        <span class="args">-b</span>&lt;区块大小&gt; 　指定区块的大小，单位为KB。 <br />
+        　
+        <span class="args">-B</span>&lt;区块数目&gt; 　指定备份卷册的区块数目。 <br />
+        　
+        <span class="args">-c</span> 　修改备份磁带预设的密度与容量。 <br />
+        　
+        <span class="args">-d</span>&lt;密度&gt; 　设置磁带的密度。单位为BPI。 <br />
+        　
+        <span class="args">-f</span>&lt;设备名称&gt; 　指定备份设备。 <br />
+        　
+        <span class="args">-h</span>&lt;层级&gt; 　当备份层级等于或大雨指定的层级时，将不备份用户标示为&quot;nodump&quot;的文件。 <br />
+        　
+        <span class="args">-n</span> 　当备份工作需要管理员介入时，向所有&quot;operator&quot;群组中的使用者发出通知。 <br />
+        　
+        <span class="args">-s</span>&lt;磁带长度&gt; 　备份磁带的长度，单位为英尺。 <br />
+        　
+        <span class="args">-T</span>&lt;日期&gt; 　指定开始备份的时间与日期。 <br />
+        　
+        <span class="args">-u</span> 　备份完毕后，在/etc/<span class="args">dumpdates</span>中记录备份的文件系统，层级，日期与时间等。 <br />
+        　
+        <span class="args">-w</span> 　与<span class="args">-W</span>类似，但仅显示需要备份的文件。 <br />
+        　
+      <span class="args">-W</span> 　显示需要备份的文件及其最后一次备份的层级，时间与日期。</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<div  class="category">示例：</div>
+<code>
+将/home目录所有内容备份到/tmp/homeback.bak文件中，备份层级为0并在/etc/dumpdates中记录相关信息：
+‍dump -0u -f /tmp/homeback.bak /home
+
+将/home目录所有内容备份到/tmp/homeback.bak文件中，备份层级为1（只备份上次使用层次0备份后发生过改变的数据）并在/etc/dumpdates中记录相关信息：
+dump -1u -f /tmp/homeback.bak /home
+
+通过dump命令的备份层级，可实现完整+增量备份、完整+差异备份，在配合crontab可以实现无人值守备份。
+
+</code>
+</body></html>

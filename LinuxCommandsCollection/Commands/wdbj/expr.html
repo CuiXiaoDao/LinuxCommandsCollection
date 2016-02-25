@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>...</p>
+<div  class="category">语　　法：</div>
+<p>expr <br />
+  　　
+  <br />
+  　　
+  ### 字串长度 <br />
+  　　
+  <br />
+  　　
+  shell&gt;&gt; expr length &quot;this is a test&quot; <br />
+  　　
+  14 <br />
+  　　
+  <br />
+  　　
+  ### 数字商数 <br />
+  　　
+  <br />
+  　　
+  shell&gt;&gt; expr 14 % 9 <br />
+  　　
+  5 <br />
+  　　
+  <br />
+  　　
+  ### 从位置处抓取字串 <br />
+  　　
+  <br />
+  　　
+  shell&gt;&gt; expr substr &quot;this is a test&quot;   3 5 <br />
+  　　
+  is is <br />
+  　　
+  <br />
+  　　
+  ### 数字串 only the first character <br />
+  　　
+  <br />
+  　　
+  shell&gt;&gt; expr index &quot;testforthegame&quot; e <br />
+  　　
+  2 <br />
+  　　
+  <br />
+  　　
+  ###   字串真实重现 <br />
+  　　
+  <br />
+  　　
+  shell&gt;&gt; expr quote thisisatestformela <br />
+  　　
+thisisatestformela </p>
+<div  class="category">补充说明：</div>
+<p>...</p>
+
+<div  class="category">参　　数：</div>
+<p>...</p>
+<div  class="category">示例：</div>
+<code>
+result=`expr 2 + 3`
+result=$(expr $no1 + 5)
+</code>
+</body></html>

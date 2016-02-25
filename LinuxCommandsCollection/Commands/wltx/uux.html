@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>在远端的<span class="args">UUCP</span>主机上执行指令。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>uux [<span class="args">-bcCIjlnrvz</span>][<span class="args">-a</span>&lt;地址&gt;][<span class="args">-g</span>&lt;等级&gt;][<span class="args">-s</span>&lt;文件&gt;][<span class="args">-x</span>&lt;层级&gt;][<span class="args">--help</span>][指令]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">uux</span>可在远端的<span class="args">UUCP</span>主机上执行指令或是执行本机上的指令，但在执行时会使用远端电脑的文件。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  -或<span class="args">-p</span>或<span class="args">--stdin   </span>直接从键盘读取要执行的指令。<br />
+    
+  <span class="args">-a</span>&lt;地址&gt;或<span class="args">--requestor</span>&lt;地址&gt;   执行邮件地址，以便寄送状态信息。<br />
+    
+  <span class="args">-b</span>或<span class="args">--erturn-stdin   </span>在屏幕上显示状态信息。<br />
+    
+  <span class="args">-c</span>或<span class="args">--nocopy   </span>不用将文件复制到缓冲区。<br />
+    
+  <span class="args">-C</span>或<span class="args">--copy   </span>将文件复制到缓冲区。<br />
+    
+  <span class="args">-g</span>&lt;等级&gt;或<span class="args">--grade</span>&lt;等级&gt;   指定文件传送作业的优先顺序。<br />
+    
+  <span class="args">-I</span>或<span class="args">--config file   </span>指定<span class="args">uux</span>配置文件。<br />
+    
+  <span class="args">-j</span>或<span class="args">--jobid   </span>显示作业编号。<br />
+    
+  <span class="args">-l</span>或<span class="args">--link   </span>将本机上的文件连接到缓冲区。<br />
+    
+  <span class="args">-n</span>或--notification=<span class="args">no   </span>无论发生任何状态，都不寄邮件通知用户。<br />
+    
+  <span class="args">-r</span>或<span class="args">--nouucico   </span>不要立即启动<span class="args">uucico</span>服务程序，仅将作业送到队列中，然后再执行。<br />
+    
+  <span class="args">-s</span>&lt;文件&gt;或<span class="args">--status</span>&lt;文件&gt;   将完成状态保存为指定的文件。<br />
+    
+  <span class="args">-v</span>或<span class="args">--version   </span>显示版本信息。<br />
+    
+  <span class="args">-x</span>&lt;层级&gt;或<span class="args">--debug</span>&lt;层级&gt;   指定排错层级。<br />
+    
+  <span class="args">-z</span>或--notification=<span class="args">error   </span>若发生错误，则以邮件来通知用户。<br />
+    
+<span class="args">--help</span>   显示帮助。</p>
+<div  class="category">示例：</div>
+<code>
+要在远程系统上运行 qprt 命令，输入：
+  uux merlin!qprt /reports/memos/lance
+ 在本例中，远程文件  /reports/memos/lance 在远程系统 merlin 上被打印。由于既没有指定 -n 标志，也没有指定 -z 标志，uux命令只有在远程系统运行命令失败时才通知用户。远程系统通过 mail 命令来发布该通知。
+
+要在两个远程系统上运行命令，在各个命令行上分别输入信息：
+  uux merlin!qprt /reports/memos/lance
+  uux zeus!qprt /test/examples/examp1 
+
+</code>
+</body></html>

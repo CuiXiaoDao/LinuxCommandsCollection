@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>比较文件的差异。</p>
+<div  class="category">语　　法：</div>
+<p>diff [<span class="args">-abBcdefHilnNpPqrstTuvwy</span>][<span class="args">-</span>&lt;行数&gt;][<span class="args">-C</span> &lt;行数&gt;][<span class="args">-D</span> &lt;巨集名称&gt;][<span class="args">-I</span> &lt;字符或字符串&gt;][<span class="args">-S</span> &lt;文件&gt;][<span class="args">-W</span> &lt;宽度&gt;][<span class="args">-x</span> &lt;文件或目录&gt;][<span class="args">-X</span> &lt;文件&gt;][<span class="args">--help</span>][<span class="args">--left-column</span>][<span class="args">--suppress-common-line</span>][文件或目录1][文件或目录2]</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">diff</span>以逐行的方式，比较文本文件的异同处。所是指定要比较目录，则<span class="args">diff</span>会比较目录中相同文件名的文件，但不会比较其中子目录。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>　 <span class="args">-</span>&lt;行数&gt; 　指定要显示多少行的文本。此参数必须与<span class="args">-c</span>或<span class="args">-u</span>参数一并使用。 <br />
+  　
+  <span class="args">-a</span>或<span class="args">--text 　diff</span>预设只会逐行比较文本文件。<br />
+  　
+  <span class="args">-b</span>或<span class="args">--ignore-space-change</span> 　不检查空格字符的不同。 <br />
+  　
+  <span class="args">-B</span>或<span class="args">--ignore-blank-lines</span> 　不检查空白行。 <br />
+  　
+  <span class="args">-c</span> 　显示全部内文，并标出不同之处。 <br />
+  　
+  <span class="args">-C</span>&lt;行数&gt;或<span class="args">--context</span>&lt;行数&gt; 　与执行&quot;-c<span class="args">-</span>&lt;行数&gt;&quot;指令相同。 <br />
+  　
+  <span class="args">-d</span>或<span class="args">--minimal 　</span>使用不同的演算法，以较小的单位来做比较。 <br />
+  　
+  <span class="args">-D</span>&lt;巨集名称&gt;或<span class="args">ifdef</span>&lt;巨集名称&gt; 　此参数的输出格式可用于前置处理器巨集。 <br />
+  　
+  <span class="args">-e</span>或<span class="args">--ed 　</span>此参数的输出格式可用于<span class="args">ed</span>的<span class="args">script</span>文件。 <br />
+  　
+  <span class="args">-f</span>或<span class="args">-forward-ed 　</span>输出的格式类似<span class="args">ed</span>的<span class="args">script</span>文件，但按照原来文件的顺序来显示不同处。 <br />
+  　
+  <span class="args">-H</span>或<span class="args">--speed-large-files</span> 　比较大文件时，可加快速度。 <br />
+  　
+  <span class="args">-l</span>&lt;字符或字符串&gt;或<span class="args">--ignore-matching-lines</span>&lt;字符或字符串&gt; 　若两个文件在某几行有所不同，而这几行同时都包含了选项中指定的字符或字符串，则不显示这两个文件的差异。 <br />
+  　
+  <span class="args">-i</span>或<span class="args">--ignore-case 　</span>不检查大小写的不同。 <br />
+  　
+  <span class="args">-l</span>或<span class="args">--paginate 　</span>将结果交由<span class="args">pr</span>程序来分页。 <br />
+  　
+  <span class="args">-n</span>或<span class="args">--rcs 　</span>将比较结果以<span class="args">RCS</span>的格式来显示。 <br />
+  　
+  <span class="args">-N</span>或<span class="args">--new-file 　</span>在比较目录时，若文件<span class="args">A</span>仅出现在某个目录中，预设会显示：<br />
+  <span class="args">Only in</span>目录：文件<span class="args">A</span>若使用<span class="args">-N</span>参数，则<span class="args">diff</span>会将文件<span class="args">A</span>与一个空白的文件比较。  <br />
+  　
+  <span class="args">-p</span> 　若比较的文件为<span class="args">C</span>语言的程序码文件时，显示差异所在的函数名称。 <br />
+  　
+  <span class="args">-P</span>或<span class="args">--unidirectional-new-file</span> 　与<span class="args">-N</span>类似，但只有当第二个目录包含了一个第一个目录所没有的文件时，才会将这个文件与空白的文件做比较。 <br />
+  　
+  <span class="args">-q</span>或<span class="args">--brief 　</span>仅显示有无差异，不显示详细的信息。 <br />
+  　
+  <span class="args">-r</span>或<span class="args">--recursive 　</span>比较子目录中的文件。 <br />
+  　
+  <span class="args">-s</span>或<span class="args">--report-identical-files</span> 　若没有发现任何差异，仍然显示信息。 <br />
+  　
+  <span class="args">-S</span>&lt;文件&gt;或<span class="args">--starting-file</span>&lt;文件&gt; 　在比较目录时，从指定的文件开始比较。 <br />
+  　
+  <span class="args">-t</span>或<span class="args">--expand-tabs 　</span>在输出时，将<span class="args">tab</span>字符展开。 <br />
+  　
+  <span class="args">-T</span>或<span class="args">--initial-tab 　</span>在每行前面加上<span class="args">tab</span>字符以便对齐。 <br />
+  　
+  -u,<span class="args">-U</span>&lt;列数&gt;或<span class="args">--unified=</span>&lt;列数&gt; 　以合并的方式来显示文件内容的不同。 <br />
+  　
+  <span class="args">-v</span>或<span class="args">--version 　</span>显示版本信息。 <br />
+  　
+  <span class="args">-w</span>或<span class="args">--ignore-all-space</span> 　忽略全部的空格字符。 <br />
+  　
+  <span class="args">-W</span>&lt;宽度&gt;或<span class="args">--width</span>&lt;宽度&gt; 　在使用<span class="args">-y</span>参数时，指定栏宽。 <br />
+  　
+  <span class="args">-x</span>&lt;文件名或目录&gt;或<span class="args">--exclude</span>&lt;文件名或目录&gt; 　不比较选项中所指定的文件或目录。 <br />
+  　
+  <span class="args">-X</span>&lt;文件&gt;或<span class="args">--exclude-from</span>&lt;文件&gt; 　您可以将文件或目录类型存成文本文件，然后在<span class="args">=</span>&lt;文件&gt;中指定此文本文件。 <br />
+  　
+  <span class="args">-y</span>或<span class="args">--side-by-side</span> 　以并列的方式显示文件的异同之处。 <br />
+  　
+  <span class="args">--help</span> 　显示帮助。 <br />
+  　
+  <span class="args">--left-column 　</span>在使用<span class="args">-y</span>参数时，若两个文件某一行内容相同，则仅在左侧的栏位显示该行内容。<br />
+  　
+  <span class="args">--suppress-common-lines</span> 　在使用<span class="args">-y</span>参数时，仅显示不同之处。<br />
+</p>
+<div  class="category">示例：</div>
+<code>
+将目录/usr/li下的文件"test.txt"与当前目录下的文件"test.txt"进行比较，输入如下命令：
+diff /usr/li test.txt     #使用diff指令对文件进行比较
+
+上面的命令执行后，会将比较后的不同之处以指定的形式列出，如下所示：
+n1 a n3,n4  
+n1,n2 d n3  
+n1,n2 c n3,n4 
+
+其中，字母"a"、"d"、"c"分别表示添加、删除及修改操作。而"n1"、"n2"表示在文件1中的行号，"n3"、"n4"表示在文件2中的行号。
+
+注意：以上说明指定了两个文件中不同处的行号及其相应的操作。在输出形式中，每一行后面将跟随受到影响的若干行。其中，以<开始的行属于文件1，以>开始的行属于文件2。
+</code>
+</body></html>

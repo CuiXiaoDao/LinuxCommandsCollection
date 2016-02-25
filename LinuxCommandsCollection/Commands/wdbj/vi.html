@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>文档编辑。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>vi[<span class="args">-bcdlmMnoRs</span>][文件列表]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p> <span class="args">vi</span>可让您集合许多文件，成为单一的备存文件。在备存文件中，所有成员文件皆保有原来的属性与权限。</p>
+
+<div  class="category">参　　数：</div>
+<p>指令参数 <br />
+  　
+  <span class="args">+</span>&lt;行号&gt; 　从指定行号的行开始先是文本内容。 <br />
+  　
+  <span class="args">-b</span> 　以二进制模式打开文件，用于编辑二进制文件和可执行文件。 <br />
+  
+  <span class="args">&nbsp;&nbsp;&nbsp; -c</span>&lt;指令&gt; 　在完成对第一个文件编辑任务后，执行给出的指令。 <br />
+  　
+  <span class="args">-d</span> 　以diff模式打开文件，当多个文件编辑时，显示文件差异部分。 <br />
+  　
+  <span class="args">-l</span> 　使用lisp模式，打开“lisp”和“showmatch”。 <br />
+  　
+  <span class="args">-m</span> 　取消写文件功能，重设“write”选项。 <br />
+  　
+  <span class="args">-n</span> 　不实用缓存功能。 <br />
+  　
+  <span class="args">-o</span>&lt;文件数目&gt; 　指定同时打开指定数目的文件。 <br />
+  选项参数 <br />
+  　
+&lt;文件列表&gt; 　指定要编辑的文件列表,多个文件之间使用空格分隔开。 <br /></p>
+　
+<div  class="category">内置命令：</div>
+	<p>指令参数 <br />
+		<span class="args">&nbsp;&nbsp;	Ctrl+u
+	</span> 　向文件首翻半屏。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;Ctrl+d</span> 　向文件尾翻半屏。 <br />
+		
+		<span class="args">&nbsp;&nbsp;&nbsp;Ctrl+f</span> 　向文件尾翻一屏。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;Ctrl+b</span> 　向文件首翻一屏。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;Esc</span> 　从编辑模式切换到命令模式。 <br />
+		<span class="args">&nbsp;&nbsp; ZZ</span> 　命令模式下保存当前文件所做的修改后退出vi。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;:</span>&lt;行号&gt; 　光标跳转到指定行的行首。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;:$</span> 　光标跳转到最后一行的行首。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;
+			
+		x</span>&nbsp;&nbsp;&nbsp;	删除一个字符，x删除光标后的，而X删除光标前的。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;D</span>&nbsp;&nbsp;&nbsp;删除从当前光标到光标所在行尾的全部字符。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;dd</span>&nbsp;&nbsp;&nbsp;删除光标行正行内容。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;ndd</span>&nbsp;&nbsp;&nbsp;删除当前行及其后n-1行。 <br />
+		
+		<span class="args">&nbsp;&nbsp;&nbsp;nyy</span>&nbsp;&nbsp;&nbsp;将当前行及其下n行的内容保存到寄存器？中，其中？为一个字母，n为一个数字。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;p</span>&nbsp;&nbsp;&nbsp;粘贴文本操作，用于将缓存区的内容粘贴到当前光标所在位置的下方。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;P</span>&nbsp;&nbsp;&nbsp;粘贴文本操作，用于将缓存区的内容粘贴到当前光标所在位置的上方。 <br />
+		
+		<span class="args">&nbsp;&nbsp;&nbsp;/</span>&lt;字符串&gt;&nbsp;&nbsp;&nbsp;文本查找操作，用于从当前光标所在位置开始向文件尾部查找指定字符串的内容，查找的字符串会被加亮显示。 <br />
+	<span class="args">&nbsp;&nbsp;&nbsp;？name</span>&nbsp;&nbsp;&nbsp;文本查找操作，用于从当前光标所在位置开始向文件头部查找指定字符串的内容，查找的字符串会被加亮显示。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;a，bs/F/T</span>&nbsp;&nbsp;&nbsp;替换文本操作，用于在第a行到第b行之间，将F字符串换成T字符串。其中，“s/”表示进行替换操作。<br />
+		<span class="args">&nbsp;&nbsp;&nbsp;a</span>&nbsp;&nbsp;&nbsp;在当前字符后添加文本。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;A</span>&nbsp;&nbsp;&nbsp;在行末添加文本。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp; i</span>&nbsp;&nbsp;&nbsp;在当前字符前插入文本。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp; I</span>&nbsp;&nbsp;&nbsp;在行首插入文本。 <br />
+		<span class="args">&nbsp;&nbsp; o</span>&nbsp;&nbsp;&nbsp;在当前行后面插入一空行。 <br />
+		<span class="args">&nbsp;&nbsp; O</span>&nbsp;&nbsp;&nbsp;在当前行前面插入一空行。 <br />		
+		<span class="args">&nbsp;&nbsp;&nbsp;:wq</span>&nbsp;&nbsp;&nbsp;在命令模式下，执行存盘退出操作。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;:w</span>&nbsp;&nbsp;&nbsp;在命令模式下，执行存盘操作。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;:w！</span>&nbsp;&nbsp;&nbsp;在命令模式下，执行强制存盘操作。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;:q</span>&nbsp;&nbsp;&nbsp;在命令模式下，执行退出vi操作。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;:q！</span>&nbsp;&nbsp;&nbsp;在命令模式下，执行强制退出vi操作。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;:e</span>&nbsp;&nbsp;&nbsp;文件名：在命令模式下，打开并编辑指定名称的文件。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;:n</span>&nbsp;&nbsp;&nbsp;在命令模式下，如果同时打开多个文件，则继续编辑下一个文件。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;:f</span>&nbsp;&nbsp;&nbsp;在命令模式下，用于显示当前的文件名、光标所在行的行号以及显示比例。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;:set number</span>&nbsp;&nbsp;&nbsp;在命令模式下，用于在最左端显示行号。 <br />
+		<span class="args">&nbsp;&nbsp;&nbsp;:set nonumber</span>&nbsp;&nbsp;&nbsp;在命令模式下，用于在最左端不显示行号。 <br /></p>
+
+<div  class="category">示例：</div>
+<code>
+抱歉暂无示例。
+</code>
+</body></html>

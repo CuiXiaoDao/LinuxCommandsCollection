@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>删除文件或目录。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>rm [<span class="args">-dfirv</span>][<span class="args">--help</span>][<span class="args">--version</span>][文件或目录...]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p>执行<span class="args">rm</span>指令可删除文件或目录，如欲删除目录必须加上参数&quot;-r&quot;，否则预设仅会删除文件。</p>
+
+<div  class="category">参　　数：</div>
+<p>　 <span class="args">-d</span>或<span class="args">--directory 　</span>直接把欲删除的目录的硬连接数据删成0，删除该目录。 <br />
+  　
+  <span class="args">-f</span>或<span class="args">--force 　</span>强制删除文件或目录。 <br />
+  　
+  <span class="args">-i</span>或<span class="args">--interactive 　</span>删除既有文件或目录之前先询问用户。 <br />
+  　
+  <span class="args">-r</span>或<span class="args">-R</span>或<span class="args">--recursive 　</span>递归处理，将指定目录下的所有文件及子目录一并处理。 <br />
+  　
+  <span class="args">-v</span>或<span class="args">--verbose 　</span>显示指令执行过程。 <br />
+  　
+  <span class="args">--help</span> 　在线帮助。 <br />
+  　
+<span class="args">--version</span> 　显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+交互式删除当前目录下的文件test和example
+rm -i test example
+Remove test ?n（不删除文件test)
+Remove example ?y（删除文件example)
+
+删除当前目录下除隐含文件外的所有文件和子目录
+# rm -r *
+
+应注意，这样做是非常危险的!
+</code>
+</body></html>

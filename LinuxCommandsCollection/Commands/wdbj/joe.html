@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>编辑文本文件。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>joe [<span class="args">-asis</span>][<span class="args">-beep</span>][<span class="args">-csmode</span>][<span class="args">-dopadding</span>][<span class="args">-exask</span>][<span class="args">-force</span>][<span class="args">-help</span>][<span class="args">-keepup</span>][<span class="args">-lightoff</span>][<span class="args">-arking</span>][<span class="args">-mid</span>][<span class="args">-nobackups</span>][<span class="args">-nonotice</span>][<span class="args">-nosta</span>][<span class="args">-noxon</span>][<span class="args">-orphan</span>][<span class="args">-backpath</span>&lt;目录&gt;][<span class="args">-columns</span>&lt;栏位&gt;][<span class="args">-lines</span>&lt;行数&gt;][<span class="args">-pg</span>&lt;行数&gt;][<span class="args">-skiptop</span>&lt;行数&gt;][<span class="args">-autoindent</span> crlf linums overwrite rdonly wordwrap][<span class="args">+</span>&lt;行数&gt;][<span class="args">-indentc</span>&lt;缩排字符&gt;][<span class="args">-istep</span>&lt;缩排字符数&gt;][<span class="args">-keymap</span>&lt;按键配置文件&gt;][<span class="args">-lmargin</span>&lt;栏数&gt;][<span class="args">-rmargin</span>&lt;栏数&gt;][<span class="args">-tab</span>&lt;栏数&gt;][要编辑的文件]<br />
+  <br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">Joe</span>是一个功能强大的全屏幕文本编辑程序。操作的复杂度要比<span class="args">Pico</span>高一点，但是功能较为齐全。<span class="args">Joe</span>一次可开启多个文件，每个文件各放在一个编辑区内，并可在文件之间执行剪贴的动作。<br />
+  <br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p> <span class="args">-asis   </span>字符码超过127的字符不做任何处理。<br />
+    
+  <span class="args">-backpath</span>&lt;目录&gt;   指定备份文件的目录。<br />
+    
+  <span class="args">-beep</span>   编辑时，若有错误即发出哗声。<br />
+    
+  <span class="args">-columns</span>&lt;栏位&gt;   设置栏数。<br />
+    
+  <span class="args">-csmode</span>   可执行连续查找模式。<br />
+    
+  <span class="args">-dopadding</span>   是程序跟<span class="args">tty</span>间存在缓冲区。<br />
+    
+  <span class="args">-exask</span>   在程序中，执行&quot;Ctrl+k+x&quot;时，会先确认是否要保存文件。<br />
+    
+  <span class="args">-force</span>   强制在最后一行的结尾处加上换行符号。<br />
+    
+  <span class="args">-help</span>   执行程序时一并显示帮助。<br />
+    
+  <span class="args">-keepup</span>   在进入程序后，画面上方为状态列。<br />
+    
+  <span class="args">-lightoff</span>   选取的区块在执行完区块命令后，就会回复成原来的状态。<br />
+    
+  <span class="args">-lines</span>&lt;行数&gt;   设置行数。<br />
+    
+  <span class="args">-marking</span>   在选取区块时，反白区块会随着光标移动。<br />
+    
+  <span class="args">-mid</span>   当光标移出画面时，即自动卷页，使光标回到中央。<br />
+    
+  <span class="args">-nobackups</span>   不建立备份文件。<br />
+    
+  <span class="args">-nonotice</span>   程序执行时，不显示版权信息。<br />
+    
+  <span class="args">-nosta</span>   程序执行时，不显示状态列。<br />
+    
+  <span class="args">-noxon</span>   尝试取消“Ctrl+s”与“Ctrl+q”键的功能。<br />
+    
+  <span class="args">-orphan</span>   若同时开启一个以上的文件，则其他文件会置于独立的缓冲区，而不会另外开启编辑区。<br />
+    
+  <span class="args">-pg</span>&lt;行数&gt;   按“PageUp”或“PageDown”换页时，所要保留前一页的行数。<br />
+    
+  <span class="args">-skiptop</span>&lt;行数&gt;   不使用屏幕上方指定的行数。<br />
+  以下为文件参数<br />
+    
+  <span class="args">+</span>&lt;行数&gt;   指定开启文件时，光标所在的行数。<br />
+    
+  <span class="args">-autoindent</span>   自动缩排。<br />
+    
+  <span class="args">-crlf</span>   在换行时，使用<span class="args">CR-LF</span>字符。<br />
+    
+  <span class="args">-indentc</span>&lt;缩排字符&gt;   执行缩排时，实际插入的字符。<br />
+    
+  <span class="args">-istep</span>&lt;缩排字符数&gt;   每次执行缩排时，所移动的缩排字符数。<br />
+    
+  <span class="args">-keymap</span>&lt;按键配置文件&gt;   使用不同的按键配置文件。<br />
+    
+  <span class="args">-linums</span>   在每行前面加上行号。<br />
+    
+  <span class="args">-lmargin</span>&lt;栏数&gt;   设置左侧边界。<br />
+    
+  <span class="args">-overwrite</span>   设置覆盖模式。<br />
+    
+  <span class="args">-rmargin</span>&lt;栏数&gt;   设置右侧边界。<br />
+    
+  <span class="args">-tab</span>&lt;栏数&gt;   设置<span class="args">tab</span>的宽度。<br />
+    
+<span class="args">-rdonly</span>   以只读的方式开启文件<span class="args">-wordwrap</span>编辑时若超过右侧边界，则自动换行。</p>
+<div  class="category">示例：</div>
+<code>
+抱歉暂无示例。
+</code>
+</body></html>

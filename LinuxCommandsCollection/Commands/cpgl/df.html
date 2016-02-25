@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>显示磁盘的相关信息。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>df [<span class="args">-ahHiklmPT</span>][<span class="args">--block-size=</span>&lt;区块大小&gt;][<span class="args">-t</span> &lt;文件系统类型&gt;][<span class="args">-x</span> &lt;文件系统类型&gt;][<span class="args">--help</span>][<span class="args">--no-sync</span>][<span class="args">--sync</span>][<span class="args">--version</span>][文件或设备]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">df</span>可显示磁盘的文件系统与使用情形。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  <span class="args">-a</span>或<span class="args">--all   </span>包含全部的文件系统。<br />
+    
+  <span class="args">--block-size=</span>&lt;区块大小&gt;   以指定的区块大小来显示区块数目。<br />
+    
+  <span class="args">-h</span>或<span class="args">--human-readable   </span>以可读性较高的方式来显示信息。<br />
+    
+  <span class="args">-H</span>或<span class="args">--si   </span>与<span class="args">-h</span>参数相同，但在计算时是以1000 <span class="args">Bytes</span>为换算单位而非1024 Bytes。<br />
+    
+  <span class="args">-i</span>或<span class="args">--inodes   </span>显示<span class="args">inode</span>的信息。<br />
+    
+  <span class="args">-k</span>或<span class="args">--kilobytes   </span>指定区块大小为1024字节。<br />
+    
+  <span class="args">-l</span>或<span class="args">--local   </span>仅显示本地端的文件系统。<br />
+    
+  <span class="args">-m</span>或<span class="args">--megabytes   </span>指定区块大小为1048576字节。<br />
+    
+  <span class="args">--no-sync   </span>在取得磁盘使用信息前，不要执行<span class="args">sync</span>指令，此为预设值。<br />
+    
+  <span class="args">-P</span>或<span class="args">--portability   </span>使用<span class="args">POSIX</span>的输出格式。<br />
+    
+  <span class="args">--sync</span>   在取得磁盘使用信息前，先执行<span class="args">sync</span>指令。<br />
+    
+  <span class="args">-t</span>&lt;文件系统类型&gt;或<span class="args">--type=</span>&lt;文件系统类型&gt;   仅显示指定文件系统类型的磁盘信息。<br />
+    
+  <span class="args">-T</span>或<span class="args">--print-type   </span>显示文件系统的类型。<br />
+    
+  <span class="args">-x</span>&lt;文件系统类型&gt;或<span class="args">--exclude-type=</span>&lt;文件系统类型&gt;   不要显示指定文件系统类型的磁盘信息。<br />
+    
+  <span class="args">--help</span>   显示帮助。<br />
+    
+  <span class="args">--version</span>   显示版本信息。<br />
+    
+[文件或设备]   指定磁盘设备。</p>
+<div  class="category">示例：</div>
+<code>
+查看系统磁盘设备，默认是KB为单位：
+[root@LinServ-1 ~]# df
+
+使用-h选项以KB以上的单位来显示，可读性高：
+[root@LinServ-1 ~]# df -h
+
+</code>
+</body></html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>对<span class="args">MS-DOS</span>文件系统的磁盘进行格式化。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>mformat [<span class="args">-1aCFIKX</span>][<span class="args">-0</span> &lt;数据传输率&gt;][<span class="args">-2</span> &lt;磁区数&gt;][<span class="args">-A</span> &lt;数据传输率&gt;][<span class="args">-B</span> &lt;开机区文件&gt;][<span class="args">-c</span> &lt;丛集大小&gt;][<span class="args">-h</span> &lt;磁头数&gt;][<span class="args">-H</span> &lt;隐藏磁区数&gt;][<span class="args">-l</span> &lt;磁盘标签&gt;][<span class="args">-M</span> &lt;磁区大小&gt;][<span class="args">-n</span> &lt;序号&gt;][<span class="args">-r</span> &lt;根目录大小&gt;][<span class="args">-s</span> &lt;磁区数&gt;][<span class="args">-S</span> &lt;磁区大小&gt;][<span class="args">-t</span> &lt;柱面数&gt;][驱动器代号]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">mformat</span>为<span class="args">mtools</span>工具指令，模拟<span class="args">MS-DOS</span>的<span class="args">format</span>指令，可将指定的磁盘或硬盘分区格式化为<span class="args">MS-DOS</span>文件系统。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>   <span class="args">-0</span>&lt;数据传输率&gt;   指定第0磁轨的数据传输率。<br />
+
+    
+  <span class="args">-1</span>   不使用2<span class="args">M</span>格式。<br />
+    
+  <span class="args">-2</span>&lt;磁区数&gt;   指定在第0磁轨的第0个磁头的磁区数，也就是所谓的2<span class="args">M</span>格式。<br />
+    
+  <span class="args">-a</span>   指定产生<span class="args">Atari</span>格式的序号。<br />
+    
+  <span class="args">-A</span>&lt;数据传输率&gt;   指定第0磁轨以外所有磁轨的数据传输率。<br />
+    
+  <span class="args">-B</span>&lt;开机区文件&gt;   从指定的文件来建立开机区。<br />
+    
+  <span class="args">-c</span>&lt;丛集大小&gt;   指定丛集大小，单位为磁区。<br />
+    
+  <span class="args">-C</span>   建立磁盘<span class="args">MS-DOS</span>文件系统的映像文件。<br />
+    
+  <span class="args">-F</span>   以<span class="args">FAT32</span>来格式化磁盘。<br />
+    
+  <span class="args">-H</span>&lt;隐藏磁区数&gt;   指定隐藏磁区的数目。<br />
+    
+  <span class="args">-I</span>   指定<span class="args">FAT32</span>的<span class="args">frVersion</span>编号。<br />
+    
+  <span class="args">-k</span>   尽可能地保留原有的开机区。<br />
+    
+  <span class="args">-l</span>&lt;磁盘标签&gt;   指定磁盘标签名称。<br />
+    
+  <span class="args">-M</span>&lt;磁区大小&gt;   指定<span class="args">MS-DOS</span>文件系统所使用的磁区大小，预设应该与硬体磁区大小相同，单位为字节。<br />
+    
+  <span class="args">-n</span>&lt;序号&gt;   指定序号。<br />
+    
+  <span class="args">-r</span>&lt;根目录大小&gt;   指定根目录的大小，单位为磁区。<br />
+    
+  <span class="args">-s</span>&lt;磁区数&gt;   指定每一磁轨所包含的磁区数目。<br />
+    
+  <span class="args">-S</span>&lt;磁区大小&gt;   指定硬件磁区大小。<br />
+    
+  <span class="args">-t</span>&lt;柱面数&gt;   指定柱面数目。<br />
+    
+<span class="args">-X</span>   格式化<span class="args">XDF</span>磁盘。</p>
+<div  class="category">示例：</div>
+<code>
+mformat a: 
+这样会用预设值把 a: （就是 /dev/fd0）里的磁碟片格式化。 
+</code>
+</body></html>

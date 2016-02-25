@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>显示开机信息。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>dmesg [<span class="args">-cn</span>][<span class="args">-s</span> &lt;缓冲区大小&gt;]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">kernel</span>会将开机信息存储在<span class="args">ring buffer</span>中。您若是开机时来不及查看信息，可利用<span class="args">dmesg</span>来查看。开机信息亦保存在/var/<span class="args">log</span>目录中，名称为<span class="args">dmesg</span>的文件里。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>　<span class="args">-c 　</span>显示信息后，清除<span class="args">ring buffer</span>中的内容。 <br />
+　
+        <span class="args">-s</span>&lt;缓冲区大小&gt; 　预设置为8196，刚好等于<span class="args">ring buffer</span>的大小。 <br />
+　
+<span class="args">-n</span> 　设置记录信息的层级。 </p>
+<div  class="category">示例：</div>
+<code>
+抱歉暂无示例。
+</code>
+</body></html>

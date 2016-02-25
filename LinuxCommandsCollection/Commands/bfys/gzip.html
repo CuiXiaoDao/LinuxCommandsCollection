@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>压缩文件。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>gzip [<span class="args">-acdfhlLnNqrtvV</span>][<span class="args">-S</span> &lt;压缩字尾字符串&gt;][<span class="args">-</span>&lt;压缩效率&gt;][<span class="args">--best</span>/fast][文件...] 或 gzip [<span class="args">-acdfhlLnNqrtvV</span>][<span class="args">-S</span> &lt;压缩字尾字符串&gt;][<span class="args">-</span>&lt;压缩效率&gt;][<span class="args">--best</span>/fast][目录]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">gzip</span>是个使用广泛的压缩程序，文件经它压缩过后，其名称后面会多出&quot;.gz&quot;的扩展名。<br />
+</p>
+
+<div  class="category">参　数：</div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+    <tr>
+      <td>　 <span class="args">-a</span>或<span class="args">--ascii 　</span>使用<span class="args">ASCII</span>文字模式。 <br />
+        　
+        <span class="args">-c</span>或<span class="args">--stdout</span>或<span class="args">--to-stdout 　</span>把压缩后的文件输出到标准输出设备，不去更动原始文件。 <br />
+        　
+        <span class="args">-d</span>或<span class="args">--decompress</span>或<span class="args">----uncompress 　</span>解开压缩文件。 <br />
+        　
+        <span class="args">-f</span>或<span class="args">--force 　</span>强行压缩文件。不理会文件名称或硬连接是否存在以及该文件是否为符号连接。 <br />
+        　
+        <span class="args">-h</span>或<span class="args">--help 　</span>在线帮助。 <br />
+        　
+        <span class="args">-l</span>或<span class="args">--list 　</span>列出压缩文件的相关信息。 <br />
+        　
+        <span class="args">-L</span>或<span class="args">--license 　</span>显示版本与版权信息。 <br />
+        　
+        <span class="args">-n</span>或<span class="args">--no-name 　</span>压缩文件时，不保存原来的文件名称及时间戳记。 <br />
+        　
+        <span class="args">-N</span>或<span class="args">--name 　</span>压缩文件时，保存原来的文件名称及时间戳记。 <br />
+        　
+        <span class="args">-q</span>或<span class="args">--quiet 　</span>不显示警告信息。 <br />
+        　
+        <span class="args">-r</span>或<span class="args">--recursive 　</span>递归处理，将指定目录下的所有文件及子目录一并处理。 <br />
+        　
+        <span class="args">-S</span>&lt;压缩字尾字符串&gt;或<span class="args">----suffix</span>&lt;压缩字尾字符串&gt; 　更改压缩字尾字符串。 <br />
+        　
+        <span class="args">-t</span>或<span class="args">--test 　</span>测试压缩文件是否正确无误。 <br />
+        　
+        <span class="args">-v</span>或<span class="args">--verbose 　</span>显示指令执行过程。 <br />
+        　
+        <span class="args">-V</span>或<span class="args">--version 　</span>显示版本信息。 <br />
+        　
+        <span class="args">-</span>&lt;压缩效率&gt; 　压缩效率是一个介于1－9的数值，预设值为&quot;6&quot;，指定愈大的数值，压缩效率就会愈高。 <br />
+        　
+        <span class="args">--best</span> 　此参数的效果和指定&quot;-9&quot;参数相同。 <br />
+        　
+      <span class="args">--fast</span> 　此参数的效果和指定&quot;-1&quot;参数相同。</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<div  class="category">示例：</div>
+<code>
+把test6目录下的每个文件压缩成.gz文件
+gzip *
+
+把上例中每个压缩的文件解压，并列出详细的信息
+gzip -dv *
+
+详细显示例1中每个压缩的文件的信息，并不解压
+gzip -l *
+
+压缩一个tar备份文件，此时压缩文件的扩展名为.tar.gz
+gzip -r log.tar
+
+递归的压缩目录
+gzip -rv test6
+
+</code>
+</body></html>

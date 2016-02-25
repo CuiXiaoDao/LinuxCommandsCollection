@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>显示文件属性。</p>
+<div  class="category">语　　法：</div>
+<p>lsattr [<span class="args">-adlRvV</span>][文件或目录...]</p>
+<div  class="category">补充说明：</div>
+<p>用<span class="args">chattr</span>执行改变文件或目录的属性，可执行<span class="args">lsattr</span>指令查询其属性。</p>
+
+<div  class="category">参　　数：</div>
+<p>   <span class="args">-a</span> 　显示所有文件和目录，包括以&quot;.&quot;为名称开头字符的额外内建，现行目录&quot;.&quot;与上层目录&quot;..&quot;。 <br />
+    
+  <span class="args">-d</span> 　显示，目录名称，而非其内容。 <br />
+    
+  <span class="args">-l</span> 　此参数目前没有任何作用。 <br />
+    
+  <span class="args">-R</span> 　递归处理，将指定目录下的所有文件及子目录一并处理。 <br />
+    
+  <span class="args">-v</span> 　显示文件或目录版本。 <br />
+    
+<span class="args">-V</span> 　显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+lsattr -E -l rmt0 -H
+lsattr -EO -l rmt0
+</code>
+</body></html>

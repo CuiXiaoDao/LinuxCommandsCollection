@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>输出文件内容。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>od [<span class="args">-abcdfhilovx</span>][<span class="args">-A</span> &lt;字码基数&gt;][<span class="args">-j</span> &lt;字符数目&gt;][<span class="args">-N</span> &lt;字符数目&gt;][<span class="args">-s</span> &lt;字符串字符数&gt;][<span class="args">-t</span> &lt;输出格式&gt;][<span class="args">-w</span> &lt;每列字符数&gt;][<span class="args">--help</span>][<span class="args">--version</span>][文件...]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">od</span>指令会读取所给予的文件的内容，并将其内容以八进制字码呈现出来。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>　 <span class="args">-a</span> 　此参数的效果和同时指定&quot;-ta&quot;参数相同。 <br />
+  　
+  <span class="args">-A</span>&lt;字码基数&gt; 　选择要以何种基数计算字码。 <br />
+  　
+  <span class="args">-b</span> 　此参数的效果和同时指定&quot;-toC&quot;参数相同。 <br />
+  　
+  <span class="args">-c</span> 　此参数的效果和同时指定&quot;-tC&quot;参数相同。 <br />
+  　
+  <span class="args">-d</span> 　此参数的效果和同时指定&quot;-tu2&quot;参数相同。 <br />
+  　
+  <span class="args">-f</span> 　此参数的效果和同时指定&quot;-tfF&quot;参数相同。 <br />
+  　
+  <span class="args">-h</span> 　此参数的效果和同时指定&quot;-tx2&quot;参数相同。 <br />
+  　
+  <span class="args">-i</span> 　此参数的效果和同时指定&quot;-td2&quot;参数相同。 <br />
+  　
+  <span class="args">-j</span>&lt;字符数目&gt;或<span class="args">--skip-bytes=</span>&lt;字符数目&gt; 　略过设置的字符数目。 <br />
+  　
+  <span class="args">-l</span> 　此参数的效果和同时指定&quot;-td4&quot;参数相同。 <br />
+  　
+  <span class="args">-N</span>&lt;字符数目&gt;或<span class="args">--read-bytes=</span>&lt;字符数目&gt; 　到设置的字符数目为止。 <br />
+  　
+  <span class="args">-o</span> 　此参数的效果和同时指定&quot;-to2&quot;参数相同。 <br />
+  　
+  <span class="args">-s</span>&lt;字符串字符数&gt;或<span class="args">--strings=</span>&lt;字符串字符数&gt; 　只显示符合指定的字符数目的字符串。 <br />
+  　
+  <span class="args">-t</span>&lt;输出格式&gt;或<span class="args">--format=</span>&lt;输出格式&gt; 　设置输出格式。 <br />
+  　
+  <span class="args">-v</span>或<span class="args">--output-duplicates 　</span>输出时不省略重复的数据。 <br />
+  　
+  <span class="args">-w</span>&lt;每列字符数&gt;或<span class="args">--width=</span>&lt;每列字符数&gt; 　设置每列的最大字符数。 <br />
+  　
+  <span class="args">-x</span> 　此参数的效果和同时指定&quot;-h&quot;参数相同。 <br />
+  　
+  <span class="args">--help</span> 　在线帮助。 <br />
+  　
+<span class="args">--version</span> 　显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+[linuxde@localhost ~]$ echo abcdef g > tmp
+[linuxde@localhost ~]$ cat tmp
+abcdef g
+
+说明：先准备一个tmp文件
+[linuxde@localhost ~]$ od -b tmp
+0000000 141 142 143 144 145 146 040 147 012
+0000011
+
+说明：使用单字节八进制解释进行输出，注意左侧的默认地址格式为八字节
+[linuxde@localhost ~]$ od -c tmp
+0000000   a   b   c   d   e   f       g  \n
+0000011
+
+说明：使用ASCII码进行输出，注意其中包括转义字符
+[linuxde@localhost ~]$ od -t d1 tmp
+0000000   97   98   99  100  101  102   32  103   10
+0000011
+
+说明：使用单字节十进制进行解释
+[linuxde@localhost ~]$ od -A d -c tmp
+0000000   a   b   c   d   e   f       g  \n
+0000009
+
+说明：设置地址格式为十进制。
+[linuxde@localhost ~]$ od -A x -c tmp
+000000   a   b   c   d   e   f       g  \n
+000009
+
+说明：设置地址格式为十六进制
+[linuxde@localhost ~]$ od -j 2 -c tmp
+0000002   c   d   e   f       g  \n
+0000011
+
+说明：跳过开始的两个字节
+[linuxde@localhost ~]$ od -N 2 -j 2 -c tmp
+0000002   c   d
+0000004
+
+说明：跳过开始的两个字节，并且仅输出两个字节
+[linuxde@localhost ~]$ od -w1 -c tmp
+0000000   a
+0000001   b
+0000002   c
+0000003   d
+0000004   e
+0000005   f
+0000006   
+0000007   g
+0000010  \n
+0000011
+
+说明：每行仅输出1个字节
+[linuxde@localhost ~]$ od -w2 -c tmp
+0000000   a   b
+0000002   c   d
+0000004   e   f
+0000006       g
+0000010  \n
+0000011
+
+说明：每行输出两个字节
+[linuxde@localhost ~]$ od -w3 -b tmp
+0000000 141 142 143
+0000003 144 145 146
+0000006 040 147 012
+0000011
+
+说明：每行输出3个字节，并使用八进制单字节进行解释
+</code>
+</body></html>

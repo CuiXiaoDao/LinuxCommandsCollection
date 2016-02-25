@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>管理套件。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>rpm [<span class="args">-acdhilqRsv</span>][<span class="args">-b</span>&lt;完成阶段&gt;&lt;套间档&gt;+][<span class="args">-e</span>&lt;套件挡&gt;][<span class="args">-f</span>&lt;文件&gt;+][<span class="args">-i</span>&lt;套件档&gt;][<span class="args">-p</span>&lt;套件档&gt;＋][<span class="args">-U</span>&lt;套件档&gt;][<span class="args">-vv</span>][<span class="args">--addsign</span>&lt;套件档&gt;+][<span class="args">--allfiles</span>][<span class="args">--allmatches</span>][<span class="args">--badreloc</span>][<span class="args">--buildroot</span>&lt;根目录&gt;][<span class="args">--changelog</span>][<span class="args">--checksig</span>&lt;套件档&gt;+][<span class="args">--clean</span>][<span class="args">--dbpath</span>&lt;数据库目录&gt;][<span class="args">--dump</span>][<span class="args">--excludedocs</span>][<span class="args">--excludepath</span>&lt;排除目录&gt;][<span class="args">--force</span>][<span class="args">--ftpproxy</span>&lt;主机名称或<span class="args">IP</span>地址&gt;][<span class="args">--ftpport</span>&lt;通信端口&gt;][<span class="args">--help</span>][<span class="args">--httpproxy</span>&lt;主机名称或<span class="args">IP</span>地址&gt;][<span class="args">--httpport</span>&lt;通信端口&gt;][<span class="args">--ignorearch</span>][<span class="args">--ignoreos</span>][<span class="args">--ignoresize</span>][<span class="args">--includedocs</span>][<span class="args">--initdb</span>][<span class="args">justdb</span>][<span class="args">--nobulid</span>][<span class="args">--nodeps</span>][<span class="args">--nofiles</span>][<span class="args">--nogpg</span>][<span class="args">--nomd</span>5][<span class="args">--nopgp</span>][<span class="args">--noorder</span>][<span class="args">--noscripts</span>][<span class="args">--notriggers</span>][<span class="args">--oldpackage</span>][<span class="args">--percent</span>][<span class="args">--pipe</span>&lt;执行指令&gt;][<span class="args">--prefix</span>&lt;目的目录&gt;][<span class="args">--provides</span>][<span class="args">--queryformat</span>&lt;档头格式&gt;][<span class="args">--querytags</span>][<span class="args">--rcfile</span>&lt;配置档&gt;][<span class="args">--rebulid</span>&lt;套件档&gt;][<span class="args">--rebuliddb</span>][<span class="args">--recompile</span>&lt;套件档&gt;][<span class="args">--relocate</span>&lt;原目录&gt;<span class="args">=</span>&lt;新目录&gt;][<span class="args">--replacefiles</span>][<span class="args">--replacepkgs</span>][<span class="args">--requires</span>][<span class="args">--resign</span>&lt;套件档&gt;+][<span class="args">--rmsource</span>][<span class="args">--rmsource</span>&lt;文件&gt;][<span class="args">--root</span>&lt;根目录&gt;][<span class="args">--scripts</span>][<span class="args">--setperms</span>][<span class="args">--setugids</span>][<span class="args">--short-circuit</span>][<span class="args">--sign</span>][<span class="args">--target=</span>&lt;安装平台&gt;+][<span class="args">--test</span>][<span class="args">--timecheck</span>&lt;检查秒数&gt;][<span class="args">--triggeredby</span>&lt;套件档&gt;][<span class="args">--triggers</span>][<span class="args">--verify</span>][<span class="args">--version</span>][<span class="args">--whatprovides</span>&lt;功能特性&gt;][<span class="args">--whatrequires</span>&lt;功能特性&gt;]<br />
+  <br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">rmp</span>原本是<span class="args">Red Hat Linux</span>发行版专门用来管理<span class="args">Linux</span>各项套件的程序，由于它遵循<span class="args">GPL</span>规则且功能强大方便，因而广受欢迎。逐渐受到其他发行版的采用。<span class="args">RPM</span>套件管理方式的出现，让<span class="args">Linux</span>易于安装，升级，间接提升了<span class="args">Linux</span>的适用度。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  <span class="args">-a</span> 　查询所有套件。<br />
+    
+  <span class="args">-b</span>&lt;完成阶段&gt;&lt;套件档&gt;+或<span class="args">-t</span> &lt;完成阶段&gt;&lt;套件档&gt;+ 　设置包装套件的完成阶段，并指定套件档的文件名称。<br />
+    
+  <span class="args">-c</span> 　只列出组态配置文件，本参数需配合&quot;-l&quot;参数使用。 <br />
+    
+  <span class="args">-d</span> 　只列出文本文件，本参数需配合&quot;-l&quot;参数使用。　 <br />
+    
+  <span class="args">-e</span>&lt;套件档&gt;或<span class="args">--erase</span>&lt;套件档&gt; 　删除指定的套件。<br />
+    
+  <span class="args">-f</span>&lt;文件&gt;+ 　查询拥有指定文件的套件。 <br />
+    
+  <span class="args">-h</span>或<span class="args">--hash 　</span>套件安装时列出标记。 <br />
+    
+  <span class="args">-i</span> 　显示套件的相关信息。 <br />
+    
+  <span class="args">-i</span>&lt;套件档&gt;或<span class="args">--install</span>&lt;套件档&gt; 　安装指定的套件档。 <br />
+    
+  <span class="args">-l</span> 　显示套件的文件列表。 <br />
+    
+  <span class="args">-p</span>&lt;套件档&gt;+ 　查询指定的<span class="args">RPM</span>套件档。 <br />
+    
+  <span class="args">-q</span> 　使用询问模式，当遇到任何问题时，<span class="args">rpm</span>指令会先询问用户。 <br />
+    
+  <span class="args">-R</span> 　显示套件的关联性信息。 <br />
+    
+  <span class="args">-s</span> 　显示文件状态，本参数需配合&quot;-l&quot;参数使用。 <br />
+    
+  <span class="args">-U</span>&lt;套件档&gt;或<span class="args">--upgrade</span>&lt;套件档&gt;   升级指定的套件档。 <br />
+    
+  <span class="args">-v</span> 　显示指令执行过程。<br />
+    
+  <span class="args">-vv</span> 　详细显示指令执行过程，便于排错。 <br />
+    
+  <span class="args">-addsign</span>&lt;套件档&gt;+ 　在指定的套件里加上新的签名认证。 <br />
+    
+  <span class="args">--allfiles</span> 　安装所有文件。 <br />
+    
+  <span class="args">--allmatches</span> 　删除符合指定的套件所包含的文件。 <br />
+    
+  <span class="args">--badreloc</span> 　发生错误时，重新配置文件。 <br />
+    
+  <span class="args">--buildroot</span>&lt;根目录&gt; 　设置产生套件时，欲当作根目录的目录。 <br />
+    
+  <span class="args">--changelog</span> 　显示套件的更改记录。 <br />
+    
+  <span class="args">--checksig</span>&lt;套件档&gt;+ 　检验该套件的签名认证。 <br />
+    
+  <span class="args">--clean</span> 　完成套件的包装后，删除包装过程中所建立的目录。 <br />
+    
+  <span class="args">--dbpath</span>&lt;数据库目录&gt; 　设置欲存放<span class="args">RPM</span>数据库的目录。 <br />
+    
+  <span class="args">--dump</span> 　显示每个文件的验证信息。本参数需配合&quot;-l&quot;参数使用。 <br />
+    
+  <span class="args">--excludedocs</span> 　安装套件时，不要安装文件。 <br />
+    
+  <span class="args">--excludepath</span>&lt;排除目录&gt; 　忽略在指定目录里的所有文件。 <br />
+    
+  <span class="args">--force</span> 　强行置换套件或文件。 <br />
+    
+  <span class="args">--ftpproxy</span>&lt;主机名称或<span class="args">IP</span>地址&gt; 　指定<span class="args">FTP</span>代理服务器。 <br />
+    
+  <span class="args">--ftpport</span>&lt;通信端口&gt; 　设置<span class="args">FTP</span>服务器或代理服务器使用的通信端口。 <br />
+    
+  <span class="args">--help</span> 　在线帮助。 <br />
+    
+  <span class="args">--httpproxy</span>&lt;主机名称或<span class="args">IP</span>地址&gt; 　指定<span class="args">HTTP</span>代理服务器。 <br />
+    
+  <span class="args">--httpport</span>&lt;通信端口&gt; 　设置<span class="args">HTTP</span>服务器或代理服务器使用的通信端口。 <br />
+    
+  <span class="args">--ignorearch</span> 　不验证套件档的结构正确性。 <br />
+    
+  <span class="args">--ignoreos</span> 　不验证套件档的结构正确性。 <br />
+    
+  <span class="args">--ignoresize</span> 　安装前不检查磁盘空间是否足够。 <br />
+    
+  <span class="args">--includedocs</span> 　安装套件时，一并安装文件。 <br />
+    
+  <span class="args">--initdb</span> 　确认有正确的数据库可以使用。 <br />
+    
+  <span class="args">--justdb</span> 　更新数据库，当不变动任何文件。 <br />
+    
+  <span class="args">--nobulid</span> 　不执行任何完成阶段。 <br />
+    
+  <span class="args">--nodeps</span> 　不验证套件档的相互关联性。 <br />
+    
+  <span class="args">--nofiles</span> 　不验证文件的属性。 <br />
+    
+  <span class="args">--nogpg</span> 　略过所有<span class="args">GPG</span>的签名认证。 <br />
+    
+  <span class="args">--nomd5 　</span>不使用<span class="args">MD5</span>编码演算确认文件的大小与正确性。 <br />
+    
+  <span class="args">--nopgp</span> 　略过所有<span class="args">PGP</span>的签名认证。 <br />
+    
+  <span class="args">--noorder</span> 　不重新编排套件的安装顺序，以便满足其彼此间的关联性。 <br />
+    
+  <span class="args">--noscripts</span> 　不执行任何安装<span class="args">Script</span>文件。 <br />
+    
+  <span class="args">--notriggers</span> 　不执行该套件包装内的任何<span class="args">Script</span>文件。 <br />
+    
+  <span class="args">--oldpackage</span> 　升级成旧版本的套件。 <br />
+    
+  <span class="args">--percent</span> 　安装套件时显示完成度百分比。 <br />
+    
+  <span class="args">--pipe</span>&lt;执行指令&gt; 　建立管道，把输出结果转为该执行指令的输入数据。 <br />
+    
+  <span class="args">--prefix</span>&lt;目的目录&gt; 　若重新配置文件，就把文件放到指定的目录下。 <br />
+    
+  <span class="args">--provides</span> 　查询该套件所提供的兼容度。 <br />
+    
+  <span class="args">--queryformat</span>&lt;档头格式&gt; 　设置档头的表示方式。 <br />
+    
+  <span class="args">--querytags</span> 　列出可用于档头格式的标签。 <br />
+    
+  <span class="args">--rcfile</span>&lt;配置文件&gt; 　使用指定的配置文件。 <br />
+    
+  <span class="args">--rebulid</span>&lt;套件档&gt; 　安装原始代码套件，重新产生二进制文件的套件。 <br />
+    
+  <span class="args">--rebuliddb</span> 　以现有的数据库为主，重建一份数据库。 <br />
+    
+  <span class="args">--recompile</span>&lt;套件档&gt; 　此参数的效果和指定&quot;--rebulid&quot;参数类似，当不产生套件档。 <br />
+    
+  <span class="args">--relocate</span>&lt;原目录&gt;<span class="args">=</span>&lt;新目录&gt; 　把本来会放到原目录下的文件改放到新目录。 <br />
+    
+  <span class="args">--replacefiles</span> 　强行置换文件。 <br />
+    
+  <span class="args">--replacepkgs</span> 　强行置换套件。 <br />
+    
+  <span class="args">--requires</span> 　查询该套件所需要的兼容度。 <br />
+    
+  <span class="args">--resing</span>&lt;套件档&gt;+ 　删除现有认证，重新产生签名认证。 <br />
+    
+  <span class="args">--rmsource</span> 　完成套件的包装后，删除原始代码。 <br />
+    
+  <span class="args">--rmsource</span>&lt;文件&gt; 　删除原始代码和指定的文件。 <br />
+    
+  <span class="args">--root</span>&lt;根目录&gt; 　设置欲当作根目录的目录。 <br />
+    
+  <span class="args">--scripts</span> 　列出安装套件的<span class="args">Script</span>的变量。 <br />
+    
+  <span class="args">--setperms</span> 　设置文件的权限。 <br />
+    
+  <span class="args">--setugids</span> 　设置文件的拥有者和所属群组。 <br />
+    
+  <span class="args">--short-circuit 　</span>直接略过指定完成阶段的步骤。<br />
+    
+  <span class="args">--sign</span> 　产生<span class="args">PGP</span>或<span class="args">GPG</span>的签名认证。 <br />
+    
+  <span class="args">--target=</span>&lt;安装平台&gt;+ 　设置产生的套件的安装平台。 <br />
+    
+  <span class="args">--test</span> 　仅作测试，并不真的安装套件。 <br />
+    
+  <span class="args">--timecheck</span>&lt;检查秒数&gt; 　设置检查时间的计时秒数。 <br />
+    
+  <span class="args">--triggeredby</span>&lt;套件档&gt; 　查询该套件的包装者。 <br />
+    
+  <span class="args">--triggers</span> 　展示套件档内的包装Script。 <br />
+    
+  <span class="args">--verify</span> 　此参数的效果和指定&quot;-q&quot;参数相同。 <br />
+    
+  <span class="args">--version</span> 　显示版本信息。 <br />
+    
+  <span class="args">--whatprovides</span>&lt;功能特性&gt; 　查询该套件对指定的功能特性所提供的兼容度。 <br />
+    
+<span class="args">--whatrequires</span>&lt;功能特性&gt; 　查询该套件对指定的功能特性所需要的兼容度。</p>
+<div  class="category">示例：</div>
+<code>
+抱歉暂无示例。
+</code>
+</body></html>

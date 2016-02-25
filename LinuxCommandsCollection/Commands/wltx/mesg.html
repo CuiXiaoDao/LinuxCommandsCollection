@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>设置终端机的写入权限。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>mesg [<span class="args">ny</span>]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p>将<span class="args">mesg</span>设置<span class="args">y</span>时，其他用户可利用<span class="args">write</span>指令将信息直接显示在您的屏幕上。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  <span class="args">n</span>   不允许气筒用户将信息直接显示在你的屏幕上。<br />
+    
+<span class="args">y</span>   允许气筒用户将信息直接显示在你的屏幕上。</p>
+<div  class="category">示例：</div>
+<code>
+[root@localhost ~]# mesg y    #允许系统用户将信息直接显示在你的屏幕上。
+[root@localhost ~]# mesg n    #不允许系统用户将信息直接显示在你的屏幕上。
+</code>
+</body></html>

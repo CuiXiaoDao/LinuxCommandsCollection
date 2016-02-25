@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>设置交换区(swap area)。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>mkswap [<span class="args">-cf</span>][<span class="args">-v</span>0][<span class="args">-v</span>1][设备名称或文件][交换区大小]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">mkswap</span>可将磁盘分区或文件设为<span class="args">Linux</span>的交换区。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  <span class="args">-c</span>   建立交换区前，先检查是否有损坏的区块。<br />
+    
+  <span class="args">-f</span>   在<span class="args">SPARC</span>电脑上建立交换区时，要加上此参数。<br />
+    
+  <span class="args">-v0   </span>建立旧式交换区，此为预设值。<br />
+    
+  <span class="args">-v1   </span>建立新式交换区。<br />
+    
+[交换区大小]   指定交换区的大小，单位为1024字节。</p>
+<div  class="category">示例：</div>
+<code>
+查看系统swap space大小：
+free -m
+total used free shared buffers cached
+Mem: 377 180 197 0 19 110
+-/+ buffers/cache: 50 327
+Swap: 572 0 572
+</code>
+</body></html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>检查文件系统并尝试修复错误。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>fsck [<span class="args">-aANPrRsTV</span>][<span class="args">-t</span> &lt;文件系统类型&gt;][文件系统...]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p>当文件系统发生错误四化，可用<span class="args">fsck</span>指令尝试加以修复。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+  <span class="args">-a</span>   自动修复文件系统，不询问任何问题。<br />
+  
+<span class="args">-A</span>   依照/etc/<span class="args">fstab</span>配置文件的内容，检查文件内所列的全部文件系统。<br />
+  
+<span class="args">-N</span>   不执行指令，仅列出实际执行会进行的动作。<br />
+  
+<span class="args">-P</span>   当搭配&quot;-A&quot;参数使用时，则会同时检查所有的文件系统。<br />
+  
+<span class="args">-r</span>   采用互动模式，在执行修复时询问问题，让用户得以确认并决定处理方式。<br />
+  
+<span class="args">-R</span>   当搭配&quot;-A&quot;参数使用时，则会略过/目录的文件系统不予检查。<br />
+  
+<span class="args">-s</span>   依序执行检查作业，而非同时执行。<br />
+  
+<span class="args">-t</span>&lt;文件系统类型&gt;   指定要检查的文件系统类型。<br />
+  
+<span class="args">-T</span>   执行<span class="args">fsck</span>指令时，不显示标题信息。<br />
+  
+<span class="args">-V</span>   显示指令执行过程。
+<p>&nbsp;</p>
+<div  class="category">示例：</div>
+<code>
+检查 msdos 档案系统的 /dev/hda5 是否正常，如果有异常便自动修复 : 
+fsck -t msdos -a /dev/hda5
+</code>
+</body></html>

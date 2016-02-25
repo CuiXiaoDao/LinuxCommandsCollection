@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>维护符号连接的工具程序。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>symlinks [<span class="args">-cdrstv</span>][目录]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">symlinks</span>可检查目录中的符号连接，并显示符号连接类型。以下为<span class="args">symlinks</span>可判断的符号连接类型：<br />
+    
+  <span class="args">absolute</span>：符号连接使用了绝对路径。<br />
+    
+  <span class="args">dangling</span>：原始文件已经不存在。<br />
+    
+  <span class="args">lengthy</span>：符号连接的路径中包含了多余的&quot;../&quot;。<br />
+    
+  <span class="args">messy</span>：符号连接的路径中包含了多余的&quot;/&quot;。<br />
+    
+  <span class="args">other_fs</span>：原始文件位于其他文件系统中。<br />
+    
+  <span class="args">relative</span>：符号连接使用了相对路径。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  <span class="args">-c</span>   将使用绝对路径的符号连接转换为相对路径。<br />
+    
+  <span class="args">-d</span>   移除<span class="args">dangling</span>类型的符号连接。<br />
+    
+  <span class="args">-r</span>   检查目录下所有子目录中的符号连接。<br />
+    
+  <span class="args">-s</span>   检查<span class="args">lengthy</span>类型的符号连接。<br />
+    
+  <span class="args">-t</span>   与<span class="args">-c</span>一并使用时，会显示如何将绝对路径的符号连接转换为相对路径，但不会实际转换。<br />
+    
+<span class="args">-v</span>   显示所有类型的符号连接。</p>
+<div  class="category">示例：</div>
+<code>
+抱歉暂无示例。
+</code>
+</body></html>

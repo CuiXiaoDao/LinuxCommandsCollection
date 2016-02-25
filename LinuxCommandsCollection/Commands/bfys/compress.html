@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>压缩或解压文件。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>compress [<span class="args">-cdfrvV</span>][<span class="args">-b</span> &lt;压缩效率&gt;][文件或目录...]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">compress</span>是个历史悠久的压缩程序，文件经它压缩后，其名称后面会多出&quot;.Z&quot;的扩展名。当要解压缩时，可执行<span class="args">uncompress</span>指令。事实上<span class="args">uncompress</span>是指向<span class="args">compress</span>的符号连接，因此不论是压缩或解压缩，都可通过<span class="args">compress</span>指令单独完成。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p><span class="args">-b</span>&lt;压缩效率&gt; 　压缩效率是一个介于9－16的数值，预设值为&quot;16&quot;，指定愈大的数值，压缩效率就愈高。 <br />
+  <span class="args">-c</span> 　把压缩后的文件输出到标准输出设备，不去更动原始文件。 <br />
+  <span class="args">-d</span> 　对文件进行解压缩而非压缩。 <br />
+  <span class="args">-f</span> 　强制保存压缩文件，不理会文件名称或硬连接是否存在，该文件是否为符号连接以及压缩效率高低的问题。 <br />
+  <span class="args">-r</span> 　递归处理，将指定目录下的所有文件及子目录一并处理。 <br />
+  <span class="args">-v</span> 　显示指令执行过程。 <br />
+<span class="args">-V</span> 　显示指令版本及程序预设值。</p>
+<div  class="category">示例：</div>
+<code>
+将/etc/man.config复到/tmp ，并加以压缩
+[root@localhost ~]# cd /tmp
+[root@localhost tmp]# cp /etc/man.config .
+[root@localhost tmp]# compress man.config
+[root@localhost tmp]# ls -l
+-rw-r--r-- 1 root root 2605 Jul 27 11:43 man.config.Z
+
+将刚刚的压缩档解开
+[root@localhost tmp]# compress -d man.config.Z
+
+将 man.config 压缩成另外一个文件来备份
+[root@localhost tmp]# compress -c man.config > man.config.back.Z
+[root@localhost tmp]# ll man.config*
+
+</code>
+</body></html>

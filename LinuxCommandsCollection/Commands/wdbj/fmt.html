@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>编排文本文件。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>fmt [<span class="args">-cstu</span>][<span class="args">-p</span>&lt;列起始字符串&gt;][<span class="args">-w</span>&lt;每列字符数&gt;][<span class="args">--help</span>][<span class="args">--version</span>][文件...]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">fmt</span>指令会从指定的文件里读取内容，将其依照指定格式重新编排后，输出到标准输出设备。若指定的文件名为&quot;-&quot;，则<span class="args">fmt</span>指令会从标准输入设备读取数据。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p> <span class="args">-c</span>或<span class="args">--crown-margin   </span>每段前两列缩排。<br />
+    
+  <span class="args">-p</span>&lt;列起始字符串&gt;或<span class="args">-prefix=</span>&lt;列起始字符串&gt;   仅合并含有指定字符串的列，通常运用在程序语言的注解方面。<br />
+    
+  <span class="args">-s</span>或<span class="args">--split-only   </span>只拆开字数超出每列字符数的列，但不合并字数不足每列字符数的列。<br />
+    
+  <span class="args">-t</span>或<span class="args">--tagged-paragraph   </span>每列前两列缩排，但第1列和第2列的缩排格式不同。<br />
+    
+  <span class="args">-u</span>或<span class="args">--uniform-spacing   </span>每个字符之间都以一个空格字符间隔，每个句子之间则两个空格字符分隔。<br />
+    
+  <span class="args">-w</span>&lt;每列字符数&gt;或<span class="args">--width=</span>&lt;每列字符数&gt;或<span class="args">-</span>&lt;每列字符数&gt;   设置每列的最大字符数。<br />
+    
+  <span class="args">--help</span>   在线帮助。<br />
+    
+<span class="args">--version</span>   显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+fmt file1 在本示例中，文件 file1 被格式化并且显示在您的屏幕上。
+</code>
+</body></html>

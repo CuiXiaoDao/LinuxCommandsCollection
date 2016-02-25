@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>建立各种文件系统。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>mkfs&nbsp;[<span class="args">-vV</span>][<span class="args">fs</span>][<span class="args">-f</span>&nbsp;&lt;文件系统类型&gt;][设备名称][区块数]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p> <span class="args">mkfs</span>本身并不执行建立文件系统的工作，而是去调用相关的程序来执行。</p>
+
+<div  class="category">参　　数：</div>
+<p>　
+  <span class="args">fs</span> 　指定建立文件系统时的参数。 <br />
+  　
+  <span class="args">-t</span>&lt;文件系统类型&gt;&nbsp;&nbsp;&nbsp;指定要建立何种文件系统。 <br />
+  　
+  <span class="args">-v</span> 　显示版本信息与详细的使用方法。 <br />
+  
+  <span class="args">&nbsp;&nbsp;&nbsp;&nbsp;-V</span> 　显示简要的使用方法。 <br />
+</p>
+<div  class="category">示例：</div>
+<code>
+创建指定的ext2文件系统。
+mke2fs -q /dev/hda1
+</code>
+</body></html>

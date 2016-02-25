@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>调整<span class="args">C</span>原始代码文件的格式。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>indent [参数][源文件] 或 indent [参数][源文件][<span class="args">-o </span>目标文件]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">indent</span>可辨识<span class="args">C</span>的原始代码文件，并加以格式化，以方便程序设计师阅读。</p>
+
+<div  class="category">参　　数：</div>
+<p>　<span class="args">-bad</span>或<span class="args">--blank-lines-after-declarations</span>  　在声明区段或加上空白行。 <br />
+  　
+  <span class="args">-bap</span>或<span class="args">--blank-lines-after-procedures</span> 　在程序或加上空白行。 <br />
+  　
+  <span class="args">-bbb</span>或<span class="args">--blank-lines-after-block-comments</span> 　在注释区段后加上空白行。 <br />
+  　
+  <span class="args">-bc</span>或<span class="args">--blank-lines-after-commas</span>  　在声明区段中，若出现逗号即换行。 <br />
+  　
+  <span class="args">-bl</span>或--braces-after-if-line 　if(或是else,<span class="args">for</span>等等)与后面执行区段的&quot;{&quot;不同行，且&quot;}&quot;自成一行。 <br />
+  　
+  <span class="args">-bli</span>&lt;缩排格数&gt;或<span class="args">--brace-indent</span>&lt;缩排格数&gt; 　设置{ }缩排的格数。 <br />
+  　
+  <span class="args">-br</span>或--braces-on-if-line 　if(或是else,<span class="args">for</span>等等)与后面执行跛段的&quot;{&quot;不同行，且&quot;}&quot;自成一行。 <br />
+  　
+  <span class="args">-bs</span>或<span class="args">--blank-before-sizeof</span> 　在<span class="args">sizeof</span>之后空一格。 <br />
+  　
+  <span class="args">-c</span>&lt;栏数&gt;或<span class="args">--comment-indentation</span>&lt;栏数&gt; 　将注释置于程序码右侧指定的栏位。 <br />
+  　
+  <span class="args">-cd</span>&lt;栏数&gt;或<span class="args">--declaration-comment-column</span>&lt;栏数&gt; 　将注释置于声明右侧指定的栏位。 <br />
+  　
+  <span class="args">-cdb</span>或<span class="args">--comment-delimiters-on-blank-lines</span> 　注释符号自成一行。 <br />
+  　
+  <span class="args">-ce</span>或<span class="args">--cuddle-else 　</span>将<span class="args">else</span>置于&quot;}&quot;(<span class="args">if</span>执行区段的结尾)之后。 <br />
+  　
+  <span class="args">-ci</span>&lt;缩排格数&gt;或<span class="args">--continuation-indentation</span>&lt;缩排格数&gt; 　叙述过长而换行时，指定换行后缩排的格数。 <br />
+  　
+  <span class="args">-cli</span>&lt;缩排格数&gt;或<span class="args">--case-indentation-</span>&lt;缩排格数&gt; 　使用<span class="args">case</span>时，<span class="args">switch</span>缩排的格数。 <br />
+  　
+  <span class="args">-cp</span>&lt;栏数&gt;或<span class="args">-else-endif-column</span>&lt;栏数&gt; 　将注释置于<span class="args">else</span>与<span class="args">elseif</span>叙述右侧定的栏位。 <br />
+  　
+  <span class="args">-cs</span>或<span class="args">--space-after-cast</span> 　在<span class="args">cast</span>之后空一格。 <br />
+  　
+  <span class="args">-d</span>&lt;缩排格数&gt;或<span class="args">-line-comments-indentation</span>&lt;缩排格数&gt; 　针对不是放在程序码右侧的注释，设置其缩排格数。 <br />
+  　
+  <span class="args">-di</span>&lt;栏数&gt;或<span class="args">--declaration-indentation</span>&lt;栏数&gt; 　将声明区段的变量置于指定的栏位。 <br />
+  　
+  <span class="args">-fc1</span>或<span class="args">--format-first-column-comments</span> 　针对放在每行最前端的注释，设置其格式。 <br />
+  　
+  <span class="args">-fca</span>或<span class="args">--format-all-comments</span> 　设置所有注释的格式。 <br />
+  　
+  <span class="args">-gnu</span>或<span class="args">--gnu-style 　</span>指定使用<span class="args">GNU</span>的格式，此为预设值。 <br />
+  　
+  <span class="args">-i</span>&lt;格数&gt;或<span class="args">--indent-level</span>&lt;格数&gt; 　设置缩排的格数。 <br />
+  　
+  <span class="args">-ip</span>&lt;格数&gt;或<span class="args">--parameter-indentation</span>&lt;格数&gt; 　设置参数的缩排格数。 <br />
+  　
+  <span class="args">-kr</span>或<span class="args">--k-and-r-style</span> 　指定使用Kernighan&amp;<span class="args">Ritchie</span>的格式。 <br />
+  　
+  <span class="args">-lp</span>或<span class="args">--continue-at-parentheses</span> 　叙述过长而换行，且叙述中包含了括弧时，将括弧中的每行起始栏位内容垂直对其排列。 <br />
+  　
+  <span class="args">-nbad</span>或<span class="args">--no-blank-lines-after-declarations</span> 　在声明区段后不要加上空白行。 <br />
+  　
+  <span class="args">-nbap</span>或<span class="args">--no-blank-lines-after-procedures</span> 　在程序后不要加上空白行。 <br />
+  　
+  <span class="args">-nbbb</span>或<span class="args">--no-blank-lines-after-block-comments</span> 　在注释区段后不要加上空白行。 <br />
+  　
+  <span class="args">-nbc</span>或<span class="args">--no-blank-lines-after-commas</span> 　在声明区段中，即使出现逗号，仍旧不要换行。 <br />
+  　
+  <span class="args">-ncdb</span>或<span class="args">--no-comment-delimiters-on-blank-lines</span> 　注释符号不要自成一行。 <br />
+  　
+  <span class="args">-nce</span>或<span class="args">--dont-cuddle-else</span> 　不要将<span class="args">else</span>置于&quot;}&quot;之后。 <br />
+  　
+  <span class="args">-ncs</span>或<span class="args">--no-space-after-casts</span> 　不要在<span class="args">cast</span>之后空一格。 <br />
+  　
+  <span class="args">-nfc1</span>或<span class="args">--dont-format-first-column-comments</span> 　不要格式化放在每行最前端的注释。 <br />
+  　
+  <span class="args">-nfca</span>或<span class="args">--dont-format-comments</span> 　不要格式化任何的注释。 <br />
+  　
+  <span class="args">-nip</span>或<span class="args">--no-parameter-indentation</span> 　参数不要缩排。 <br />
+  　
+  <span class="args">-nlp</span>或<span class="args">--dont-line-up-parentheses</span> 　叙述过长而换行，且叙述中包含了括弧时，不用将括弧中的每行起始栏位垂直对其排列。 <br />
+  　
+  <span class="args">-npcs</span>或<span class="args">--no-space-after-function-call-names</span> 　在调用的函数名称之后，不要加上空格。 <br />
+  　
+  <span class="args">-npro</span>或<span class="args">--ignore-profile 　</span>不要读取<span class="args">indent</span>的配置文件.indent.pro。 <br />
+  　
+  <span class="args">-npsl</span>或<span class="args">--dont-break-procedure-type</span> 　程序类型与程序名称放在同一行。 <br />
+  　
+  <span class="args">-nsc</span>或<span class="args">--dont-star-comments</span> 　注解左侧不要加上星号(*)。 <br />
+  　
+  <span class="args">-nsob</span>或<span class="args">--leave-optional-semicolon</span> 　不用处理多余的空白行。 <br />
+  　
+  <span class="args">-nss</span>或<span class="args">--dont-space-special-semicolon</span>  　若<span class="args">for</span>或<span class="args">while</span>区段仅有一行时，在分号前不加上空格。 <br />
+  　
+  <span class="args">-nv</span>或<span class="args">--no-verbosity 　</span>不显示详细的信息。 <br />
+  　
+  <span class="args">-orig</span>或<span class="args">--original 　</span>使用<span class="args">Berkeley</span>的格式。 <br />
+  　
+  <span class="args">-pcs</span>或<span class="args">--space-after-procedure-calls</span> 　在调用的函数名称与&quot;{&quot;之间加上空格。 <br />
+  　
+  <span class="args">-psl</span>或<span class="args">--procnames-start-lines</span> 　程序类型置于程序名称的前一行。 <br />
+  　
+  <span class="args">-sc</span>或<span class="args">--start-left-side-of-comments</span> 　在每行注释左侧加上星号(*)。 <br />
+  　
+  <span class="args">-sob</span>或<span class="args">--swallow-optional-blank-lines</span> 　删除多余的空白行。 <br />
+  　
+  <span class="args">-ss</span>或<span class="args">--space-special-semicolon</span> 　若<span class="args">for</span>或<span class="args">swile</span>区段今有一行时，在分号前加上空格。 <br />
+  　
+  <span class="args">-st</span>或<span class="args">--standard-output 　</span>将结果显示在标准输出设备。 <br />
+  　
+  <span class="args">-T</span> 　数据类型名称缩排。 <br />
+  　
+  <span class="args">-ts</span>&lt;格数&gt;或<span class="args">--tab-size</span>&lt;格数&gt; 　设置<span class="args">tab</span>的长度。 <br />
+  　
+  <span class="args">-v</span>或<span class="args">--verbose 　</span>执行时显示详细的信息。 <br />
+  　
+<span class="args">-version</span> 　显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+使用indent命令将C语言源文件"test.c"中所有的sizeof后面添加一个空格，输入如下命令：
+indent -bs /home/rootlocal/桌面/test.c
+
+执行上面的命令后，用户可以打开指定的源文件查看在sizeof后面是否都添加了一个空格。由于该命令的参数非常多，所以用户可以根据实际需要选择适合的参数进行使用即可。
+</code>
+</body></html>

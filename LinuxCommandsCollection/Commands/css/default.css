@@ -1,0 +1,52 @@
+﻿body{
+	overflow-x: hidden;
+	-ms-word-break: break-all;
+	word-break: break-all;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	font-family: 微软雅黑, Segoe WP;
+	background-color: #181818;
+	background-repeat: repeat;
+	color: #ecf0f1;
+	font-style: normal;
+	line-height: 150%;
+	-ms-scrollbar-face-color: #111;
+	scrollbar-face-color: #111;
+	-ms-scrollbar-highlight-color: #555;
+	scrollbar-highlight-color: #555;
+	-ms-scrollbar-shadow-color: #555;
+	scrollbar-shadow-color: #555;
+	-ms-scrollbar-3dlight-color: #111;
+	scrollbar-3dlight-color: #111;
+	-ms-scrollbar-arrow-color: #555;
+	scrollbar-arrow-color: #555;
+	-ms-scrollbar-track-color: #111;
+	scrollbar-track-color: #111;
+	-ms-scrollbar-darkshadow-color: #4c4c4c;
+	scrollbar-darkshadow-color: #4c4c4c;
+	font-size: 20px;
+	}
+	
+div.category {		
+	font-weight:bold;
+	font-family: Times, serif;
+	font-size: 24px;
+	color:#F26522;
+	background:#0c0c0c;	
+	line-height:120%;
+	}
+span.args {		
+font-size: 20px;
+color:#7bf204;
+line-height:120%;
+}
+
+code{
+	font-family: 微软雅黑, Segoe WP;
+	color: #ecf0f1;
+    line-height: 100%;
+	font-size: 20px;
+
+    white-space: pre-wrap;
+	word-wrap: break-word; /* Internet Explorer 5.5+ */
+	}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p><span class="args">newaliases </span>的功能传是将<span class="args"> /etc/aliases </span>转换成一个 <span class="args">sendmail </span>所能了解的数据库。</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">sendmail </span>会使用一个在 /etc/<span class="args">aliases </span>中的档案做使用者名称转换的动作。当 <span class="args">sendmail </span>收到一个要送给 <span class="args">xxx </span>的信时，它会依据   <span class="args">aliases</span>档的内容送给另一个使用者。这个功能可以创造一个只有在信件系统内才有效的使用者。例如 <span class="args">mailing list </span>就会用到这个功能，在   <span class="args">mailinglist </span>中，我们可能会创造一个叫 redlinux@link.ece.uci<span class="args">.edu </span>的 <span class="args">mailinglist</span>，但实际上并没有一个叫   <span class="args">redlinux </span>的使用者。实际 <span class="args">aliases </span>档的内容是将送给这个使用者的信都收给 <span class="args">mailing list </span>处理程序负责分送的工作。 <br />
+  　　
+  <br />
+  　　
+<span class="args">/etc/aliases </span>是一个文字模式的档案，<span class="args">sendmail </span>需要一个二进位格式的   /etc/aliases.db。<span class="args">newaliases </span>的功能传是将<span class="args"> /etc/aliases </span>转换成一个 <span class="args">sendmail </span>所能了解的数据库。</p>
+
+<div  class="category">参　　数：</div>
+<table border="0" cellspacing="0" cellpadding="0" width="80%">
+  <tbody>
+    <tr>
+      <td><p>没有任何参数。 </p>
+          <p>　　范例： <br />
+            　　 
+            # newaliases <br />
+            　　 
+            <br />
+            　　
+            下面命令会做相同的事， <br />
+            　　 
+            #   sendmail -bi <br />
+            　　 
+            <br />
+            　　
+            相关命令: <br />
+            　　
+            mail, mailq, newaliases,   sendmail </p></td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<div  class="category">示例：</div>
+<code>
+抱歉暂无示例。
+</code>
+</body></html>

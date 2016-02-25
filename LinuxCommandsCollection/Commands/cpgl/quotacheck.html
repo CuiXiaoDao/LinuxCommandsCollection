@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>检查磁盘的使用空间与限制。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>quotacheck [<span class="args">-adgRuv</span>][文件系统...]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p>执行<span class="args">quotacheck</span>指令，扫描挂入系统的分区，并在各分区的文件系统根目录下产生quota<span class="args">.user</span>和quota<span class="args">.group</span>文件，设置用户和群组的磁盘空间限制。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p> <span class="args">-a   </span>扫描在/etc/<span class="args">fstab</span>文件里，有加入<span class="args">quota</span>设置的分区。<br />
+    
+  <span class="args">-d</span>   详细显示指令执行过程，便于排错或了解程序执行的情形。<br />
+    
+  <span class="args">-g</span>   扫描磁盘空间时，计算每个群组识别码所占用的目录和文件数目。<br />
+    
+  <span class="args">-R</span>   排除根目录所在的分区。<br />
+    
+  <span class="args">-u</span>   扫描磁盘空间时，计算每个用户识别码所占用的目录和文件数目。<br />
+    
+<span class="args">-v</span>   显示指令执行过程。</p>
+<div  class="category">示例：</div>
+<code>
+将所有的在/etc/mtab内，含有quota支持的partition进行扫描：
+[root@linux ~]# quotacheck -avug
+quotacheck: Scanning /dev/hdb1 [/disk2] done
+quotacheck: Checked 3 directories and 4 files
+
+
+强制扫描已挂载的filesystem：
+[root@linux ~]# quotacheck -avug -m
+
+</code>
+</body></html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>显示每行从开头算起 <span class="args">num1 </span>到 <span class="args">num2 </span>的文字。</p>
+<div  class="category">语　　法：</div>
+<p>cut -cnum1-num2 filename</p>
+<div  class="category">补充说明：</div>
+<p>显示每行从开头算起 <span class="args">num1 </span>到 <span class="args">num2 </span>的文字。</p>
+
+<div  class="category">参　　数：</div>
+<p>范例：</p>
+<p>        shell&gt;&gt; cat example<br />
+          
+  test2<br />
+        
+this is   test1  <br />
+        
+shell  &gt;&gt; cut -c0-6 example       ## <span class="args">print </span>开头算起前 6   个字元<br />
+        
+test2  <br />
+        
+this i   <br />
+</p>
+<div  class="category">示例：</div>
+<code>
+设ml和m2是当前目录下的两个文件
+cat m1 （在屏幕上显示文件ml的内容）
+cat m1 m2 （同时显示文件ml和m2的内容）
+cat m1 m2 > file （将文件ml和m2合并后放入文件file中）
+</code>
+</body></html>

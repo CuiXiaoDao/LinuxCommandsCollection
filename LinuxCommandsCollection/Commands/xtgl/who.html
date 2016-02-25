@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>显示目前登入系统的用户信息。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>who [<span class="args">-Himqsw</span>][<span class="args">--help</span>][<span class="args">--version</span>][<span class="args">am</span> i][记录文件]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p>执行这项指令可得知目前有那些用户登入系统，单独执行<span class="args">who</span>指令会列出登入帐号，使用的 <br />
+  终端机，登入时间以及从何处登入或正在使用哪个<span class="args">X</span>显示器。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>　<span class="args">-H</span>或<span class="args">--heading 　</span>显示各栏位的标题信息列。 <br />
+  　
+  <span class="args">-i</span>或<span class="args">-u</span>或<span class="args">--idle 　</span>显示闲置时间，若该用户在前一分钟之内有进行任何动作，将标示成&quot;.&quot;号，如果该用户已超过24小时没有任何动作，则标示出&quot;old&quot;字符串。 <br />
+  　
+  <span class="args">-m</span> 　此参数的效果和指定&quot;am i&quot;字符串相同。 <br />
+  　
+  <span class="args">-q</span>或<span class="args">--count 　</span>只显示登入系统的帐号名称和总人数。 <br />
+  　
+  <span class="args">-s</span> 　此参数将忽略不予处理，仅负责解决<span class="args">who</span>指令其他版本的兼容性问题。 <br />
+  　
+  <span class="args">-w</span>或<span class="args">-T</span>或<span class="args">--mesg</span>或<span class="args">--message</span>或<span class="args">--writable 　</span>显示用户的信息状态栏。 <br />
+  　
+  <span class="args">--help</span> 　在线帮助。 <br />
+  　
+<span class="args">--version</span> 　显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+[root@localhost ~]# who
+root     pts/0        2013-08-19 15:04 (192.168.0.134)
+root     pts/1        2013-12-20 10:37 (180.111.155.40)
+
+[root@localhost ~]# who -q
+root root
+# users=2
+
+[root@localhost ~]# who -H
+NAME     LINE         time             COMMENT
+root     pts/0        2013-08-19 15:04 (192.168.0.134)
+root     pts/1        2013-12-20 10:37 (180.111.155.40)
+
+[root@localhost ~]# who -w
+root     + pts/0        2013-08-19 15:04 (192.168.0.134)
+root     + pts/1        2013-12-20 10:37 (180.111.155.40)
+</code>
+</body></html>

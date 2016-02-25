@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>显示网络状态。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>netstat [<span class="args">-acCeFghilMnNoprstuvVwx</span>][<span class="args">-A</span>&lt;网络类型&gt;][<span class="args">--ip</span>]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p>利用<span class="args">netstat</span>指令可让你得知整个<span class="args">Linux</span>系统的网络情况。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  <span class="args">-a</span>或<span class="args">--all   </span>显示所有连线中的Socket。<br />
+    
+  <span class="args">-A</span>&lt;网络类型&gt;或-<span class="args">-</span>&lt;网络类型&gt;   列出该网络类型连线中的相关地址。<br />
+    
+  <span class="args">-c</span>或<span class="args">--continuous   </span>持续列出网络状态。<br />
+    
+  <span class="args">-C</span>或<span class="args">--cache   </span>显示路由器配置的快取信息。<br />
+    
+  <span class="args">-e</span>或<span class="args">--extend   </span>显示网络其他相关信息。<br />
+    
+  <span class="args">-F</span>或<span class="args">--fib   </span>显示FIB。<br />
+    
+  <span class="args">-g</span>或<span class="args">--groups   </span>显示多重广播功能群组组员名单。<br />
+    
+  <span class="args">-h</span>或<span class="args">--help   </span>在线帮助。<br />
+    
+  <span class="args">-i</span>或<span class="args">--interfaces   </span>显示网络界面信息表单。<br />
+    
+  <span class="args">-l</span>或<span class="args">--listening   </span>显示监控中的服务器的Socket。<br />
+    
+  <span class="args">-M</span>或<span class="args">--masquerade   </span>显示伪装的网络连线。<br />
+    
+  <span class="args">-n</span>或<span class="args">--numeric   </span>直接使用<span class="args">IP</span>地址，而不通过域名服务器。<br />
+    
+  <span class="args">-N</span>或<span class="args">--netlink</span>或<span class="args">--symbolic   </span>显示网络硬件外围设备的符号连接名称。<br />
+    
+  <span class="args">-o</span>或<span class="args">--timers   </span>显示计时器。<br />
+    
+  <span class="args">-p</span>或<span class="args">--programs   </span>显示正在使用<span class="args">Socket</span>的程序识别码和程序名称。<br />
+    
+  <span class="args">-r</span>或<span class="args">--route   </span>显示Routing Table。<br />
+    
+  <span class="args">-s</span>或<span class="args">--statistice   </span>显示网络工作信息统计表。<br />
+    
+  <span class="args">-t</span>或<span class="args">--tcp   </span>显示<span class="args">TCP</span>传输协议的连线状况。<br />
+    
+  <span class="args">-u</span>或<span class="args">--udp   </span>显示<span class="args">UDP</span>传输协议的连线状况。<br />
+    
+  <span class="args">-v</span>或<span class="args">--verbose   </span>显示指令执行过程。<br />
+    
+  <span class="args">-V</span>或<span class="args">--version   </span>显示版本信息。<br />
+    
+  <span class="args">-w</span>或<span class="args">--raw   </span>显示<span class="args">RAW</span>传输协议的连线状况。<br />
+    
+  <span class="args">-x</span>或<span class="args">--unix   </span>此参数的效果和指定&quot;-A unix&quot;参数相同。<br />
+    
+<span class="args">--ip</span>或<span class="args">--inet   </span>此参数的效果和指定&quot;-A inet&quot;参数相同。</p>
+<div  class="category">示例：</div>
+<code>
+列出所有端口 (包括监听和未监听的)
+netstat -a     #列出所有端口
+netstat -at    #列出所有tcp端口
+netstat -au    #列出所有udp端口                             
+
+列出所有处于监听状态的 Sockets
+netstat -l        #只显示监听端口
+netstat -lt       #只列出所有监听 tcp 端口
+netstat -lu       #只列出所有监听 udp 端口
+netstat -lx       #只列出所有监听 UNIX 端口
+
+显示每个协议的统计信息
+netstat -s   显示所有端口的统计信息
+netstat -st   显示TCP端口的统计信息
+netstat -su   显示UDP端口的统计信息
+</code>
+</body></html>

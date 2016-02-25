@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>修改用户帐号。<br />
+  <br />
+</p>
+<div  class="category">语　　法：</div>
+<p>usermod [<span class="args">-LU</span>][<span class="args">-c</span> &lt;备注&gt;][<span class="args">-d</span> &lt;登入目录&gt;][<span class="args">-e</span> &lt;有效期限&gt;][<span class="args">-f</span> &lt;缓冲天数&gt;][<span class="args">-g</span> &lt;群组&gt;][<span class="args">-G</span> &lt;群组&gt;][<span class="args">-l</span> &lt;帐号名称&gt;][<span class="args">-s</span> &lt;shell&gt;][<span class="args">-u</span> &lt;uid&gt;][用户帐号]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">usermod</span>可用来修改用户帐号的各项设定。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>　<span class="args">-c</span>&lt;备注&gt; 　修改用户帐号的备注文字。 <br />
+  　
+  <span class="args">-d</span>登入目录&gt; 　修改用户登入时的目录。 <br />
+  　
+  <span class="args">-e</span>&lt;有效期限&gt; 　修改帐号的有效期限。 <br />
+  　
+  <span class="args">-f</span>&lt;缓冲天数&gt; 　修改在密码过期后多少天即关闭该帐号。 <br />
+  　
+  <span class="args">-g</span>&lt;群组&gt; 　修改用户所属的群组。 <br />
+  　
+  <span class="args">-G</span>&lt;群组&gt; 　修改用户所属的附加群组。 <br />
+  　
+  <span class="args">-l</span>&lt;帐号名称&gt; 　修改用户帐号名称。 <br />
+  　
+  <span class="args">-L</span> 　锁定用户密码，使密码无效。 <br />
+  　
+  <span class="args">-s</span>&lt;shell&gt; 　修改用户登入后所使用的shell。 <br />
+  　
+  <span class="args">-u</span>&lt;uid&gt; 　修改用户ID。 <br />
+  　
+<span class="args">-U</span> 　解除密码锁定。</p>
+<div  class="category">示例：</div>
+<code>
+将newuser2添加到组staff中：
+usermod -G staff newuser2
+
+修改newuser的用户名为newuser1：
+usermod -l newuser1 newuser
+
+锁定账号newuser1：
+usermod -L newuser1
+
+解除对newuser1的锁定：
+usermod -U newuser1
+</code>
+</body></html>

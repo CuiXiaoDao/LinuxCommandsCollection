@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>变更用户身份。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>su [<span class="args">-flmp</span>][<span class="args">--help</span>][<span class="args">--version</span>][-][<span class="args">-c</span> &lt;指令&gt;][<span class="args">-s</span> &lt;shell&gt;][用户帐号]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">su</span>可让用户暂时变更登入的身份。变更时须输入所要变更的用户帐号与密码。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>　<span class="args">-c</span>&lt;指令&gt;或<span class="args">--command=</span>&lt;指令&gt; 　执行完指定的指令后，即恢复原来的身份。 <br />
+  　
+  <span class="args">-f</span>或<span class="args">--fast 　</span>适用于<span class="args">csh</span>与<span class="args">tsch</span>，使<span class="args">shell</span>不用去读取启动文件。 <br />
+  　
+  -<span class="args">.-l</span>或<span class="args">--login 　</span>改变身份时，也同时变更工作目录，以及HOME,SHELL,USER,<span class="args">LOGNAME</span>。此外，也会变更<span class="args">PATH</span>变量。  <br />
+  　
+  -m,<span class="args">-p</span>或<span class="args">--preserve-environment 　</span>变更身份时，不要变更环境变量。 <br />
+  　
+  <span class="args">-s</span>&lt;shell&gt;或<span class="args">--shell=</span>&lt;shell&gt; 　指定要执行的shell。 <br />
+  　
+  <span class="args">--help</span> 　显示帮助。 <br />
+  　
+  <span class="args">--version</span> 　显示版本信息。 <br />
+  　
+[用户帐号] 　指定要变更的用户。若不指定此参数，则预设变更为root。</p>
+<div  class="category">示例：</div>
+<code>
+变更帐号为root并在执行ls指令后退出变回原使用者：
+su -c ls root
+
+变更帐号为root并传入-f选项给新执行的shell：
+su root -f
+
+变更帐号为test并改变工作目录至test的家目录：
+su -test
+</code>
+</body></html>

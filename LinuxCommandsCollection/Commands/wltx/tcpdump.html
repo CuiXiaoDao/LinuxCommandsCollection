@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>倾倒网络传输数据。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>tcpdump [<span class="args">-adeflnNOpqStvx</span>][<span class="args">-c</span>&lt;数据包数目&gt;][<span class="args">-dd</span>][<span class="args">-ddd</span>][<span class="args">-F</span>&lt;表达文件&gt;][<span class="args">-i</span>&lt;网络界面&gt;][<span class="args">-r</span>&lt;数据包文件&gt;][<span class="args">-s</span>&lt;数据包大小&gt;][<span class="args">-tt</span>][<span class="args">-T</span>&lt;数据包类型&gt;][<span class="args">-vv</span>][<span class="args">-w</span>&lt;数据包文件&gt;][输出数据栏位]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p>执行<span class="args">tcpdump</span>指令可列出经过指定网络界面的数据包文件头，在<span class="args">Linux</span>操作系统中，你必须是系统管理员。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+  <span class="args">-a</span>   尝试将网络和广播地址转换成名称。<br />
+  
+        <span class="args">-c</span>&lt;数据包数目&gt;   收到指定的数据包数目后，就停止进行倾倒操作。<br />
+  
+<span class="args">-d</span>   把编译过的数据包编码转换成可阅读的格式，并倾倒到标准输出。 <br />
+  
+<span class="args">-dd</span>   把编译过的数据包编码转换成<span class="args">C</span>语言的格式，并倾倒到标准输出。 <br />
+  
+<span class="args">-ddd</span>   把编译过的数据包编码转换成十进制数字的格式，并倾倒到标准输出。 <br />
+  
+<span class="args">-e</span>   在每列倾倒资料上显示连接层级的文件头。 <br />
+  
+<span class="args">-f</span>   用数字显示网际网络地址。 <br />
+  
+<span class="args">-F</span>        &lt;表达文件&gt;   指定内含表达方式的文件。<br />
+  
+<span class="args">-i</span>        &lt;网络界面&gt;   使用指定的网络截面送出数据包。<br />
+  
+<span class="args">-l</span>   使用标准输出列的缓冲区。 <br />
+  
+<span class="args">-n</span>   不把主机的网络地址转换成名字。 <br />
+  
+<span class="args">-N</span>   不列出域名。 <br />
+  
+<span class="args">-O</span>   不将数据包编码最佳化。 <br />
+  
+<span class="args">-p</span>   不让网络界面进入混杂模式。 <br />
+  
+<span class="args">-q</span>   快速输出，仅列出少数的传输协议信息。 <br />
+  
+<span class="args">-r</span>        &lt;数据包文件&gt;   从指定的文件读取数据包数据。<br />
+  
+<span class="args">-s</span>        &lt;数据包大小&gt;   设置每个数据包的大小。<br />
+  
+<span class="args">-S</span>   用绝对而非相对数值列出<span class="args">TCP</span>关联数。 <br />
+  
+<span class="args">-t</span>   在每列倾倒资料上不显示时间戳记。 <br />
+  
+<span class="args">-tt</span>   在每列倾倒资料上显示未经格式化的时间戳记。 <br />
+  
+<span class="args">-T</span>        &lt;数据包类型&gt;   强制将表达方式所指定的数据包转译成设置的数据包类型。<br />
+  
+<span class="args">-v</span>   详细显示指令执行过程。 <br />
+  
+<span class="args">-vv</span>   更详细显示指令执行过程。 <br />
+  
+<span class="args">-x</span>   用十六进制字码列出数据包资料。 <br />
+  
+<span class="args">-w</span>        &lt;数据包文件&gt;   把数据包数据写入指定的文件。
+<p>&nbsp;</p>
+<div  class="category">示例：</div>
+<code>
+直接启动tcpdump将监视第一个网络接口上所有流过的数据包
+tcpdump
+
+监视指定网络接口的数据包
+tcpdump -i eth1
+
+如果不指定网卡，默认tcpdump只会监视第一个网络接口，一般是eth0，下面的例子都没有指定网络接口。
+
+监视指定主机的数据包
+
+打印所有进入或离开sundown的数据包。
+tcpdump host sundown
+
+也可以指定ip,例如截获所有210.27.48.1 的主机收到的和发出的所有的数据包
+tcpdump host 210.27.48.1
+</code>
+</body></html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>显示或设置系统时间与日期。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>date [<span class="args">-d</span> &lt;字符串&gt;][<span class="args">-u</span>][+%H%I%K%l%M%P%r%s%S%T%X%Z%a%A%b%B%c%d%D%j%m%U%w%x%y%Y%n%t] 或date [<span class="args">-s</span> &lt;字符串&gt;][<span class="args">-u</span>][<span class="args">MMDDhhmmCCYYss</span>] 或 date [<span class="args">--help</span>][<span class="args">--version</span>]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p>第一种语法可用来显示系统日期或时间，以%为开头的参数为格式参数，可指定日期或时间的显示格式。第二种语法可用来设置系统日期与时间。只有管理员才有设置日期与时间的权限。若不加任何参数，<span class="args">data</span>会显示目前的日期与时间。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>　%<span class="args">H 　</span>小时(以00-23来表示)。 <br />
+  　
+  %<span class="args">I 　</span>小时(以01-12来表示)。 <br />
+  　
+  %<span class="args">K 　</span>小时(以0-23来表示)。 <br />
+  　
+  %<span class="args">l 　</span>小时(以0-12来表示)。 <br />
+  　
+  %<span class="args">M 　</span>分钟(以00-59来表示)。 <br />
+  　
+  %<span class="args">P 　AM</span>或PM。 <br />
+  　
+  %<span class="args">r 　</span>时间(含时分秒，小时以12小时AM/<span class="args">PM</span>来表示)。 <br />
+  　
+  %<span class="args">s 　</span>总秒数。起算时间为1970-01-01 00:00:00 UTC。 <br />
+  　
+  %<span class="args">S 　</span>秒(以本地的惯用法来表示)。 <br />
+  　
+  %<span class="args">T 　</span>时间(含时分秒，小时以24小时制来表示)。 <br />
+  　
+  %<span class="args">X 　</span>时间(以本地的惯用法来表示)。 <br />
+  　
+  %<span class="args">Z 　</span>市区。 <br />
+  　
+  %<span class="args">a 　</span>星期的缩写。 <br />
+  　
+  %<span class="args">A 　</span>星期的完整名称。 <br />
+  　
+  %<span class="args">b 　</span>月份英文名的缩写。 <br />
+  　
+  %<span class="args">B 　</span>月份的完整英文名称。 <br />
+  　
+  %<span class="args">c 　</span>日期与时间。只输入<span class="args">date</span>指令也会显示同样的结果。 <br />
+  　
+  %<span class="args">d 　</span>日期(以01-31来表示)。 <br />
+  　
+  %<span class="args">D 　</span>日期(含年月日)。 <br />
+  　
+  %<span class="args">j 　</span>该年中的第几天。 <br />
+  　
+  %<span class="args">m 　</span>月份(以01-12来表示)。 <br />
+  　
+  %<span class="args">U 　</span>该年中的周数。 <br />
+  　
+  %<span class="args">w 　</span>该周的天数，0代表周日，1代表周一，异词类推。 <br />
+  　
+  %<span class="args">x 　</span>日期(以本地的惯用法来表示)。 <br />
+  　
+  %<span class="args">y 　</span>年份(以00-99来表示)。 <br />
+  　
+  %<span class="args">Y 　</span>年份(以四位数来表示)。 <br />
+  　
+  %<span class="args">n 　</span>在显示时，插入新的一行。 <br />
+  　
+  %<span class="args">t 　</span>在显示时，插入tab。 <br />
+  　
+  <span class="args">MM</span> 　月份(必要)。 <br />
+  　
+  <span class="args">DD</span> 　日期(必要)。 <br />
+  　
+  <span class="args">hh</span> 　小时(必要)。 <br />
+  　
+  <span class="args">mm</span> 　分钟(必要)。 <br />
+  　
+  <span class="args">CC</span> 　年份的前两位数(选择性)。 <br />
+  　
+  <span class="args">YY</span> 　年份的后两位数(选择性)。 <br />
+  　
+  <span class="args">ss</span> 　秒(选择性)。 <br />
+  　
+  <span class="args">-d</span>&lt;字符串&gt; 　显示字符串所指的日期与时间。字符串前后必须加上双引号。 <br />
+  　
+  <span class="args">-s</span>&lt;字符串&gt; 　根据字符串来设置日期与时间。字符串前后必须加上双引号。 <br />
+  　
+  <span class="args">-u</span> 　显示GMT。 <br />
+  　
+  <span class="args">--help</span> 　在线帮助。 <br />
+  　
+<span class="args">--version</span> 　显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+格式化输出：
+date +"%Y-%m-%d"
+2009-12-07
+
+输出昨天日期：
+date -d "1 day ago" +"%Y-%m-%d"
+2012-11-19
+
+2秒后输出：
+date -d "2 second" +"%Y-%m-%d %H:%M.%S"
+2012-11-20 14:21.31
+
+传说中的 1234567890 秒：
+date -d "1970-01-01 1234567890 seconds" +"%Y-%m-%d %H:%m:%S"
+2009-02-13 23:02:30
+
+普通转格式：
+date -d "2009-12-12" +"%Y/%m/%d %H:%M.%S"
+2009/12/12 00:00.00
+
+apache格式转换：
+date -d "Dec 5, 2009 12:00:37 AM" +"%Y-%m-%d %H:%M.%S"
+2009-12-05 00:00.37
+
+格式转换后时间游走：
+date -d "Dec 5, 2009 12:00:37 AM 2 year ago" +"%Y-%m-%d %H:%M.%S"
+2007-12-05 00:00.37
+
+加减操作：
+date +%Y%m%d                   //显示前天年月日
+date -d "+1 day" +%Y%m%d       //显示前一天的日期
+date -d "-1 day" +%Y%m%d       //显示后一天的日期
+date -d "-1 month" +%Y%m%d     //显示上一月的日期
+date -d "+1 month" +%Y%m%d     //显示下一月的日期
+date -d "-1 year" +%Y%m%d      //显示前一年的日期
+date -d "+1 year" +%Y%m%d      //显示下一年的日期
+
+设定时间：
+date -s                        //设置当前时间，只有root权限才能设置，其他只能查看
+date -s 20120523               //设置成20120523，这样会把具体时间设置成空00:00:00
+date -s 01:01:01               //设置具体时间，不会对日期做更改
+date -s "01:01:01 2012-05-23"  //这样可以设置全部时间
+date -s "01:01:01 20120523"    //这样可以设置全部时间
+date -s "2012-05-23 01:01:01"  //这样可以设置全部时间
+date -s "20120523 01:01:01"    //这样可以设置全部时间
+
+有时需要检查一组命令花费的时间，举例：
+#!/bin/bash
+
+start=$(date +%s)
+nmap man.linuxde.net &> /dev/null
+
+end=$(date +%s)
+difference=$(( end - start ))
+echo $difference seconds.
+</code>
+</body></html>

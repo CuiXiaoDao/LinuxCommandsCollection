@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>用于在Linux下进行远程拷贝文件的命令。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>scp(选项)(参数)<br />
+</p>
+<div  class="category">补充说明：</div>
+<p> 类似的命令有<span class="args">cp</span>，不过<span class="args">cp</span>只是在本机进行拷贝不能跨服务器，而且<span class="args">scp</span>传输是加密的。可能会稍微影响一下速度。当你服务器硬盘变为只读read only system时，用<span class="args">scp</span>可以帮你把文件移出来。另外，<span class="args">scp</span>还非常不占资源，不会提高多少系统负荷，在这一点上，rsync就远远不及它了。虽然 <span class="args">rsync</span>比<span class="args">scp</span>会快一点，但当小文件众多的情况下，<span class="args">rsync</span>会导致硬盘I/O非常高，而<span class="args">scp</span>基本不影响系统正常使用。</p>
+
+<div  class="category">参　　数：</div>
+<p>指令参数 <br />
+  　
+  <span class="args">-d</span> 　删除备存文件中的成员文件。 <br />
+  　
+  <span class="args">-m</span> 　变更成员文件在备存文件中的次序。 <br />
+  　
+  <span class="args">-p</span> 　显示备存文件中的成员文件内容。 <br />
+  　
+  <span class="args">-q</span> 　将问家附加在备存文件末端。 <br />
+  　
+  <span class="args">-r</span> 　将文件插入备存文件中。 <br />
+  　
+  <span class="args">-t</span> 　显示备存文件中所包含的文件。 <br />
+  　
+  <span class="args">-x</span> 　自备存文件中取出成员文件。 <br />
+  选项参数 <br />
+  　
+  <span class="args">a</span>&lt;成员文件&gt; 　将文件插入备存文件中指定的成员文件之后。 <br />
+  　
+  <span class="args">b</span>&lt;成员文件&gt; 　将文件插入备存文件中指定的成员文件之前。 <br />
+  　
+  <span class="args">c</span> 　建立备存文件。 <br />
+  　
+  <span class="args">f</span> 　为避免过长的文件名不兼容于其他系统的<span class="args">ar</span>指令，因此可利用此参数，截掉要放入备存文件中过长的成员文件名称。 <br />
+  　
+  <span class="args">i</span>&lt;成员文件&gt; 　将问家插入备存文件中指定的成员文件之前。 <br />
+  　
+  <span class="args">o</span> 　保留备存文件中文件的日期。 <br />
+  　
+  <span class="args">s</span> 　若备存文件中包含了对象模式，可利用此参数建立备存文件的符号表。 <br />
+  　
+  <span class="args">S</span> 　不产生符号表。 <br />
+  　
+  <span class="args">u</span> 　只将日期较新文件插入备存文件中。 <br />
+  　
+  <span class="args">v</span> 　程序执行时显示详细的信息。 <br />
+  　
+<span class="args">V</span> 　显示版本信息。 </p>
+<div  class="category">示例：</div>
+<code>
+从远程复制到本地的scp命令与上面的命令雷同，只要将从本地复制到远程的命令后面2个参数互换顺序就行了。
+
+从远处复制文件到本地目录
+scp root@10.10.10.10:/opt/soft/nginx-0.5.38.tar.gz /opt/soft/
+
+从10.10.10.10机器上的/opt/soft/的目录中下载nginx-0.5.38.tar.gz 文件到本地/opt/soft/目录中。
+
+从远处复制到本地
+scp -r root@10.10.10.10:/opt/soft/mongodb /opt/soft/
+
+从10.10.10.10机器上的/opt/soft/中下载mongodb目录到本地的/opt/soft/目录来。
+
+上传本地文件到远程机器指定目录
+scp /opt/soft/nginx-0.5.38.tar.gz root@10.10.10.10:/opt/soft/scptest
+
+复制本地/opt/soft/目录下的文件nginx-0.5.38.tar.gz到远程机器10.10.10.10的opt/soft/scptest目录。
+
+上传本地目录到远程机器指定目录
+scp -r /opt/soft/mongodb root@10.10.10.10:/opt/soft/scptest
+
+上传本地目录/opt/soft/mongodb到远程机器10.10.10.10上/opt/soft/scptest的目录中去。
+</code>
+</body></html>

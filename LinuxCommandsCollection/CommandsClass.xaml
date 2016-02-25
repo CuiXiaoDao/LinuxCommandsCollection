@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="LinuxCommandsCollection.CommandsClass"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LinuxCommandsCollection"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+	DataContext="{Binding DefaultViewModel.Commands, RelativeSource={RelativeSource Self}}"
+    Background="{ThemeResource MyBackgroundColor}">
+	<Page.Transitions>
+		<TransitionCollection>
+			<NavigationThemeTransition>
+				<NavigationThemeTransition.DefaultNavigationTransitionInfo>
+					<ContinuumNavigationTransitionInfo/>
+				</NavigationThemeTransition.DefaultNavigationTransitionInfo>
+			</NavigationThemeTransition>
+		</TransitionCollection>
+	</Page.Transitions>
+	<Grid x:Name="LayoutRoot">
+
+		<Grid.ChildrenTransitions>
+			<TransitionCollection>
+				<EntranceThemeTransition/>
+			</TransitionCollection>
+		</Grid.ChildrenTransitions>
+
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition Height="8*"/>
+		</Grid.RowDefinitions>
+
+		<!-- Title Panel -->
+		<!--	Source="ms-appx:///Assets/cpgl.png"  设备管理	-->
+		<StackPanel Grid.Row="0" Orientation="Horizontal" Background="{ThemeResource MyDark}">
+			<Image x:Name="ClassIcon"  Margin="0,10,0,10"/>
+			<TextBlock x:Name="ClassNameTextBlock" VerticalAlignment="Center"
+					   FontSize="28"
+					   Style="{ThemeResource HeaderStyle}"></TextBlock>
+		</StackPanel>
+
+		<!--TODO: Content should be placed within the following grid-->
+		<Grid Grid.Row="1" x:Name="ContentRoot" Margin="18,6,16,0">
+			<ListView
+                    ItemsSource="{Binding}"
+                    IsItemClickEnabled="True"
+                    ItemClick="ItemView_ItemClick"                
+                    ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<TextBlock
+                            Text="{Binding CommandName}"
+                            Pivot.SlideInAnimationGroup="1"
+                            CommonNavigationTransitionInfo.IsStaggerElement="True"
+                            Style="{StaticResource ListViewItemTextBlockStyle}" />
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</Grid>
+	</Grid>
+</Page>

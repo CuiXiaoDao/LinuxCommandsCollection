@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>编辑文本文件。<br />
+  <br />
+</p>
+<div  class="category">语　　法：</div>
+<p>jed [<span class="args">-2n</span>][<span class="args">-batch</span>][<span class="args">-f</span>&lt;函数&gt;][<span class="args">-g</span>&lt;行数&gt;][<span class="args">-i</span>&lt;文件&gt;][<span class="args">-I</span>&lt;文件&gt;][<span class="args">-s</span>&lt;字符串&gt;][文件]<br />
+  <br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">Jed</span>是以<span class="args">Slang</span>所写成的程序，适合用来编辑程序原始代码。<br />
+  <br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p> -2   显示上下两个编辑区。<br />
+    
+  <span class="args">-batch</span>   以批处理模式来执行。<br />
+    
+  <span class="args">-f</span>&lt;函数&gt;   执行<span class="args">Slang</span>函数。<br />
+    
+  <span class="args">-g</span>&lt;行数&gt;   移到缓冲区中指定的行数。<br />
+    
+  <span class="args">-i</span>&lt;文件&gt;   将指定的文件载入缓冲区。<br />
+    
+  <span class="args">-i</span>&lt;文件&gt;   载入<span class="args">Slang</span>原始代码文件。<br />
+    
+  <span class="args">-n</span>   不要载入jed<span class="args">.rc</span>配置文件。<br />
+    
+<span class="args">-s</span>&lt;字符串&gt;   查找并移到指定的字符串。</p>
+<div  class="category">示例：</div>
+<code>
+以上下两个编辑区的方式，开启 mysource.c 原始代码文件。若要切换编辑区，可利用稍后介绍的命令，开启操作命令，开启功能表后，按 3 ，再按 2 ，即可切换编辑区：
+jed -2 mysource.c
+</code>
+</body></html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>远端登入。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>telnet [<span class="args">-8acdEfFKLrx</span>][<span class="args">-b</span>&lt;主机别名&gt;][<span class="args">-e</span>&lt;脱离字符&gt;][<span class="args">-k</span>&lt;域名&gt;][<span class="args">-l</span>&lt;用户名称&gt;][<span class="args">-n</span>&lt;记录文件&gt;][<span class="args">-S</span>&lt;服务类型&gt;][<span class="args">-X</span>&lt;认证形态&gt;][主机名称或<span class="args">IP</span>地址&lt;通信端口&gt;]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p>执行<span class="args">telnet</span>指令开启终端机阶段作业，并登入远端主机。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>
+  <span class="args">-8</span>   允许使用8位字符资料，包括输入与输出。<br />
+    
+  <span class="args">-a</span>   尝试自动登入远端系统。<br />
+    
+  <span class="args">-b</span>&lt;主机别名&gt;   使用别名指定远端主机名称。<br />
+    
+  <span class="args">-c</span>   不读取用户专属目录里的<span class="args">.telnetrc</span>文件。<br />
+    
+  <span class="args">-d</span>   启动排错模式。<br />
+    
+  <span class="args">-e</span>&lt;脱离字符&gt;   设置脱离字符。<br />
+    
+  <span class="args">-E</span>   滤除脱离字符。<br />
+    
+  <span class="args">-f</span>   此参数的效果和指定&quot;-F&quot;参数相同。<br />
+    
+  <span class="args">-F</span>   使用<span class="args">Kerberos V5</span>认证时，加上此参数可把本地主机的认证数据上传到远端主机。<br />
+    
+  <span class="args">-k</span>&lt;域名&gt;   使用<span class="args">Kerberos</span>认证时，加上此参数让远端主机采用指定的领域名，而非该主机的域名。<br />
+    
+  <span class="args">-K</span>   不自动登入远端主机。<br />
+    
+  <span class="args">-l</span>&lt;用户名称&gt;   指定要登入远端主机的用户名称。<br />
+    
+  <span class="args">-L</span>   允许输出8位字符资料。<br />
+    
+  <span class="args">-n</span>&lt;记录文件&gt;   指定文件记录相关信息。<br />
+    
+  <span class="args">-r</span>   使用类似<span class="args">rlogin</span>指令的用户界面。<br />
+    
+  <span class="args">-S</span>&lt;服务类型&gt;   设置<span class="args">telnet</span>连线所需的<span class="args">IP TOS</span>信息。<br />
+    
+  <span class="args">-x</span>   假设主机有支持数据加密的功能，就使用它。<br />
+    
+<span class="args">-X</span>&lt;认证形态&gt;   关闭指定的认证形态。</p>
+<div  class="category">示例：</div>
+<code>
+telnet 192.168.2.10
+Trying 192.168.2.10...
+Connected to 192.168.2.10 (192.168.2.10).
+Escape character is '^]'.
+
+    localhost (Linux release 2.6.18-274.18.1.el5 #1 SMP Thu Feb 9 12:45:44 EST 2012) (1)
+
+login: root
+Password: 
+Login incorrect
+</code>
+</body></html>

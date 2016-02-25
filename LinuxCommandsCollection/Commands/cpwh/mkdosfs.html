@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>建立<span class="args">MS-DOS</span>文件系统。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>mkdosfs [<span class="args">-cv</span>][<span class="args">-f</span> &lt;<span class="args">FAT</span>数目&gt;][<span class="args">-F</span> &lt;<span class="args">FAT</span>记录的单位&gt;][<span class="args">-i</span> &lt;磁盘序号&gt;][<span class="args">-l</span> &lt;文件名&gt;][<span class="args">-m</span> &lt;信息文件&gt;][<span class="args">-n</span> &lt;标签&gt;][<span class="args">-r</span> &lt;根目录项目数&gt;][<span class="args">-s</span> &lt;磁区数&gt;][设备名称][区块数]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">mkdosfs</span>可在<span class="args">Linux</span>下，将磁盘格式化为<span class="args">MS-DOS</span>文件系统的格式。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  <span class="args">-c</span>   检查是否有损坏的区块。<br />
+  
+        <span class="args">-f</span>&lt;<span class="args">FAT</span>数目&gt;   指定<span class="args">FAT</span>的数目，目前支持1与2两种选项。<br />
+  
+<span class="args">-F</span>        &lt;<span class="args">FAT</span>记录的单位&gt;   指定<span class="args">FAT</span>记录的单位为12或16位。<br />
+  
+<span class="args">-i</span>        &lt;磁盘序号&gt;   设置文件系统的磁盘序号。<br />
+  
+<span class="args">-l</span>        &lt;文件名&gt;   从指定的文件中，读取文件系统中损坏区块的信息。<br />
+  
+<span class="args">-m</span>        &lt;信息文件&gt;   若以次文件系统开机，而却因操作系统没有正常安装，则会显示选项中所指定的信息文件内容。<br />
+  
+<span class="args">-n</span>        &lt;标签&gt;   设置文件系统的磁盘标签名称。<br />
+  
+<span class="args">-r</span>        &lt;根目录项目数&gt;   设置根目录最多能记载项目数。<br />
+  
+<span class="args">-s</span>        &lt;磁区数&gt;   指定每个丛集所包含的磁区数。<br />
+  
+<span class="args">-v</span>   执行时显示详细的信息。 </p>
+<div  class="category">示例：</div>
+<code>
+将mtdblock4块设备格式化为 DOS 格式。
+mkdosfs -c  /dev/mtdblock4 
+</code>
+</body></html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>显示或设置网络设备。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>ifconfig [网络设备][<span class="args">down</span> up -allmulti -arp -promisc][<span class="args">add</span>&lt;地址&gt;][<span class="args">del</span>&lt;地址&gt;][&lt;<span class="args">hw</span>&lt;网络设备类型&gt;&lt;硬件地址&gt;][<span class="args">io</span>_addr&lt;I/<span class="args">O</span>地址&gt;][<span class="args">irq</span>&lt;<span class="args">IRQ</span>地址&gt;][<span class="args">media</span>&lt;网络媒介类型&gt;][<span class="args">mem</span>_<span class="args">start</span>&lt;内存地址&gt;][<span class="args">metric</span>&lt;数目&gt;][<span class="args">mtu</span>&lt;字节&gt;][<span class="args">netmask</span>&lt;子网掩码&gt;][<span class="args">tunnel</span>&lt;地址&gt;][<span class="args">-broadcast</span>&lt;地址&gt;][<span class="args">-pointopoint</span>&lt;地址&gt;][<span class="args">IP</span>地址]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">ifconfig</span>可设置网络设备的状态，或是显示目前的设置。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  <span class="args">add</span>&lt;地址&gt;   设置网络设备<span class="args">IPv6</span>的<span class="args">IP</span>地址。<br />
+    
+  <span class="args">del</span>&lt;地址&gt;   删除网络设备<span class="args">IPv6</span>的<span class="args">IP</span>地址。<br />
+    
+  <span class="args">down</span>   关闭指定的网络设备。<br />
+    
+  &lt;<span class="args">hw</span>&lt;网络设备类型&gt;&lt;硬件地址&gt;   设置网络设备的类型与硬件地址。<br />
+    
+  io_addr&lt;I/<span class="args">O</span>地址&gt;   设置网络设备的I/<span class="args">O</span>地址。<br />
+    
+  <span class="args">irq</span>&lt;<span class="args">IRQ</span>地址&gt;   设置网络设备的IRQ。<br />
+    
+  <span class="args">media</span>&lt;网络媒介类型&gt;   设置网络设备的媒介类型。<br />
+    
+  mem_<span class="args">start</span>&lt;内存地址&gt;   设置网络设备在主内存所占用的起始地址。<br />
+    
+  <span class="args">metric</span>&lt;数目&gt;   指定在计算数据包的转送次数时，所要加上的数目。<br />
+    
+  <span class="args">mtu</span>&lt;字节&gt;   设置网络设备的MTU。<br />
+    
+  <span class="args">netmask</span>&lt;子网掩码&gt;   设置网络设备的子网掩码。<br />
+    
+  <span class="args">tunnel</span>&lt;地址&gt;   建立<span class="args">IPv4</span>与<span class="args">IPv6</span>之间的隧道通信地址。<br />
+    
+  <span class="args">up</span>   启动指定的网络设备。<br />
+    
+  <span class="args">-broadcast</span>&lt;地址&gt;   将要送往指定地址的数据包当成广播数据包来处理。<br />
+    
+  <span class="args">-pointopoint</span>&lt;地址&gt;   与指定地址的网络设备建立直接连线，此模式具有保密功能。<br />
+    
+  <span class="args">-promisc</span>   关闭或启动指定网络设备的<span class="args">promiscuous</span>模式。<br />
+    
+  [<span class="args">IP</span>地址]   指定网络设备的<span class="args">IP</span>地址。<br />
+    
+[网络设备]   指定网络设备的名称。</p>
+<div  class="category">示例：</div>
+<code>
+实例1：显示网络设备信息（激活状态的）
+ifconfig
+
+实例2：启动关闭指定网卡
+ifconfig eth0 up
+ifconfig eth0 down
+ifconfig eth0 up 为启动网卡eth0 ；ifconfig eth0 down 为关闭网卡eth0。ssh登陆linux服务器操作要小心，关闭了就不能开启了，除非你有多网卡。
+</code>
+</body></html>

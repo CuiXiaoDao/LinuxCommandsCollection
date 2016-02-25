@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>连接文件并打印到标准输出设备上，<span class="args">cat</span>经常用来显示文件的内容</p>
+<div  class="category">语　　法：</div>
+<p>cat [<span class="args">-AbeEnstTuv</span>] [<span class="args">--help</span>] [<span class="args">--version</span>] fileName <br />
+</p>
+<div  class="category">补充说明：</div>
+<p>把档案串连接后传到基本输出（萤幕或加 &gt; <span class="args">fileName </span>到另一个档案）<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p><span class="args">-n </span>或 <span class="args">--number </span>由 1 开始对所有输出的行数编号<br />
+  <span class="args">-b </span>或 <span class="args">--number-nonblank </span>和 <span class="args">-n   </span>相似，只不过对于空白行不编号<br />
+  <span class="args">-s </span>或 <span class="args">--squeeze-blank </span>当遇到有连续两行以上的空白行，就代换为一行的空白行<br />
+  <span class="args">-v </span>或   <span class="args">--show-nonprinting</span><br />
+  范例：<br />
+  cat -n textfile1 &gt; <span class="args">textfile2 </span>把 <span class="args">textfile1   </span>的档案内容加上行号后输入 <span class="args">textfile2 </span>这个档案里<br />
+cat -b textfile1 textfile2 &gt;&gt; <span class="args">textfile3 </span>把   <span class="args">textfile1 </span>和 <span class="args">textfile2 </span>的档案内容加上行号（空白行不加）之后将内容附加到 <span class="args">textfile3 </span>里。</p>
+<div  class="category">示例：</div>
+<code>
+设ml和m2是当前目录下的两个文件
+cat m1 （在屏幕上显示文件ml的内容）
+cat m1 m2 （同时显示文件ml和m2的内容）
+cat m1 m2 > file （将文件ml和m2合并后放入文件file中）
+</code>
+</body></html>

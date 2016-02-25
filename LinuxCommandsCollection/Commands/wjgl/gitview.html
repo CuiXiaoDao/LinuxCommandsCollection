@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>Hex/<span class="args">ASCII</span>的看文件程序。</p>
+<div  class="category">语　　法：</div>
+<p>gitview [<span class="args">-bchilv</span>][文件]</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">gitview</span>指令可用于观看文件的内容，它会同时显示十六进制和<span class="args">ASCII</span>格式的字码。</p>
+
+<div  class="category">参　　数：</div>
+<p>   <span class="args">-b</span> 　单色模式，不使用<span class="args">ANSI</span>控制码显示彩色。 <br />
+    
+  <span class="args">-c</span> 　彩色模式，使用<span class="args">ANSI</span>控制码显示色彩。 <br />
+    
+  <span class="args">-h</span> 　在线帮助。 <br />
+    
+  <span class="args">-i</span> 　显示存放<span class="args">gitview</span>程序的所在位置。 <br />
+    
+  <span class="args">-l</span> 　不使用先前的显示字符。 <br />
+    
+<span class="args">-v</span> 　显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+
+使用指令gitview以彩色模式观看文件"/home/ rootlocal/demo.txt"中的内容，输入如下命令：. 
+$ gitview -c /home/rootlocal/demo.txt     #使用gitview指令观看指定文件内容 
+</code>
+</body></html>

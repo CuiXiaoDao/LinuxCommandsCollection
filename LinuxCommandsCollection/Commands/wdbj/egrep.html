@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>在文件内查找指定的字符串。<span class="args">egrep</span>执行效果如<span class="args">grep -E</span>，使用的语法及参数可参照<span class="args">grep</span>指令，与<span class="args">grep</span>不同点在于解读字符串的方法，<span class="args">egrep</span>是用<span class="args">extended regular expression</span>语法来解读，而<span class="args">grep</span>则用<span class="args">basic regular expression</span>语法，<span class="args">extended regular expression</span>比<span class="args">basic regular expression</span>有更完整的表达规范。</p>
+<div  class="category">语　　法：</div>
+<p>...</p>
+<div  class="category">补充说明：</div>
+<p>...</p>
+
+<div  class="category">参　　数：</div>
+<p>...</p>
+<div  class="category">示例：</div>
+<code>
+显示文件中符合条件的字符。例如，查找当前目录下所有文件中包含字符串"Linux"的文件，可以使用如下命令：
+egrep Linux *
+
+结果如下所示：
+#以下五行为 testfile 中包含Linux字符的行
+testfile:hello Linux!
+testfile:Linux is a free Unix-type operating system.
+testfile:This is a Linux testfile!
+testfile:Linux
+testfile:Linux
+
+#以下两行为testfile1中含Linux字符的行
+testfile1:helLinux!
+testfile1:This a Linux testfile!
+
+#以下两行为 testfile_2 中包含Linux字符的行
+testfile_2:Linux is a free unix-type opterating system
+testfile_2:Linux test
+</code>
+</body></html>

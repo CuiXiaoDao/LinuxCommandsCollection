@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>在指定的时间关闭<span class="args">FTP</span>服务器。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>ftpshut [<span class="args">-d</span>&lt;分钟&gt;][<span class="args">-l</span>&lt;分钟&gt;][关闭时间][&quot;警告信息&quot;]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p>本指令提供系统管理者在设置的时间关闭<span class="args">FTP</span>服务器，且能在关闭之前发出警告信息通知用户。关闭时间若设置后为&quot;none&quot;，则会马上关闭服务器。如果采用&quot;+30&quot;的方式来设置表示服务器在30分钟之后关闭。依次类推，假设使用&quot;1130&quot;的格式则代表服务器会在每日的11时30分关闭，时间格式为24小时制。<span class="args">FTP</span>服务器关闭后，在/<span class="args">etc</span>目录下会产生一个名称为<span class="args">shutmsg</span>的文件，把它删除后即可再度启动<span class="args">FTP</span>服务器的功能。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>   <span class="args">-d</span>&lt;分钟&gt;   切断所有<span class="args">FTP</span>连线时间。<br />
+    
+<span class="args">-l</span>&lt;分钟&gt;   停止接受<span class="args">FTP</span>登入的时间。</p>
+<div  class="category">示例：</div>
+<code>
+抱歉暂无示例。
+</code>
+</body></html>

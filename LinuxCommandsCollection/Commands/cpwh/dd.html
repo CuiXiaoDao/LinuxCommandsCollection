@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>读取，转换并输出数据。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>dd [<span class="args">bs=</span>&lt;字节数&gt;][<span class="args">cbs=</span>&lt;字节数&gt;][<span class="args">conv=</span>&lt;关键字&gt;][<span class="args">count=</span>&lt;区块数&gt;][<span class="args">ibs=</span>&lt;字节数&gt;][<span class="args">if=</span>&lt;文件&gt;][<span class="args">obs=</span>&lt;字节数&gt;][<span class="args">of=</span>&lt;文件&gt;][<span class="args">seek=</span>&lt;区块数&gt;][<span class="args">skip=</span>&lt;区块数&gt;][<span class="args">--help</span>][<span class="args">--version</span>]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">dd</span>可从标准输入或文件读取数据，依指定的格式来转换数据，再输出到文件，设备或标准输出。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  <span class="args">bs=</span>&lt;字节数&gt;   将ibs( 输入)与obs(输出)设成指定的字节数。<br />
+    
+  <span class="args">cbs=</span>&lt;字节数&gt;   转换时，每次只转换指定的字节数。<br />
+    
+  <span class="args">conv=</span>&lt;关键字&gt;   指定文件转换的方式。<br />
+    
+  <span class="args">count=</span>&lt;区块数&gt;   仅读取指定的区块数。<br />
+    
+  <span class="args">ibs=</span>&lt;字节数&gt;   每次读取的字节数。<br />
+    
+  <span class="args">if=</span>&lt;文件&gt;   从文件读取。<br />
+    
+  <span class="args">obs=</span>&lt;字节数&gt;   每次输出的字节数。<br />
+    
+  <span class="args">of=</span>&lt;文件&gt;   输出到文件。<br />
+    
+  <span class="args">seek=</span>&lt;区块数&gt;   一开始输出时，跳过指定的区块数。<br />
+    
+  <span class="args">skip=</span>&lt;区块数&gt;   一开始读取时，跳过指定的区块数。<br />
+    
+  <span class="args">--help</span>   帮助。<br />
+    
+<span class="args">--version</span>   显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+要把一张软盘的內容复制到另一张软盘上，先将源盘内容制作成img映象文件，然后插入目标空白软盘，将该映象文件写到目标盘上去。 
+
+先插入源盘：
+dd if=/dev/fd0 of=./temp/temp.img
+2880+0 records in
+2880+0 records out
+
+生成的img文件可以使用WinImage这一类的工具打开并查看。
+
+再插入目标盘：
+dd if=./temp/temp.img of=/dev/fd0
+2880+0 records in
+2880+0 records out
+
+文件复制功能，将file1复制到file2。 
+dd if=file1 of=file2
+
+</code>
+</body></html>

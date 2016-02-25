@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>setleds </p>
+<div  class="category">语　　法：</div>
+<p>setleds [<span class="args">-v</span>] [<span class="args">-L</span>] [<span class="args">-D</span>] [<span class="args">-F</span>] [{+|-}num] [{+|-}caps] [{+|-}scroll]</p>
+<div  class="category">补充说明：</div>
+<p>用来设定键盘上方三个 <span class="args">LED </span>的状态。在 <span class="args">Linux </span>中，每一个虚拟主控台都有独立的设定。 <br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>　-F <br />
+  　　
+  预设的选项，设定虚拟主控台的状态。 <br />
+  　　
+  -D <br />
+  　　
+  除了改变虚拟主控台的状态外，还改变预设的状态。 <br />
+  　　
+  -L <br />
+  　　
+  不改变虚拟主控台的状态，但直接改变 <span class="args">LED </span>显示的状态。这会使得 <span class="args">LDE </span>显示和目前虚拟主控台的状态不符合。我们可以在稍后用 <span class="args">-L </span>且不含其它选项的   <span class="args">setleds </span>命令回复正常状态。 <br />
+  　　
+  -num +num <br />
+  　　
+  将数字键打开或关闭。 <br />
+  　　
+  -caps +caps <br />
+  　　
+  把大小写键打开或关闭。 <br />
+  　　
+  -scroll +scroll <br />
+  　　
+  把选项键打开或关闭。 <br />
+  　　
+  范例： <br />
+  　　
+  将数字键打开，其馀二个灯关闭。 <br />
+  　　 
+  # setleds +num -caps -scroll <br />
+</p>
+<div  class="category">示例：</div>
+<code>
+将数字键打开，其馀二个灯关闭。 
+ # setleds +num -caps -scroll 
+ 在ctrl+Alt+F2  终端下,可执行.
+</code>
+</body></html>

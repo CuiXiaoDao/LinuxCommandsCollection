@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>改变文件或目录时间。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>touch [<span class="args">-acfm</span>][<span class="args">-d</span> &lt;日期时间&gt;][<span class="args">-r</span> &lt;参考文件或目录&gt;][<span class="args">-t</span> &lt;日期时间&gt;][<span class="args">--help</span>]　　 [<span class="args">--version</span>][文件或目录...] 或 touch [<span class="args">-acfm</span>][<span class="args">--help</span>][<span class="args">--version</span>][日期时间][文件或目录...]</p>
+<div  class="category">补充说明：</div>
+<p>使用<span class="args">touch</span>指令可更改文件或目录的日期时间，包括存取时间和更改时间。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>　 <span class="args">-a</span>或--time=<span class="args">atime</span>或--time=<span class="args">access</span>或--time=<span class="args">use 　</span>只更改存取时间。 <br />
+  　
+  <span class="args">-c</span>或<span class="args">--no-create 　</span>不建立任何文件。 <br />
+  　
+  <span class="args">-d</span>&lt;时间日期&gt; 　使用指定的日期时间，而非现在的时间。 <br />
+  　
+  <span class="args">-f</span> 　此参数将忽略不予处理，仅负责解决<span class="args">BSD</span>版本<span class="args">touch</span>指令的兼容性问题。 <br />
+  　
+  <span class="args">-m</span>或--time=<span class="args">mtime</span>或--time=<span class="args">modify 　</span>只更改变动时间。 <br />
+  　
+  <span class="args">-r</span>&lt;参考文件或目录&gt; 　把指定文件或目录的日期时间，统统设成和参考文件或目录的日期时间相同。 <br />
+  　
+  <span class="args">-t</span>&lt;日期时间&gt; 　使用指定的日期时间，而非现在的时间。 <br />
+  　
+  <span class="args">--help</span> 　在线帮助。 <br />
+  　
+<span class="args">--version</span> 　显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+touch ex2
+
+在当前目录下建立一个空文件ex2，然后，利用ls -l命令可以发现文件ex2的大小为0，表示它是空文件。
+</code>
+</body></html>

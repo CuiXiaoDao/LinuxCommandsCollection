@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>关闭系统交换区(swap area)。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>swapoff [设备]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">swapoff</span>实际上为<span class="args">swapon</span>的符号连接，可用来关闭系统的交换区。</p>
+
+<div  class="category">参　　数：</div>
+<p>...</p>
+<div  class="category">示例：</div>
+<code>
+sfdisk -l //显示分区信息
+swapoff /dev/sda2 // 关闭交换分区
+</code>
+</body></html>

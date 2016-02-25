@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>解压文件。
+</p>
+<div  class="category">语　　法：</div>
+<p>gunzip [<span class="args">-acfhlLnNqrtvV</span>][<span class="args">-s</span> <压缩字尾字符串>][文件...] 或 gunzip [<span class="args">-acfhlLnNqrtvV</span>][<span class="args">-s</span> <压缩字尾字符串>][目录]
+<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">gunzip</span>是个使用广泛的解压缩程序，它用于解开被<span class="args">gzip</span>压缩过的文件，这些压缩文件预设最后的扩展名为&quot;.gz&quot;。事实上<span class="args">gunzip</span>就是<span class="args">gzip</span>的硬连接，因此不论是压缩或解压缩，都可通过<span class="args">gzip</span>指令单独完成。<br />
+</p>
+
+<div  class="category">参　数：</div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+    <tr>
+      <td>　 <span class="args">-a</span>或<span class="args">--ascii 　</span>使用<span class="args">ASCII</span>文字模式。 <br />
+        　
+        <span class="args">-c</span>或<span class="args">--stdout</span>或<span class="args">--to-stdout 　</span>把解压后的文件输出到标准输出设备。 <br />
+        　
+        <span class="args">-f</span>或<span class="args">-force 　</span>强行解开压缩文件，不理会文件名称或硬连接是否存在以及该文件是否为符号连接。 <br />
+        　
+        <span class="args">-h</span>或<span class="args">--help 　</span>在线帮助。 <br />
+        　
+        <span class="args">-l</span>或<span class="args">--list 　</span>列出压缩文件的相关信息。 <br />
+        　
+        <span class="args">-L</span>或<span class="args">--license 　</span>显示版本与版权信息。 <br />
+        　
+        <span class="args">-n</span>或<span class="args">--no-name 　</span>解压缩时，若压缩文件内含有远来的文件名称及时间戳记，则将其忽略不予处理。 <br />
+        　
+        <span class="args">-N</span>或<span class="args">--name 　</span>解压缩时，若压缩文件内含有原来的文件名称及时间戳记，则将其回存到解开的文件上。 <br />
+        　
+        <span class="args">-q</span>或<span class="args">--quiet 　</span>不显示警告信息。 <br />
+        　
+        <span class="args">-r</span>或<span class="args">--recursive 　</span>递归处理，将指定目录下的所有文件及子目录一并处理。 <br />
+        　
+        <span class="args">-S</span>&lt;压缩字尾字符串&gt;或<span class="args">--suffix</span>&lt;压缩字尾字符串&gt; 　更改压缩字尾字符串。 <br />
+        　
+        <span class="args">-t</span>或<span class="args">--test 　</span>测试压缩文件是否正确无误。 <br />
+        　
+        <span class="args">-v</span>或<span class="args">--verbose 　</span>显示指令执行过程。 <br />
+        　
+      <span class="args">-V</span>或<span class="args">--version </span>显示版本信息。</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<div  class="category">示例：</div>
+<code>
+首先将/etc目录下的所有文件以及子目录进行压缩，备份压缩包etc.zip到/opt目录，然后对etc.zip文件进行gzip压缩，设置gzip的压缩级别为9。
+zip –r /opt/etc.zip /etc
+gzip -9v /opt/etc.zip
+
+查看上述etc.zip.gz文件的压缩信息。
+gzip -l /opt/etc.zip.gz
+compressed        uncompressed ratio uncompressed_name
+11938745            12767265   6.5% /opt/etc.zip
+
+解压上述etc.zip.gz文件到当前目录。
+[root@mylinux ~]#gzip –d /opt/etc.zip.gz 
+或者执行
+[root@mylinux ~]#gunzip /opt/etc.zip.gz
+
+</code>
+</body></html>

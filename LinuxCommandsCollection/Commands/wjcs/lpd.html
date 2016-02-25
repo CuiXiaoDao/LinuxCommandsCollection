@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>所有使用者都可以使用</p>
+<div  class="category">语　　法：</div>
+<p>lpd [<span class="args">-l</span>] [#port]</p>
+<div  class="category">补充说明：</div>
+<p>   　　
+  <span class="args">lpd </span>是一个常驻的打印机管理程序，它会根据 /etc/<span class="args">printcap   </span>的内容来管理本地或远端的打印机。/etc/<span class="args">printcap </span>中定义的每一个打印机必须在 /var/<span class="args">lpd </span>中有一个相对应的目录，目录中以 <span class="args">cf   </span>开头的档案表示一个等待送到适当装置的印表工作。这个档案通常是由 <span class="args">lpr </span>所产生。 <br />
+  　　
+  <br />
+  　　
+<span class="args">lpr </span>和 <span class="args">lpd   </span>组成了一个可以离线工作的系统，当你使用 <span class="args">lpr </span>时，打印机不需要能立即可用，甚至不用存在。<span class="args">lpd   </span>会自动监视打印机的状况，当打印机上线后，便立即将档案送交处理。这个得所有的应用程序不必等待打印机完成前一工作。</p>
+
+<div  class="category">参　　数：</div>
+<p>　　 -l: 将一些除错讯息显示在标准输出上。 <br />
+  　　
+  #port: 一般而言，<span class="args">lpd </span>会使用 <span class="args">getservbyname </span>取得适当的 TCP/<span class="args">IP   port</span>，你可以使用这个参数强迫 <span class="args">lpd </span>使用指定的 port。 <br />
+  　　
+  <br />
+  　　
+  范例： <br />
+  　　
+这个程序通常是由   /etc/rc<span class="args">.d </span>中的程序在系统启始阶段执行。</p>
+<div  class="category">示例：</div>
+<code>
+抱歉暂无示例。
+</code>
+</body></html>

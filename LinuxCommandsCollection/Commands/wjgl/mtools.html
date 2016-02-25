@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>显示<span class="args">mtools</span>支持的指令。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>mtools</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">mtools</span>为<span class="args">MS-DOS</span>文件系统的工具程序，可模拟许多<span class="args">MS-DOS</span>的指令。这些指令都是<span class="args">mtools</span>的符号连接，因此会有一些共同的特性。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>   <span class="args">-a</span> 　长文件名重复时自动更改目标文件的长文件名。 <br />
+    
+  <span class="args">-A</span> 　短文件名重复但长文件名不同时自动更改目标文件的短文件名。 <br />
+    
+  <span class="args">-o</span> 　长文件名重复时，将目标文件覆盖现有的文件。 <br />
+    
+  <span class="args">-O</span> 　短文件名重复但长文件名不同时，将目标文件覆盖现有的文件。 <br />
+    
+  <span class="args">-r</span> 　长文件名重复时，要求用户更改目标文件的长文件名。 <br />
+    
+  <span class="args">-R</span> 　短文件名重复但长文件名不同时，要求用户更改目标文件的短文件名。 <br />
+    
+  <span class="args">-s</span> 　长文件名重复时，则不处理该目标文件。 <br />
+    
+  <span class="args">-S</span> 　短文件名重复但长文件名不同时，则不处理该目标文件。 <br />
+    
+  <span class="args">-v</span> 　执行时显示详细的说明。 <br />
+    
+<span class="args">-V</span> 　显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+使用mtools命令显示其支持的所有的指令，输入如下命令：
+[root@localhost ~]# mtools     #显示所有支持的指令名称
+Supported commands:
+mattrib, mbadblocks, mcat, mcd, mclasserase, mcopy, mdel, mdeltree
+mdir, mdoctorfat, mdu, mformat, minfo, mlabel, mmd, mmount
+mpartition, mrd, mread, mmove, mren, mshowfat, mtoolstest, mtype
+mwrite, mzip
+
+
+如上所示，其显示的所有命令均为mtools工具所支持的。
+</code>
+</body></html>

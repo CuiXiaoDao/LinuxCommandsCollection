@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p><span class="args">ext2</span>文件系统编辑程序。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>ext2ed</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">ext2ed</span>可直接处理硬盘分区上的数据，这指令只有<span class="args">Red Hat Linux</span>才提供。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  一般指令<br />
+    
+  setdevice[设备名称]   指定要处理的设备。<br />
+    
+  <span class="args">disablewrite</span>   将<span class="args">ext2ed</span>设为只读的状态。<br />
+    
+  <span class="args">enablewrite</span>   将<span class="args">ext2ed</span>设为可读写的状态。<br />
+    
+  help[指令]   显示个别指令的帮助。<br />
+    
+  <span class="args">next</span>   移至下一个单位，单位会依目前所在的模式而异。<br />
+    
+  <span class="args">prev</span>   移至前一个单位，单位会依目前所在的模式而异。<br />
+    
+  <span class="args">pgup</span>   移至下一页。<br />
+    
+  <span class="args">pgdn</span>   移至上一页。<br />
+    
+  <span class="args">set</span>   修改目前的数据，参数会依目前所在的模式而异。<br />
+    
+  <span class="args">writedata</span>   在执行此指令之后，才会实际修改分区中的数据。<br />
+  <br />
+    
+  <span class="args">ext2</span>进入3种模式的指令<br />
+    
+  <span class="args">super</span>   进入main superblock,即<span class="args">Superblock</span>模式。<br />
+    
+  <span class="args">group</span>&lt;编号&gt;   进入指定的<span class="args">group</span>，即<span class="args">Group</span>模式。<br />
+    
+  <span class="args">cd</span>&lt;目录或文件&gt;   在<span class="args">inode</span>模式下，进入指定的目录或文件，即<span class="args">Inode</span>模式。<br />
+  <br />
+    
+  <span class="args">Superblock</span>模式<br />
+    
+  <span class="args">gocopy</span>&lt;备份编号&gt;   进入指定的<span class="args">superblock</span>备份。<br />
+    
+  <span class="args">setactivecopy</span>   将目前所在的<span class="args">superblock</span>，复制到main superblock。<br />
+  <br />
+    
+  <span class="args">Group</span>模式<br />
+    
+  <span class="args">blockbitmap</span>   显示目前<span class="args">groupo</span>的区块图。<br />
+    
+  <span class="args">inode</span>   进入目前<span class="args">group</span>的第一个inode。<br />
+    
+  <span class="args">inodebitmap</span>   显示目前<span class="args">group</span>的<span class="args">inode</span>二进制码。<br />
+  <br />
+    
+  <span class="args">Inode</span>模式<br />
+    
+  <span class="args">dir</span>   进入目录模式。<br />
+    
+<span class="args">file</span>   进入文件模式。</p>
+<div  class="category">示例：</div>
+<code>
+抱歉暂无示例。
+</code>
+</body></html>

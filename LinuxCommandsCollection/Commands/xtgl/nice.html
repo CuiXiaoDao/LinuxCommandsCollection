@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>设置优先权。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>nice [<span class="args">-n</span> &lt;优先等级&gt;][<span class="args">--help</span>][<span class="args">--version</span>][执行指令]<br />
+  <br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">nice</span>指令可以改变程序执行的优先权等级。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>&lt;/b <br />
+  　
+  <span class="args">-n</span>&lt;优先等级&gt;或<span class="args">-</span>&lt;优先等级&gt;或<span class="args">--adjustment=</span>&lt;优先等级&gt; 　设置欲执行的指令的优先权等级。等级的范围从-20－19，其中-20最高，19最低，只有系统管理者可以设置负数的等级。 <br />
+  　
+  <span class="args">--help</span> 　在线帮助。 <br />
+  　
+<span class="args">--version</span> 　显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+新建一个进程并设置优先级，将当前目录下的documents目录打包，但不希望tar占用太多CPU：
+nice -19 tar zcf pack.tar.gz documents
+
+方法非常简单，即在原命令前加上nice -19。很多人可能有疑问了，最低优先级不是19么？那是因为这个“-19”中的“-”仅表示参数前缀；所以，如果希望将当前目录下的documents目录打包，并且赋予tar进程最高的优先级：
+nice --19 tar zcf pack.tar.gz documents
+</code>
+</body></html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>检查磁盘空间限制的状态。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>repquota [<span class="args">-aguv</span>][文件系统...]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p>执行<span class="args">repquota</span>指令，可报告磁盘空间限制的状况，清楚得知每位用户或每个群组已使用多少空间。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  <span class="args">-a</span>   列出在/etc/<span class="args">fstab</span>文件里，有加入<span class="args">quota</span>设置的分区的使用状况，包括用户和群组。<br />
+    
+  <span class="args">-g</span>   列出所有群组的磁盘空间限制。<br />
+    
+  <span class="args">-u</span>   列出所有用户的磁盘空间限制。<br />
+    
+<span class="args">-v</span>   显示该用户或群组的所有空间限制。</p>
+<div  class="category">示例：</div>
+<code>
+显示所有文件系统的磁盘使用情况
+repquota -a
+
+</code>
+</body></html>

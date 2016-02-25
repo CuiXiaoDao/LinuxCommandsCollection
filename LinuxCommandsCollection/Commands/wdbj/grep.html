@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>查找文件里符合条件的字符串。<br />
+  <br />
+</p>
+<div  class="category">语　　法：</div>
+<p>fold [<span class="args">-bs</span>][<span class="args">-w</span>&lt;每列行数&gt;][<span class="args">--help</span>][<span class="args">--version</span>][文件...]<br />
+  <br />
+</p>
+<div  class="category">补充说明：</div>
+<p>grep [<span class="args">-abcEFGhHilLnqrsvVwxy</span>][<span class="args">-A</span>&lt;显示列数&gt;][<span class="args">-B</span>&lt;显示列数&gt;][<span class="args">-C</span>&lt;显示列数&gt;][<span class="args">-d</span>&lt;进行动作&gt;][<span class="args">-e</span>&lt;范本样式&gt;][<span class="args">-f</span>&lt;范本文件&gt;][<span class="args">--help</span>][范本样式][文件或目录...]<br />
+  <br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p> <span class="args">-a</span>或<span class="args">--text   </span>不要忽略二进制的数据。<br />
+    
+  <span class="args">-A</span>&lt;显示列数&gt;或<span class="args">--after-context=</span>&lt;显示列数&gt;   除了显示符合范本样式的那一列之外，并显示该列之后的内容。<br />
+    
+  <span class="args">-b</span>或<span class="args">--byte-offset   </span>在显示符合范本样式的那一列之前，标示出该列第一个字符的位编号。<br />
+    
+  <span class="args">-B</span>&lt;显示列数&gt;或<span class="args">--before-context=</span>&lt;显示列数&gt;   除了显示符合范本样式的那一列之外，并显示该列之前的内容。<br />
+    
+  <span class="args">-c</span>或<span class="args">--count   </span>计算符合范本样式的列数。<br />
+    
+  <span class="args">-C</span>&lt;显示列数&gt;或<span class="args">--context=</span>&lt;显示列数&gt;或<span class="args">-</span>&lt;显示列数&gt;   除了显示符合范本样式的那一列之外，并显示该列之前后的内容。<br />
+    
+  <span class="args">-d</span>&lt;进行动作&gt;或<span class="args">--directories=</span>&lt;进行动作&gt;   当指定要查找的是目录而非文件时，必须使用这项参数，否则<span class="args">grep</span>指令将回报信息并停止动作。<br />
+    
+  <span class="args">-e</span>&lt;范本样式&gt;或<span class="args">--regexp=</span>&lt;范本样式&gt;   指定字符串做为查找文件内容的范本样式。<br />
+    
+  <span class="args">-E</span>或<span class="args">--extended-regexp   </span>将范本样式为延伸的普通表示法来使用。<br />
+    
+  <span class="args">-f</span>&lt;范本文件&gt;或<span class="args">--file=</span>&lt;范本文件&gt;   指定范本文件，其内容含有一个或多个范本样式，让<span class="args">grep</span>查找符合范本条件的文件内容，格式为每列一个范本样式。<br />
+    
+  <span class="args">-F</span>或<span class="args">--fixed-regexp   </span>将范本样式视为固定字符串的列表。<br />
+    
+  <span class="args">-G</span>或<span class="args">--basic-regexp   </span>将范本样式视为普通的表示法来使用。<br />
+    
+  <span class="args">-h</span>或<span class="args">--no-filename   </span>在显示符合范本样式的那一列之前，不标示该列所属的文件名称。<br />
+    
+  <span class="args">-H</span>或<span class="args">--with-filename   </span>在显示符合范本样式的那一列之前，表示该列所属的文件名称。<br />
+    
+  <span class="args">-i</span>或<span class="args">--ignore-case   </span>忽略字符大小写的差别。<br />
+    
+  <span class="args">-l</span>或<span class="args">--file-with-matches</span>   列出文件内容符合指定的范本样式的文件名称。<br />
+    
+  <span class="args">-L</span>或<span class="args">--files-without-match</span>   列出文件内容不符合指定的范本样式的文件名称。<br />
+    
+  <span class="args">-n</span>或<span class="args">--line-number   </span>在显示符合范本样式的那一列之前，标示出该列的列数编号。<br />
+    
+  <span class="args">-q</span>或<span class="args">--quiet</span>或<span class="args">--silent   </span>不显示任何信息。<br />
+    
+  <span class="args">-r</span>或<span class="args">--recursive   </span>此参数的效果和指定“-d recurse”参数相同。<br />
+    
+  <span class="args">-s</span>或<span class="args">--no-messages   </span>不显示错误信息。<br />
+    
+  <span class="args">-v</span>或<span class="args">--revert-match   </span>反转查找。<br />
+    
+  <span class="args">-V</span>或<span class="args">--version   </span>显示版本信息。<br />
+    
+  <span class="args">-w</span>或<span class="args">--word-regexp   </span>只显示全字符合的列。<br />
+    
+  <span class="args">-x</span>或<span class="args">--line-regexp   </span>只显示全列符合的列。<br />
+    
+  <span class="args">-y</span>   此参数的效果和指定“-i”参数相同。<br />
+    
+<span class="args">--help</span>   在线帮助。</p>
+<div  class="category">示例：</div>
+<code>
+在文件中搜索一个单词，命令会返回一个包含“match_pattern”的文本行：
+grep match_pattern file_name
+grep "match_pattern" file_name
+
+
+在多个文件中查找：
+grep "match_pattern" file_1 file_2 file_3 ...
+
+
+输出除之外的所有行 -v 选项：
+grep -v "match_pattern" file_name
+
+
+标记匹配颜色 --color=auto 选项：
+grep "match_pattern" file_name --color=auto
+
+
+使用正则表达式 -E 选项：
+grep -E "[1-9]+"
+或
+egrep "[1-9]+"
+
+
+只输出文件中匹配到的部分 -o 选项：
+echo this is a test line. | grep -o -E "[a-z]+\."
+line.
+
+echo this is a test line. | egrep -o "[a-z]+\."
+line.
+
+
+统计文件或者文本中包含匹配字符串的行数 -c 选项：
+grep -c "text" file_name
+
+
+输出包含匹配字符串的行数 -n 选项：
+grep "text" -n file_name
+或
+cat file_name | grep "text" -n
+
+#多个文件
+grep "text" -n file_1 file_2
+
+
+打印样式匹配所位于的字符或字节偏移：
+echo gun is not unix | grep -b -o "not"
+7:not
+
+#一行中字符串的字符便宜是从该行的第一个字符开始计算，起始值为0。选项 -b -o 一般总是配合使用。
+
+
+搜索多个文件并查找匹配文本在哪些文件中：
+grep -l "text" file1 file2 file3...
+</code>
+</body></html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>用于Linux中创建的新的系统用户账户。<br />
+  <br />
+</p>
+<div  class="category">语　　法：</div>
+<p>useradd [参数][用户帐号]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">useradd</span>可用来建立用户帐号。帐号建好之后，再用passwd设定帐号的密码．而可用userdel删除帐号。使用useradd指令所建立的帐号，实际上是保存在/etc/passwd文本文件中。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>
+<span class="args">-c</span>&lt;备注&gt;：加上备注文字。备注文字会保存在passwd的备注栏位中。<br />
+<span class="args">-d</span>&lt;登入目录&gt;：指定用户登入时的启始目录。<br />
+<span class="args">-D</span> 变更预设值。<br />
+<span class="args">-e</span>&lt;有效期限&gt; 指定帐号的有效期限。<br />
+<span class="args">-f</span>&lt;缓冲天数&gt; 指定在密码过期后多少天即关闭该帐号。<br />
+<span class="args">-g</span>&lt;群组&gt; 指定用户所属的群组。<br />
+<span class="args">-G</span>&lt;群组&gt; 指定用户所属的附加群组。<br />
+<span class="args">-m</span> 自动建立用户的登入目录。<br />
+<span class="args">-M</span> 不要自动建立用户的登入目录。<br />
+<span class="args">-n</span> 取消建立以用户名称为名的群组。<br />
+<span class="args">-r</span> 建立系统帐号。<br />
+<span class="args">-s</span>&lt;shell&gt; 指定用户登入后所使用的shell。<br />
+<span class="args">-u</span>&lt;uid&gt; 指定用户id</p>
+
+<div  class="category">示例：</div>
+<code>
+新建用户加入组：
+useradd –g sales jack –G company,employees    //-g：加入主要组、-G：加入次要组
+
+建立一个新用户账户，并设置ID：
+useradd caojh -u 544
+
+需要说明的是，设定ID值时尽量要大于500，以免冲突。因为Linux安装后会建立一些特殊用户，一般0到499之间的值留给bin、mail这样的系统账号。
+</code>
+</body></html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>列出目前与过去登入系统的用户相关信息。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>last [<span class="args">-adRx</span>][<span class="args">-f</span> &lt;记录文件&gt;][<span class="args">-n</span> &lt;显示列数&gt;][帐号名称...][终端机编号...]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p>单独执行<span class="args">last</span>指令，它会读取位于/var/<span class="args">log</span>目录下，名称为<span class="args">wtmp</span>的文件，并把该给文件的内容记录的登入系统的用户名单全部显示出来。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>　<span class="args">-a 　</span>把从何处登入系统的主机名称或<span class="args">IP</span>地址，显示在最后一行。 <br />
+  　
+  <span class="args">-d</span> 　将<span class="args">IP</span>地址转换成主机名称。 <br />
+  　
+  <span class="args">-f</span> &lt;记录文件&gt; 　指定记录文件。 <br />
+  　
+  <span class="args">-n</span> &lt;显示列数&gt;或<span class="args">-</span>&lt;显示列数&gt; 　设置列出名单的显示列数。 <br />
+  　
+  <span class="args">-R</span> 　不显示登入系统的主机名称或<span class="args">IP</span>地址。 <br />
+  　
+<span class="args">-x</span> 　显示系统关机，重新开机，以及执行等级的改变等信息。</p>
+<div  class="category">示例：</div>
+<code>
+last命令用了显示用户登录情况，以下是直接显示固定行数的记录：
+last -10
+root     pts/0        221.6.45.34      Tue Dec 17 09:40   still logged in
+root     pts/0        221.6.45.34      Mon Dec 16 09:00 - 11:57  (02:56)
+root     pts/0        222.94.97.122    Sun Dec 15 20:39 - 23:28  (02:48)
+root     pts/0        222.95.209.80    Sat Dec 14 14:39 - 14:58  (00:18)
+root     pts/0        221.6.45.34      Thu Dec 12 16:55 - 17:37  (00:41)
+root     pts/0        49.65.139.195    Wed Dec 11 20:40 - 21:16  (00:35)
+root     pts/0        49.65.139.195    Wed Dec 11 19:46 - 20:03  (00:17)
+root     pts/0        221.6.45.34      Tue Dec 10 14:41 - 15:52  (01:10)
+root     pts/0        221.6.45.34      Mon Dec  9 17:24 - 17:30  (00:06)
+root     pts/0        221.6.45.34      Mon Dec  9 09:38 - 11:41  (02:02)
+</code>
+</body></html>

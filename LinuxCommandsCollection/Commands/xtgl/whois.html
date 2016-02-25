@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>查找并显示用户信息。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>whois [帐号名称]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">whois</span>指令会去查找并显示指定帐号的用户相关信息，因为它是到<span class="args">Network Solutions</span>的<span class="args">WHOIS</span>数据库去查找，所以该帐号名称必须在上面注册方能寻获，且名称没有大小写的差别</p>
+
+<div  class="category">参　　数：</div>
+<p>...</p>
+<div  class="category">示例：</div>
+<code>
+ # 要显示用户名称为 Smith 的 ARPANET 注册用户的相关信息，请输入
+ whois Smith
+  
+ # 要显示使用句柄 Hobo 的 ARPANET 注册用户的相关信息，请输入
+ whois !Hobo
+  
+ # 要显示用户名称为 John Smith 的 ARPANET 注册用户的相关信息，请输入
+ whois  .Smith, John
+  
+ # 要显示用户名称或句柄以字母 HEN 开头的 ARPANET 注册用户的相关信息，请输入
+ whois HEN  ...
+  
+ # 要获取关于 whois 命令的帮助信息，请输入
+ whois ?
+  
+ # 查询Google域名信息
+ whois google.com
+  
+ #  查询gooss.org的域名信息，可以看到whois命令将域名的所有人、地址、邮箱都列出来了
+ whois gooss.org 
+</code>
+</body></html>

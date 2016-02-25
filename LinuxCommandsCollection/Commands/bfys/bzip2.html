@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p><span class="args">.bz2</span>文件的压缩程序。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>bzip2 [<span class="args">-cdfhkLstvVz</span>][<span class="args">--repetitive-best</span>][<span class="args">--repetitive-fast</span>][- 压缩等级][要压缩的文件]
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">bzip2</span>采用新的压缩演算法，压缩效果比传统的LZ77/<span class="args">LZ78</span>压缩演算法来得好。若没有加上任何参数，<span class="args">bzip2</span>压缩完文件后会产生<span class="args">.bz2</span>的压缩文件，并删除原始的文件。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p><span class="args">-c</span>或<span class="args">--stdout 　</span>将压缩与解压缩的结果送到标准输出。 <br />
+  <span class="args">-d</span>或<span class="args">--decompress 　</span>执行解压缩。 <br />
+  <span class="args">-f</span>或<span class="args">--force 　bzip2</span>在压缩或解压缩时，若输出文件与现有文件同名，预设不会覆盖现有文件。若要覆盖，请使用此参数。 <br />
+  <span class="args">-h</span>或<span class="args">--help 　</span>显示帮助。 <br />
+  <span class="args">-k</span>或<span class="args">--keep 　bzip2</span>在压缩或解压缩后，会删除原始的文件。若要保留原始文件，请使用此参数。 <br />
+  <span class="args">-s</span>或<span class="args">--small 　</span>降低程序执行时内存的使用量。 <br />
+  <span class="args">-t</span>或<span class="args">--test 　</span>测试<span class="args">.bz2</span>压缩文件的完整性。 <br />
+  <span class="args">-v</span>或<span class="args">--verbose 　</span>压缩或解压缩文件时，显示详细的信息。 <br />
+  <span class="args">-z</span>或<span class="args">--compress 　</span>强制执行压缩。 <br />
+  -L,--license,<br />
+  <span class="args">-V</span>或<span class="args">--version 　</span>显示版本信息。 <br />
+  <span class="args">--repetitive-best 　</span>若文件中有重复出现的资料时，可利用此参数提高压缩效果。 <br />
+  <span class="args">--repetitive-fast 　</span>若文件中有重复出现的资料时，可利用此参数加快执行速度。 <br />
+-压缩等级 　压缩时的区块大小。</p>
+<div  class="category">示例：</div>
+<code>
+压缩指定文件filename:
+bzip2 filename
+
+解压指定的文件filename.bz2:
+bzip2 -d filename.bz2
+
+</code>
+</body></html>

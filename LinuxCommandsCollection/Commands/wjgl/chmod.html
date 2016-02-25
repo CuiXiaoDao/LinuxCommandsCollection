@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>变更文件或目录的权限。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>chmod [<span class="args">-cfRv</span>][<span class="args">--help</span>][<span class="args">--version</span>][&lt;权限范围&gt;<span class="args">+/-/=</span>&lt;权限设置...&gt;][文件或目录...] 或 chmod [<span class="args">-cfRv</span>][<span class="args">--help</span>][<span class="args">--version</span>][数字代号][文件或目录...] 或 chmod [<span class="args">-cfRv</span>][<span class="args">--help</span>][<span class="args">--reference=</span>&lt;参考文件或目录&gt;][<span class="args">--version</span>][文件或目录...] <br />
+</p>
+<div  class="category">补充说明：</div>
+<p>在<span class="args">UNIX</span>系统家族里，文件或目录权限的控制分别以读取，写入，执行3种一般权限来区分，另有3种特殊权限可供运用，再搭配拥有者与所属群组管理权限范围。您可以使用<span class="args">chmod</span>指令去变更文件与目录的权限，设置方式采用文字或数字代号皆可。符号连接的权限无法变更，如果您对符号连接修改权限，其改变会作用在被连接的原始文件。权限范围的表示法如下： <br />
+  　
+  <span class="args">u</span>：<span class="args">User</span>，即文件或目录的拥有者。 <br />
+  　
+  <span class="args">g</span>：<span class="args">Group</span>，即文件或目录的所属群组。 <br />
+  　
+  <span class="args">o</span>：<span class="args">Other</span>，除了文件或目录拥有者或所属群组之外，其他用户皆属于这个范围。 <br />
+  　
+  <span class="args">a</span>：<span class="args">All</span>，即全部的用户，包含拥有者，所属群组以及其他用户。 <br />
+   
+  <br />
+  　
+  有关权限代号的部分，列表于下： <br />
+  　
+  <span class="args">r</span>：读取权限，数字代号为&quot;4&quot;。 <br />
+  　
+  <span class="args">w</span>：写入权限，数字代号为&quot;2&quot;。 <br />
+  　
+  <span class="args">x</span>：执行或切换权限，数字代号为&quot;1&quot;。 <br />
+  　
+  -：不具任何权限，数字代号为&quot;0&quot;。 <br />
+  　
+  <span class="args">s</span>：特殊?b&gt;功能说明：变更文件或目录的权限。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>　 <span class="args">-c</span>或<span class="args">--changes 　</span>效果类似&quot;-v&quot;参数，但仅回报更改的部分。 <br />
+  　
+  <span class="args">-f</span>或<span class="args">--quiet</span>或<span class="args">--silent 　</span>不显示错误信息。 <br />
+  　
+  <span class="args">-R</span>或<span class="args">--recursive 　</span>递归处理，将指定目录下的所有文件及子目录一并处理。 <br />
+  　
+  <span class="args">-v</span>或<span class="args">--verbose 　</span>显示指令执行过程。 <br />
+  　
+  <span class="args">--help</span> 　在线帮助。 <br />
+  　
+  <span class="args">--reference=</span>&lt;参考文件或目录&gt; 　把指定文件或目录的权限全部设成和参考文件或目录的权限相同 <br />
+  　
+  <span class="args">--version</span> 　显示版本信息。 <br />
+  　
+  &lt;权限范围&gt;<span class="args">+</span>&lt;权限设置&gt; 　开启权限范围的文件或目录的该项权限设置。 <br />
+  　
+  &lt;权限范围&gt;<span class="args">-</span>&lt;权限设置&gt; 　关闭权限范围的文件或目录的该项权限设置。 <br />
+  　
+&lt;权限范围&gt;<span class="args">=</span>&lt;权限设置&gt; 　指定权限范围的文件或目录的该项权限设置。</p>
+<div  class="category">示例：</div>
+<code>
+1. 要将许可权类型添加到几个文件：
+
+
+1 chmod g+w chap1 chap2 
+
+这将组成员的写权限添加到文件 chap1 和 chap2 。
+
+2. 要立即进行几个许可权更改：
+
+
+
+
+1 chmod go-w+x mydir 
+
+这拒绝组成员和其他人创建或删除 mydir （go-w ）中的文件的许可权，并允许组成员和其他人搜索 mydir 或在路径名（go+x ）中使用它。这等价于命令序列：
+
+
+1 chmod g-w mydir 
+
+
+2 chmod o-w mydir 
+
+
+3 chmod g+x mydir 
+
+
+4 chmod o+x mydir 
+
+3. 要只允许所有者将 shell 步骤用作命令：
+
+
+1 chmod u=rwx,go= cmd 
+
+这授权文件（u=rwx ）所有者读、写和执行许可权。它还拒绝组和其他人以任何方式（go= ）访问 cmd 的许可权。
+
+如果具有执行 cmd shell 命令文件的许可权，则可以通过输入以下命令运行它：
+
+
+1 cmd 
+
+注：取决于 PATH shell 变量，可能需要指定 cmd 文件的全路径。
+
+4. 要使用设置标识（Set-ID ）方式：
+
+
+1 chmod ug+s cmd 
+
+在执行 cmd 命令时，有效的用户标识和组标识设置为那些拥有 cmd 文件的所有者。只更改与运行 cmd 命令的子进程关联的有效标识。 shell 会话的有效标识保留不更改。
+
+此功能允许您可以访问受限制的文件。假定 cmd 程序启用了“设置用户标识（Set-User-ID ）方式”并为名为 dbms 的用户所拥有。实际上，用户 dbms不是一个人，但可能与数据库管理系统关联。用户 betty 不具有访问任何 dbms 的数据文件的许可权。然而，她具有执行 cmd 命令的许可权。当她这样做时，她的有效用户标识临时更改为 dbms ，因此 cmd 程序可以访问用户 dbms 拥有的数据文件。
+
+这种方式下，用户 betty 可以使用 cmd 命令访问数据文件，但她不会在使用标准 shell 命令的过程中意外地破坏它们。
+
+5. 要使用 chmod 命令的完全方式格式：
+
+
+1 chmod 644 text 
+
+这设置所有者的读和写许可权，并且它对组和其他用户设置只读方式。这还除去可能与文件关联的所有扩展 ACL 。
+
+6. 要递归地降序目录并更改给予树结构的文件和目录许可权：
+
+./dir1/dir2/file1
+
+./dir1/dir2/file2
+
+./dir1/file1
+
+请输入此命令序列：
+
+
+1 chmod -R 777 f* 
+
+这将更改 ./dir1/file1 的许可权。
+
+但对于以下树结构：
+
+./dir1/fdir2/file1
+
+./dir1/fdir2/file2
+
+./dir1/file3
+
+命令序列：
+
+
+1 chmod -R 777 f* 
+
+将更改以下内容的许可权：
+
+./dir1/fdir2
+
+./dir1/fdir2/file1
+
+./dir1/fdir2/file2
+
+./dir1/file3
+
+文件
+
+/usr/bin/chmod
+
+包含 chmod 命令。
+</code>
+</body></html>

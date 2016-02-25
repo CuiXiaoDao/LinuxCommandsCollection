@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>退出目前的shell。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>exit [状态值]<br />
+  <br />
+</p>
+<div  class="category">补充说明：</div>
+<p>执行<span class="args">exit</span>可使<span class="args">shell</span>以指定的状态值退出。若不设置状态值参数，则<span class="args">shell</span>以预设值退出。状态值0代表执行成功，其他值代表执行失败。<span class="args">exit</span>也可用在<span class="args">script</span>，离开正在执行的<span class="args">script</span>，回到shell。</p>
+
+<div  class="category">参　　数：</div>
+<p>...</p>
+<div  class="category">示例：</div>
+<code>
+退出当前shell：
+[root@localhost ~]# exit
+logout
+
+在脚本中，进入脚本所在目录，否则退出：
+cd $(dirname $0) || exit 1
+
+在脚本中，判断参数数量，不匹配就打印使用方式，退出：
+if [ "$#" -ne "2" ]; then
+    echo "usage: $0 <area> <hours>"
+    exit 2
+fi
+
+在脚本中，退出时删除临时文件：
+trap "rm -f tmpfile; echo Bye." EXIT
+
+检查上一命令的退出码：
+./mycommand.sh
+EXCODE=$?
+if [ "$EXCODE" == "0" ]; then
+    echo "O.K"
+fi
+</code>
+</body></html>

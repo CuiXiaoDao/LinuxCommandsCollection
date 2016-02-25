@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>查找文件里符合条件的字符串。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>fgrep [范本样式][文件或目录...]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p>本指令相当于执行<span class="args">grep</span>指令加上参数&quot;-F&quot;，详见<span class="args">grep</span>指令说明。</p>
+
+<div  class="category">参　　数：</div>
+<p>...</p>
+<div  class="category">示例：</div>
+<code>
+搜索几个文件中的一个简单字符串：
+fgrep strcpy *.c
+
+在当前目录下所有以 .c 字符串结尾的文件中搜索字符串 strcpy。
+
+计数匹配某模式的行数：
+fgrep -c 『{』pgm.cfgrep -c 『}』pgm.c
+</code>
+</body></html>

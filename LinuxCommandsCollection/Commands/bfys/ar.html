@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>建立或修改备存文件，或是从备存文件中抽取文件。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>ar[<span class="args">-dmpqrtx</span>][<span class="args">cfosSuvV</span>][<span class="args">a</span>&lt;成员文件&gt;][<span class="args">b</span>&lt;成员文件&gt;][<span class="args">i</span>&lt;成员文件&gt;][备存文件][成员文件]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p> <span class="args">ar</span>可让您集合许多文件，成为单一的备存文件。在备存文件中，所有成员文件皆保有原来的属性与权限。</p>
+
+<div  class="category">参　　数：</div>
+<p>指令参数 <br />
+  　
+  <span class="args">-d</span> 　删除备存文件中的成员文件。 <br />
+  　
+  <span class="args">-m</span> 　变更成员文件在备存文件中的次序。 <br />
+  　
+  <span class="args">-p</span> 　显示备存文件中的成员文件内容。 <br />
+  　
+  <span class="args">-q</span> 　将问家附加在备存文件末端。 <br />
+  　
+  <span class="args">-r</span> 　将文件插入备存文件中。 <br />
+  　
+  <span class="args">-t</span> 　显示备存文件中所包含的文件。 <br />
+  　
+  <span class="args">-x</span> 　自备存文件中取出成员文件。 <br />
+  选项参数 <br />
+  　
+  <span class="args">a</span>&lt;成员文件&gt; 　将文件插入备存文件中指定的成员文件之后。 <br />
+  　
+  <span class="args">b</span>&lt;成员文件&gt; 　将文件插入备存文件中指定的成员文件之前。 <br />
+  　
+  <span class="args">c</span> 　建立备存文件。 <br />
+  　
+  <span class="args">f</span> 　为避免过长的文件名不兼容于其他系统的<span class="args">ar</span>指令，因此可利用此参数，截掉要放入备存文件中过长的成员文件名称。 <br />
+  　
+  <span class="args">i</span>&lt;成员文件&gt; 　将问家插入备存文件中指定的成员文件之前。 <br />
+  　
+  <span class="args">o</span> 　保留备存文件中文件的日期。 <br />
+  　
+  <span class="args">s</span> 　若备存文件中包含了对象模式，可利用此参数建立备存文件的符号表。 <br />
+  　
+  <span class="args">S</span> 　不产生符号表。 <br />
+  　
+  <span class="args">u</span> 　只将日期较新文件插入备存文件中。 <br />
+  　
+  <span class="args">v</span> 　程序执行时显示详细的信息。 <br />
+  　
+<span class="args">V</span> 　显示版本信息。 </p>
+<div  class="category">示例：</div>
+<code>
+格式：ar t libxxx.a
+显示库文件中有哪些目标文件，只显示名称。
+ 　
+格式：ar tv libxxx.a
+显示库文件中有哪些目标文件，显示文件名、时间、大小等详细信息。
+
+</code>
+</body></html>

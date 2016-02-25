@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>用于查找并显示用户信息。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>finger [<span class="args">-lmsp</span>][用户名]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p>finger命令用于查找并显示用户信息。包括本地与远端主机的用户皆可，帐号名称没有大小写的差别。单独执行finger指令，它会显示本地主机现在所有的用户的登陆信息，包括帐号名称，真实姓名，登入终端机，闲置时间，登入时间以及地址和电话。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>　
+  <span class="args">-l</span> 列出该用户的帐号名称，真实姓名，用户专属目录，登入所用的Shell，登入时间，转信地址，电子邮件状态，还有计划文件和方案文件内容。 <br />
+  　
+  <span class="args">-m</span> 排除查找用户的真实姓名。 <br />
+  &nbsp;&nbsp;&nbsp;<span class="args">   -s</span> 列出该用户的帐号名称，真实姓名，登入终端机，闲置时间，登入时间以及地址和电话。 <br />　
+  <span class="args">-p</span> 　列出该用户的帐号名称，真实姓名，用户专属目录，登入所用的Shell，登入时间，转信地址，电子邮件状态，但不显示该用户的计划文件和方案文件内容。 <br />
+</p>
+<div  class="category">示例：</div>
+<code>
+在计算机上使用finger：
+[root@localhost root]# finger
+login Name Tty Idle Login time Office Office Phone
+root root tty1 2 Dec 18 13
+root root pts/0 1 Dec 18 13
+root root *pts/1 Dec 18 13
+
+如果要查询远程机上的用户信息，需要在用户名后面接@主机名，采用用户名@主机名的格式，不过要查询的网络主机需要运行finger守护进程的支持。
+</code>
+</body></html>

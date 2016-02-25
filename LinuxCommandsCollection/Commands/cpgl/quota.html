@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>显示磁盘已使用的空间与限制。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>quota [<span class="args">-quvV</span>][用户名称...] 或 quota [<span class="args">-gqvV</span>][群组名称...]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p>执行<span class="args">quota</span>指令，可查询磁盘空间的限制，并得知已使用多少空间。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  <span class="args">-g</span>   列出群组的磁盘空间限制。<br />
+    
+  <span class="args">-q</span>   简明列表，只列出超过限制的部分。<br />
+    
+  <span class="args">-u</span>   列出用户的磁盘空间限制。<br />
+    
+  <span class="args">-v</span>   显示该用户或群组，在所有挂入系统的存储设备的空间限制。<br />
+    
+<span class="args">-V</span>   显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+显示出目前root自己的quota限制值：
+[root@linux~]# quota -guvs
+
+
+</code>
+</body></html>

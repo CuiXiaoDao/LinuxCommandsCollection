@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>改变<span class="args">finger</span>指令显示的信息。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>chfn [<span class="args">-f</span> &lt;真实姓名&gt;][<span class="args">-h</span> &lt;家中电话&gt;][<span class="args">-o</span> &lt;办公地址&gt;][<span class="args">-p</span> &lt;办公电话&gt;][<span class="args">-uv</span>][帐号名称]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">chfn</span>指令可用来更改执行<span class="args">finger</span>指令时所显示的信息，这些信息都存放在/<span class="args">etc</span>目录里的<span class="args">asswd</span>文件里。若不指定任何参数，则<span class="args">chfn</span>指令会进入问答式界面</p>
+
+<div  class="category">参　　数：</div>
+<p><span class="args">-f</span>&lt;真实姓名&gt;或<span class="args">--full-name</span>&lt;真实姓名&gt; 　设置真实姓名。 <br />
+  　
+  <span class="args">-h</span>&lt;家中电话&gt;或<span class="args">--home-phone</span>&lt;家中电话&gt; 　设置家中的电话号码。 <br />
+  　
+  <span class="args">-o</span>&lt;办公地址&gt;或<span class="args">--office</span>&lt;办公地址&gt; 　设置办公室的地址。 <br />
+  　
+  <span class="args">-p</span>&lt;办公电话&gt;或<span class="args">--office-phone</span>&lt;办公电话&gt; 　设置办公室的电话号码。 <br />
+  　
+  <span class="args">-u</span>或<span class="args">--help 　</span>在线帮助。 <br />
+  　
+<span class="args">-v</span>或<span class="args">-version 　</span>显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+范例1，改变finger信息：
+[root@localhost Desktop]# chfn
+Changing finger information for root.
+Name [root]: jack
+Office []: hn
+Office Phone []: 888888
+Home Phone []: 9999999
+ 
+Finger information changed.
+
+范例2，改变账号真实姓名：
+[root@localhost Desktop]# chfn -f jack
+Changing finger information for root.
+Finger information changed.
+
+范例3：
+shell>> chfn
+Changing finger information for user
+Password: [del]
+Name[]:linuxde ### 提供 finger 时的资料
+Office[]:NCCU
+Office Phone[]: [del]
+Home Phone[]: [del]
+</code>
+</body></html>

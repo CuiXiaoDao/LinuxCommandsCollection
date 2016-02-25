@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>删除目录。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>rmdir [<span class="args">-p</span>][<span class="args">--help</span>][<span class="args">--ignore-fail-on</span>-non-empty][<span class="args">--verbose</span>][<span class="args">--version</span>][目录...]<br />
+  <br />
+</p>
+<div  class="category">补充说明：</div>
+<p>当有空目录要删除时，可使用<span class="args">rmdir</span>指令。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  <span class="args">-p</span>或<span class="args">--parents   </span>删除指定目录后，若该目录的上层目录已变成空目录，则将其一并删除。<br />
+    
+  <span class="args">--help</span>   在线帮助。<br />
+    
+  --ignore-fail<span class="args">-on-non-empty</span>   忽略非空目录的错误信息。<br />
+    
+  <span class="args">--verbose</span>   显示指令执行过程。<br />
+    
+<span class="args">--version</span>   显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+删除子目录os_1和其父目录bin
+cd /usr/meng/test
+rmdir -p bin/os_1
+
+</code>
+</body></html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>显示与设定硬盘的参数。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>hdparm [<span class="args">-CfghiIqtTvyYZ</span>][<span class="args">-a</span> &lt;快取分区&gt;][<span class="args">-A</span> &lt;<span class="args">0</span>或<span class="args">1</span>&gt;][<span class="args">-c</span> &lt;I/<span class="args">O</span>模式&gt;][<span class="args">-d</span> &lt;<span class="args">0</span>或<span class="args">1</span>&gt;][<span class="args">-k</span> &lt;<span class="args">0</span>或<span class="args">1</span>&gt;][<span class="args">-K</span> &lt;<span class="args">0</span>或<span class="args">1</span>&gt;][<span class="args">-m</span> &lt;分区数&gt;][<span class="args">-n</span> &lt;<span class="args">0</span>或<span class="args">1</span>&gt;][<span class="args">-p</span> &lt;<span class="args">PIO</span>模式&gt;][<span class="args">-P</span> &lt;分区数&gt;][<span class="args">-r</span> &lt;<span class="args">0</span>或<span class="args">1</span>&gt;][<span class="args">-S</span> &lt;时间&gt;][<span class="args">-u</span> &lt;<span class="args">0</span>或<span class="args">1</span>&gt;][<span class="args">-W</span> &lt;<span class="args">0</span>或<span class="args">1</span>&gt;][<span class="args">-X</span> &lt;传输模式&gt;][设备]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">hdparm</span>可检测，显示与设定<span class="args">IDE</span>或<span class="args">SCSI</span>硬盘的参数。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  <span class="args">-a</span>&lt;快取分区&gt;   设定读取文件时，预先存入块区的分区数，若不加上&lt;快取分区&gt;选项，则显示目前的设定。<br />
+    
+  <span class="args">-A</span>&lt;<span class="args">0</span>或<span class="args">1</span>&gt;   启动或关闭读取文件时的快取功能。<br />
+    
+  <span class="args">-c</span>&lt;I/<span class="args">O</span>模式&gt;   设定<span class="args">IDE32</span>位I/<span class="args">O</span>模式。<br />
+    
+  <span class="args">-C</span>   检测<span class="args">IDE</span>硬盘的电源管理模式。<br />
+    
+  <span class="args">-d</span>&lt;<span class="args">0</span>或<span class="args">1</span>&gt;   设定磁盘的<span class="args">DMA</span>模式。<br />
+    
+  <span class="args">-f</span>   将内存缓冲区的数据写入硬盘，并清楚缓冲区。<br />
+    
+  <span class="args">-g</span>   显示硬盘的磁轨，磁头，磁区等参数。<br />
+    
+  <span class="args">-h</span>   显示帮助。<br />
+    
+  <span class="args">-i</span>   显示硬盘的硬件规格信息，这些信息是在开机时由硬盘本身所提供。<br />
+    
+  <span class="args">-I</span>   直接读取硬盘所提供的硬件规格信息。<br />
+    
+  <span class="args">-k</span>&lt;<span class="args">0</span>或<span class="args">1</span>&gt;   重设硬盘时，保留<span class="args">-dmu</span>参数的设定。<br />
+    
+  <span class="args">-K</span>&lt;<span class="args">0</span>或<span class="args">1</span>&gt;   重设硬盘时，保留<span class="args">-APSWXZ</span>参数的设定。<br />
+    
+  <span class="args">-m</span>&lt;磁区数&gt;   设定硬盘多重分区存取的分区数。<br />
+    
+  <span class="args">-n</span>&lt;<span class="args">0</span>或<span class="args">1</span>&gt;   忽略硬盘写入时所发生的错误。<br />
+    
+  <span class="args">-p</span>&lt;<span class="args">PIO</span>模式&gt;   设定硬盘的<span class="args">PIO</span>模式。<br />
+    
+  <span class="args">-P</span>&lt;磁区数&gt;   设定硬盘内部快取的分区数。<br />
+    
+  <span class="args">-q</span>   在执行后续的参数时，不在屏幕上显示任何信息。<br />
+    
+  <span class="args">-r</span>&lt;<span class="args">0</span>或<span class="args">1</span>&gt;   设定硬盘的读写模式。<br />
+    
+  <span class="args">-S</span>&lt;时间&gt;   设定硬盘进入省电模式前的等待时间。<br />
+    
+  <span class="args">-t</span>   评估硬盘的读取效率。<br />
+    
+  <span class="args">-T</span>   平谷硬盘快取的读取效率。<br />
+    
+  <span class="args">-u</span>&lt;<span class="args">0</span>或<span class="args">1</span>&gt;   在硬盘存取时，允许其他中断要求同时执行。<br />
+    
+  <span class="args">-v</span>   显示硬盘的相关设定。<br />
+    
+  <span class="args">-W</span>&lt;<span class="args">0</span>或<span class="args">1</span>&gt;   设定硬盘的写入快取。<br />
+    
+  <span class="args">-X</span>&lt;传输模式&gt;   设定硬盘的传输模式。<br />
+    
+  <span class="args">-y</span>   使<span class="args">IDE</span>硬盘进入省电模式。<br />
+    
+  <span class="args">-Y</span>   使<span class="args">IDE</span>硬盘进入睡眠模式。<br />
+    
+<span class="args">-Z</span>   关闭某些<span class="args">Seagate</span>硬盘的自动省电功能。</p>
+<div  class="category">示例：</div>
+<code>
+直接硬盘读测试
+[root@apktv ~]# hdparm -tT --direct /dev/sda1
+</code>
+</body></html>

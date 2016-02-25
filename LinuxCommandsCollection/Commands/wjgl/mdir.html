@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>显示<span class="args">MS-DOS</span>目录。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>mdir [<span class="args">-afwx</span>/][目录]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">mdir</span>为<span class="args">mtools</span>工具指令，模拟<span class="args">MS-DOS</span>的<span class="args">dir</span>指令，可显示<span class="args">MS-DOS</span>文件系统中的目录内容。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>   -/   显示目录下所有子目录与文件。 <br />
+    
+  <span class="args">-a</span> 　显示隐藏文件。 <br />
+    
+  <span class="args">-f</span> 　不显示磁盘所剩余的可用空间。 <br />
+    
+  <span class="args">-w</span> 　仅显示目录或文件名称，并以横排方式呈现，以便一次能显示较多的目录或文件。 <br />
+    
+<span class="args">-X</span> 　仅显示目录下所有子目录与文件的完整路径，不显示其他信息。</p>
+<div  class="category">示例：</div>
+<code>
+1.显示a盘中的内容
+$ mdir -/ a:\*   
+以上命令执行后，mdir将显示指定盘"a:\"中的所有子目录及其中的文件信息，如下所示：
+
+Volume in drive A has no label  #加载信息  
+Volume Serial Number is 13D2~055C  
+Directory for A:\                   #以下为目录信息  
+./TEST <DIR> 2011-08-23 16:59     
+#显示格式为文件名，目录大小，修改时间  
+AUTORUN.INF 265 2011-08-23 16:53  
+AUTORUN.BAT 43 2011-08-23 16:56  
+3 files 308 bytes               #统计总大小  
+724 325 bytes free              #剩余空间  
+</code>
+</body></html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>...</p>
+<div  class="category">语　　法：</div>
+<p>dumpkeys [ -hilfn1 -Sshape -ccharset --help --short-info <br />
+  　　 
+  --long-info   --numeric --full-table --separate-lines <br />
+  　　 
+  --shape=shape --funcs-only   --keys-only --compose-only <br />
+  　　 
+--charset=charset ]</p>
+<div  class="category">补充说明：</div>
+<p>...</p>
+
+<div  class="category">参　　数：</div>
+<p>这个命令用来将键盘的对映表写到标准输出之中，输出的格式可以被 <span class="args">loadkeys </span>命令载入。而这个表格的功能在于将键盘硬件所产生的扫描码 (scan   code)，转换成 <span class="args">ASCII </span>或是任何的字串。 <br />
+  　　
+  <br />
+  　　
+  这是在 <span class="args">Linux </span>上特有的指令，它允许你将键盘上的按键组合，如 ctrl-a.   <span class="args">shift-a </span>等转换成适当的字串。例如你可以将 <span class="args">alt-ctrl-f12</span> 定义成『linux』，以后只要按下 <span class="args">alt-ctrl-f12</span> 就等于输入 <span class="args">linux   </span>这个字了。 <br />
+  　　
+  <br />
+  　　
+  要将 <span class="args">alt-ctrl-f12</span> 定义成 <span class="args">linux </span>有二件事要做，首先你必需将 <span class="args">alt-ctrl-f12</span>   这个按键组合定义成某个功能键，在这里我们使用 f20。 <br />
+  　　 
+  control alt keycode 88 = F20 <br />
+  　　 
+  <br />
+  　　
+  上面的   <span class="args">keycode 88 </span>便是 <span class="args">F12 </span>这个键的硬件扫描码。下一步便是将 <span class="args">F20 </span>这个功能键定义成 linux <br />
+  　　 
+  string F20=&quot;linux&quot; <br />
+  　　 
+  <br />
+  　　
+  将包括这二行的档案用 <span class="args">loadkeys </span>载入后便可以用 <span class="args">alt-ctrl-f12</span> 来输入 <span class="args">linux </span>了。chdrv, <span class="args">yact </span>等   <span class="args">console </span>模式中文系统便是使用这个功能来重新定义键盘。 选项: <br />
+  　　
+  --shortinfo, -i <br />
+  　　 
+  将一些有关 <span class="args">linux   </span>键盘驱动程序的资料显示在萤幕上。这包括了硬件扫描码的范围、功能键的数量、状态键的的数量等资讯。 <br />
+  　　
+  --longinfo, -l <br />
+  　　 
+  <br />
+  　　 
+  将键盘驱动程序的资讯用比较详尽的格式显示。 <br />
+  　　
+  --numeric, -n <br />
+  　　 
+  <br />
+  　　   
+  使用十六进位的方式显示资料，如果没有这个选项，<span class="args">dumpkeys </span>会自动的将十六进位的内部表示法转换成文字表示法。 <br />
+  　　
+  --full-table -f <br />
+  　　 
+  将整个表格完整的显示，预设情况下没有被定义的组合将不会被显示。 <br />
+  　　
+  <br />
+  　　
+  --seperate--lines, -1   一行显示一个按键组合，预设模式下一个按键在不同状态码下的动作会被显示在同一行中。 <br />
+  　　
+  <br />
+  　　
+  -S,--shape=0-3] 设定输出的格式 <br />
+  　　
+  0: 预设格式(-S) <br />
+  　　
+  1: 完整格式(--full-table) <br />
+  　　
+  2: 单行格式(--seperate-lines) <br />
+  　　
+  3: 简单格式，这个格式开始时使用完整格式，但遇到第一个没有定义的组合后就切到单行格式。 <br />
+  　　 
+  <br />
+  　　
+  --funcs-only <br />
+  　　
+  --keys-only <br />
+  　　
+  --composite-only <br />
+  　　 
+  只显示部份的资料。 <br />
+  　　
+  <br />
+  　　
+  相关命令: <br />
+  　　
+loadkeys</p>
+<div  class="category">示例：</div>
+<code>
+抱歉暂无示例。
+</code>
+</body></html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>磁盘分区。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>fdisk [<span class="args">-b</span> &lt;分区大小&gt;][<span class="args">-uv</span>][外围设备代号] 或 fdisk [<span class="args">-l</span>][<span class="args">-b</span> &lt;分区大小&gt;][<span class="args">-uv</span>][外围设备代号...] 或 fdisk [<span class="args">-s</span> &lt;分区编号&gt;]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">fdisk</span>是用来磁盘分区的程序，它采用传统的问答式界面，而非类似<span class="args">DOS fdisk</span>的<span class="args">cfdisk</span>互动式操作界面，因此在使用上较为不便，但功能却丝毫不打折扣。<br />
+  <br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  <span class="args">-b</span>&lt;分区大小&gt;   指定每个分区的大小。<br />
+    
+  <span class="args">-l</span>   列出指定的外围设备的分区表状况。<br />
+    
+  <span class="args">-s</span>&lt;分区编号&gt;   将指定的分区大小输出到标准输出上，单位为区块。<br />
+    
+  <span class="args">-u</span>   搭配&quot;-l&quot;参数列表，会用分区数目取代柱面数目，来表示每个分区的起始地址。<br />
+    
+<span class="args">-v</span>   显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+通过fdisk -l 查看机器所挂硬盘个数及分区情况；
+　　[root@localhost beinan]# fdisk -l
+
+通过fdisk的d指令来删除一个分区；
+　　Command (m for help): p 注：列出分区情况；
+　　Disk /dev/sda: 1035 MB, 1035730944 bytes
+　　256 heads, 63 sectors/track, 125 cylinders
+　　Units = cylinders of 16128 * 512 = 8257536 bytes
+　　Device Boot Start End Blocks Id System
+　　/dev/sda1 1 25 201568+ c W95 FAT32 (LBA)
+　　/dev/sda2 26 125 806400 5 Extended
+　　/dev/sda5 26 50 201568+ 83 Linux
+　　/dev/sda6 51 76 200781 83 Linux
+　　Command (m for help): d 注：执行删除分区指定；
+　　Partition number (1-6): 6 注：我想删除 sda6 ，就在这里输入 6 ；
+　　Command (m for help): p 注：再查看一下硬盘分区情况，看是否删除了？
+　　Disk /dev/sda: 1035 MB, 1035730944 bytes
+　　256 heads, 63 sectors/track, 125 cylinders
+　　Units = cylinders of 16128 * 512 = 8257536 bytes
+　　Device Boot Start End Blocks Id System
+　　/dev/sda1 1 25 201568+ c W95 FAT32 (LBA)
+　　/dev/sda2 26 125 806400 5 Extended
+　　/dev/sda5 26 50 201568+ 83 Linux
+　　Command (m for help):
+　　警告：删除分区时要小心，请看好分区的序号，如果您删除了扩展分区，扩展分区之下的逻辑分区都会删除；所以操作时一定要小心；如果知道自己操作错了，请不要惊慌，用q不保存退出；切记切记！！！！在分区操作错了之时，千万不要输入w保存退出！！！
+</code>
+</body></html>

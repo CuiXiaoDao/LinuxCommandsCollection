@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>切换目录。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>cd [目的目录]<br />
+  <br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">cd</span>指令可让用户在不同的目录间切换，但该用户必须拥有足够的权限进入目的目录。</p>
+
+<div  class="category">参　　数：</div>
+<p>...</p>
+<div  class="category">示例：</div>
+<code>
+cd    进入用户主目录；
+cd ~  进入用户主目录；
+cd -  返回进入此目录之前所在的目录；
+cd ..  返回上级目录（若当前目录为“/“，则执行完后还在“/"；".."为上级目录的意思）；
+cd ../..  返回上两级目录；
+cd !$  把上个命令的参数作为cd参数使用。
+</code>
+</body></html>

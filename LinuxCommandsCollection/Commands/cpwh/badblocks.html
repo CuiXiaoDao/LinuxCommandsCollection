@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>检查磁盘装置中损坏的区块。<br />
+</p>bad
+<div  class="category">语　　法：</div>
+<p>badblocks [<span class="args">-svw</span>][<span class="args">-b</span> &lt;区块大小&gt;][<span class="args">-o</span> &lt;输出文件&gt;][磁盘装置][磁盘区块数][启始区块]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p>执行指令时须指定所要检查的磁盘装置，及此装置的磁盘区块数。<br />
+  <br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  <span class="args">-b</span>&lt;区块大小&gt;   指定磁盘的区块大小，单位为字节。<br />
+    
+  <span class="args">-o</span>&lt;输出文件&gt;   将检查的结果写入指定的输出文件。<br />
+    
+  <span class="args">-s</span>   在检查时显示进度。<br />
+    
+  <span class="args">-v</span>   执行时显示详细的信息。<br />
+    
+  <span class="args">-w</span>   在检查时，执行写入测试。<br />
+    
+  [磁盘装置]   指定要检查的磁盘装置。<br />
+    
+  [磁盘区块数]   指定磁盘装置的区块总数。<br />
+    
+[启始区块]   指定要从哪个区块开始检查。</p>
+<div  class="category">示例：</div>
+<code>
+badblocks以4096的一个block，每一个block检查16次，将结果输出到“hda-badblocks-list”文件里。
+badblocks -b 4096 -c 16 /dev/hda1 -o hda-badblocks-list
+</code>
+</body></html>

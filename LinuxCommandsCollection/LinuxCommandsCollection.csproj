@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02667837-5AED-4489-90C6-C8B03C414B17}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LinuxCommandsCollection</RootNamespace>
+    <AssemblyName>LinuxCommandsCollection</AssemblyName>
+    <DefaultLanguage>zh-cn</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{76F1466A-8B6D-4E39-A767-685A06062A39};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>arm</AppxBundlePlatforms>
+    <AppxPackageDir>C:\Users\cuichao\Desktop\</AppxPackageDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <MultilingualAppToolkitVersion>3.0</MultilingualAppToolkitVersion>
+    <MakePriLog>$(Temp)\$(MSBuildProjectName)_Multilingual.prilog.xml</MakePriLog>
+    <AppxGenerateProjectPriFileAdditionalMakepriExeParameters>/IndexLog "$(MakePriLog)"</AppxGenerateProjectPriFileAdditionalMakepriExeParameters>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Page Include="About.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CommandDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CommandsClass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FeedbackOverlay.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PivotPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Collection.cs" />
+    <Compile Include="CommandDetail.xaml.cs">
+      <DependentUpon>CommandDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CommandsClass.xaml.cs">
+      <DependentUpon>CommandsClass.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\NavigationHelper.cs" />
+    <Compile Include="Common\ObservableDictionary.cs" />
+    <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="Controls\FeedbackOverlay.xaml.cs">
+      <DependentUpon>FeedbackOverlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\TitleConverter.cs" />
+    <Compile Include="DataModel\Commands.cs" />
+    <Compile Include="DataModel\SampleDataSource.cs" />
+    <Compile Include="Helpers\FeedbackHelper.cs" />
+    <Compile Include="Helpers\StorageHelper.cs" />
+    <Compile Include="PivotPage.xaml.cs">
+      <DependentUpon>PivotPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLite.cs" />
+    <Compile Include="SQLiteAsync.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\cpgl.png" />
+    <Content Include="Assets\cpwh.png" />
+    <Content Include="Assets\Logo.scale-240.png" />
+    <Content Include="Assets\NoCollection.png" />
+    <Content Include="Assets\sbgl.png" />
+    <Content Include="Assets\Search.png" />
+    <Content Include="Assets\SmallLogo.scale-240.png" />
+    <Content Include="Assets\Tux106.scale-240.png" />
+    <Content Include="Assets\Tux120.scale-240.png" />
+    <Content Include="Assets\Tux170.scale-240.png" />
+    <Content Include="Assets\Tux360.scale-240.png" />
+    <Content Include="Assets\Tux744.scale-240.png" />
+    <Content Include="Assets\Tux80.png" />
+    <Content Include="Assets\TuxTitle.png" />
+    <Content Include="Assets\wdbj.png" />
+    <Content Include="Assets\wjcs.png" />
+    <Content Include="Assets\wjgl.png" />
+    <Content Include="Assets\wltx.png" />
+    <Content Include="Assets\xtgl.png" />
+    <Content Include="Assets\xtsz.png" />
+    <Content Include="Assets\bfys.png" />
+    <Content Include="Commands\bfys\ar.html" />
+    <Content Include="Commands\bfys\bunzip2.html" />
+    <Content Include="Commands\bfys\bzip2.html" />
+    <Content Include="Commands\bfys\bzip2recover.html" />
+    <Content Include="Commands\bfys\compress.html" />
+    <Content Include="Commands\bfys\cpio.html" />
+    <Content Include="Commands\bfys\dump.html" />
+    <Content Include="Commands\bfys\gunzip.html" />
+    <Content Include="Commands\bfys\gzexe.html" />
+    <Content Include="Commands\bfys\gzip.html" />
+    <Content Include="Commands\bfys\lha.html" />
+    <Content Include="Commands\bfys\restore.html" />
+    <Content Include="Commands\bfys\tar.html" />
+    <Content Include="Commands\bfys\unarj.html" />
+    <Content Include="Commands\bfys\unzip.html" />
+    <Content Include="Commands\bfys\uudecode.html" />
+    <Content Include="Commands\bfys\uuencode.html" />
+    <Content Include="Commands\bfys\zip.html" />
+    <Content Include="Commands\bfys\zipinfo.html" />
+    <Content Include="Commands\cpgl\cd.html" />
+    <Content Include="Commands\cpgl\df.html" />
+    <Content Include="Commands\cpgl\dirs.html" />
+    <Content Include="Commands\cpgl\du.html" />
+    <Content Include="Commands\cpgl\edquota.html" />
+    <Content Include="Commands\cpgl\eject.html" />
+    <Content Include="Commands\cpgl\lndir.html" />
+    <Content Include="Commands\cpgl\ls.html" />
+    <Content Include="Commands\cpgl\mcd.html" />
+    <Content Include="Commands\cpgl\mdeltree.html" />
+    <Content Include="Commands\cpgl\mdu.html" />
+    <Content Include="Commands\cpgl\mkdir.html" />
+    <Content Include="Commands\cpgl\mlabel.html" />
+    <Content Include="Commands\cpgl\mmd.html" />
+    <Content Include="Commands\cpgl\mmount.html" />
+    <Content Include="Commands\cpgl\mount.html" />
+    <Content Include="Commands\cpgl\mrd.html" />
+    <Content Include="Commands\cpgl\mzip.html" />
+    <Content Include="Commands\cpgl\pwd.html" />
+    <Content Include="Commands\cpgl\quota.html" />
+    <Content Include="Commands\cpgl\quotacheck.html" />
+    <Content Include="Commands\cpgl\quotaoff.html" />
+    <Content Include="Commands\cpgl\quotaon.html" />
+    <Content Include="Commands\cpgl\repquota.html" />
+    <Content Include="Commands\cpgl\rmdir.html" />
+    <Content Include="Commands\cpgl\rmt.html" />
+    <Content Include="Commands\cpgl\stat.html" />
+    <Content Include="Commands\cpgl\tree.html" />
+    <Content Include="Commands\cpgl\umount.html" />
+    <Content Include="Commands\cpwh\badblocks.html" />
+    <Content Include="Commands\cpwh\cfdisk.html" />
+    <Content Include="Commands\cpwh\dd.html" />
+    <Content Include="Commands\cpwh\e2fsck.html" />
+    <Content Include="Commands\cpwh\ext2ed.html" />
+    <Content Include="Commands\cpwh\fdformat.html" />
+    <Content Include="Commands\cpwh\fdisk.html" />
+    <Content Include="Commands\cpwh\fsck.ext2.html" />
+    <Content Include="Commands\cpwh\fsck.html" />
+    <Content Include="Commands\cpwh\fsck.minix.html" />
+    <Content Include="Commands\cpwh\fsconf.html" />
+    <Content Include="Commands\cpwh\hdparm.html" />
+    <Content Include="Commands\cpwh\losetup.html" />
+    <Content Include="Commands\cpwh\mbadblocks.html" />
+    <Content Include="Commands\cpwh\mformat.html" />
+    <Content Include="Commands\cpwh\mkbootdisk.html" />
+    <Content Include="Commands\cpwh\mkdosfs.html" />
+    <Content Include="Commands\cpwh\mke2fs.html" />
+    <Content Include="Commands\cpwh\mkfs.ext2.html" />
+    <Content Include="Commands\cpwh\mkfs.html" />
+    <Content Include="Commands\cpwh\mkfs.minix.html" />
+    <Content Include="Commands\cpwh\mkfs.msdos.html" />
+    <Content Include="Commands\cpwh\mkinitrd.html" />
+    <Content Include="Commands\cpwh\mkisofs.html" />
+    <Content Include="Commands\cpwh\mkswap.html" />
+    <Content Include="Commands\cpwh\mpartition.html" />
+    <Content Include="Commands\cpwh\sfdisk.html" />
+    <Content Include="Commands\cpwh\swapoff.html" />
+    <Content Include="Commands\cpwh\swapon.html" />
+    <Content Include="Commands\cpwh\symlinks.html" />
+    <Content Include="Commands\cpwh\sync.html" />
+    <Content Include="Commands\css\default.css" />
+    <Content Include="Commands\sbgl\dumpkeys.html" />
+    <Content Include="Commands\sbgl\loadkeys.html" />
+    <Content Include="Commands\sbgl\MAKEDEV.html" />
+    <Content Include="Commands\sbgl\rdev.html" />
+    <Content Include="Commands\sbgl\setleds.html" />
+    <Content Include="Commands\wdbj\col.html" />
+    <Content Include="Commands\wdbj\colrm.html" />
+    <Content Include="Commands\wdbj\comm.html" />
+    <Content Include="Commands\wdbj\csplit.html" />
+    <Content Include="Commands\wdbj\ed.html" />
+    <Content Include="Commands\wdbj\egrep.html" />
+    <Content Include="Commands\wdbj\ex.html" />
+    <Content Include="Commands\wdbj\expr.html" />
+    <Content Include="Commands\wdbj\fgrep.html" />
+    <Content Include="Commands\wdbj\fmt.html" />
+    <Content Include="Commands\wdbj\fold.html" />
+    <Content Include="Commands\wdbj\grep.html" />
+    <Content Include="Commands\wdbj\ispell.html" />
+    <Content Include="Commands\wdbj\jed.html" />
+    <Content Include="Commands\wdbj\joe.html" />
+    <Content Include="Commands\wdbj\join.html" />
+    <Content Include="Commands\wdbj\look.html" />
+    <Content Include="Commands\wdbj\mtype.html" />
+    <Content Include="Commands\wdbj\pico.html" />
+    <Content Include="Commands\wdbj\rgrep.html" />
+    <Content Include="Commands\wdbj\sed.html" />
+    <Content Include="Commands\wdbj\sort.html" />
+    <Content Include="Commands\wdbj\spell.html" />
+    <Content Include="Commands\wdbj\tr.html" />
+    <Content Include="Commands\wdbj\uniq.html" />
+    <Content Include="Commands\wdbj\vi.html" />
+    <Content Include="Commands\wdbj\wc.html" />
+    <Content Include="Commands\wjcs\bye.html" />
+    <Content Include="Commands\wjcs\ftp.html" />
+    <Content Include="Commands\wjcs\ftpcount.html" />
+    <Content Include="Commands\wjcs\ftpshut.html" />
+    <Content Include="Commands\wjcs\ftpwho.html" />
+    <Content Include="Commands\wjcs\lpd.html" />
+    <Content Include="Commands\wjcs\lpq.html" />
+    <Content Include="Commands\wjcs\lpr.html" />
+    <Content Include="Commands\wjcs\lprm.html" />
+    <Content Include="Commands\wjcs\ncftp.html" />
+    <Content Include="Commands\wjcs\sftp.html" />
+    <Content Include="Commands\wjcs\tftp.html" />
+    <Content Include="Commands\wjcs\uucico.html" />
+    <Content Include="Commands\wjcs\uucp.html" />
+    <Content Include="Commands\wjcs\uupick.html" />
+    <Content Include="Commands\wjcs\uuto.html" />
+    <Content Include="Commands\wjcs\wget.html" />
+    <Content Include="Commands\wjgl\cat.html" />
+    <Content Include="Commands\wjgl\chattr.html" />
+    <Content Include="Commands\wjgl\chgrp.html" />
+    <Content Include="Commands\wjgl\chmod.html" />
+    <Content Include="Commands\wjgl\chown.html" />
+    <Content Include="Commands\wjgl\cksum.html" />
+    <Content Include="Commands\wjgl\cmp.html" />
+    <Content Include="Commands\wjgl\cp.html" />
+    <Content Include="Commands\wjgl\cut.html" />
+    <Content Include="Commands\wjgl\diff.html" />
+    <Content Include="Commands\wjgl\diffstat.html" />
+    <Content Include="Commands\wjgl\file.html" />
+    <Content Include="Commands\wjgl\find.html" />
+    <Content Include="Commands\wjgl\git.html" />
+    <Content Include="Commands\wjgl\gitview.html" />
+    <Content Include="Commands\wjgl\indent.html" />
+    <Content Include="Commands\wjgl\ln.html" />
+    <Content Include="Commands\wjgl\locate.html" />
+    <Content Include="Commands\wjgl\lsattr.html" />
+    <Content Include="Commands\wjgl\mattrib.html" />
+    <Content Include="Commands\wjgl\mc.html" />
+    <Content Include="Commands\wjgl\mcopy.html" />
+    <Content Include="Commands\wjgl\mdel.html" />
+    <Content Include="Commands\wjgl\mdir.html" />
+    <Content Include="Commands\wjgl\mktemp.html" />
+    <Content Include="Commands\wjgl\mmove.html" />
+    <Content Include="Commands\wjgl\mread.html" />
+    <Content Include="Commands\wjgl\mren.html" />
+    <Content Include="Commands\wjgl\mshowfat.html" />
+    <Content Include="Commands\wjgl\mtools.html" />
+    <Content Include="Commands\wjgl\mtoolstest.html" />
+    <Content Include="Commands\wjgl\mv.html" />
+    <Content Include="Commands\wjgl\od.html" />
+    <Content Include="Commands\wjgl\paste.html" />
+    <Content Include="Commands\wjgl\patch.html" />
+    <Content Include="Commands\wjgl\rcp.html" />
+    <Content Include="Commands\wjgl\rhmask.html" />
+    <Content Include="Commands\wjgl\rm.html" />
+    <Content Include="Commands\wjgl\scp.html" />
+    <Content Include="Commands\wjgl\slocate.html" />
+    <Content Include="Commands\wjgl\split.html" />
+    <Content Include="Commands\wjgl\tee.html" />
+    <Content Include="Commands\wjgl\tmpwatch.html" />
+    <Content Include="Commands\wjgl\touch.html" />
+    <Content Include="Commands\wjgl\umask.html" />
+    <Content Include="Commands\wjgl\whereis.html" />
+    <Content Include="Commands\wjgl\which.html" />
+    <Content Include="Commands\wltx\apachectl.html" />
+    <Content Include="Commands\wltx\arpwatch.html" />
+    <Content Include="Commands\wltx\cu.html" />
+    <Content Include="Commands\wltx\dip.html" />
+    <Content Include="Commands\wltx\dnsconf.html" />
+    <Content Include="Commands\wltx\efax.html" />
+    <Content Include="Commands\wltx\getty.html" />
+    <Content Include="Commands\wltx\httpd.html" />
+    <Content Include="Commands\wltx\ifconfig.html" />
+    <Content Include="Commands\wltx\mesg.html" />
+    <Content Include="Commands\wltx\mingetty.html" />
+    <Content Include="Commands\wltx\minicom.html" />
+    <Content Include="Commands\wltx\nc.html" />
+    <Content Include="Commands\wltx\netconf.html" />
+    <Content Include="Commands\wltx\netconfig.html" />
+    <Content Include="Commands\wltx\netstat.html" />
+    <Content Include="Commands\wltx\newaliases.html" />
+    <Content Include="Commands\wltx\ping.html" />
+    <Content Include="Commands\wltx\ppp-off.html" />
+    <Content Include="Commands\wltx\pppsetup.html" />
+    <Content Include="Commands\wltx\pppstats.html" />
+    <Content Include="Commands\wltx\samba.html" />
+    <Content Include="Commands\wltx\setserial.html" />
+    <Content Include="Commands\wltx\shapecfg.html" />
+    <Content Include="Commands\wltx\smbclient.html" />
+    <Content Include="Commands\wltx\smbd.html" />
+    <Content Include="Commands\wltx\statserial.html" />
+    <Content Include="Commands\wltx\talk.html" />
+    <Content Include="Commands\wltx\tcpdump.html" />
+    <Content Include="Commands\wltx\telnet.html" />
+    <Content Include="Commands\wltx\testparm.html" />
+    <Content Include="Commands\wltx\traceroute.html" />
+    <Content Include="Commands\wltx\tty.html" />
+    <Content Include="Commands\wltx\uulog.html" />
+    <Content Include="Commands\wltx\uuname.html" />
+    <Content Include="Commands\wltx\uustat.html" />
+    <Content Include="Commands\wltx\uux.html" />
+    <Content Include="Commands\wltx\wall.html" />
+    <Content Include="Commands\wltx\write.html" />
+    <Content Include="Commands\wltx\ytalk.html" />
+    <Content Include="Commands\xtgl\adduser.html" />
+    <Content Include="Commands\xtgl\at.html" />
+    <Content Include="Commands\xtgl\chfn.html" />
+    <Content Include="Commands\xtgl\chsh.html" />
+    <Content Include="Commands\xtgl\date.html" />
+    <Content Include="Commands\xtgl\exit.html" />
+    <Content Include="Commands\xtgl\finger.html" />
+    <Content Include="Commands\xtgl\free.html" />
+    <Content Include="Commands\xtgl\fwhois.html" />
+    <Content Include="Commands\xtgl\gitps.html" />
+    <Content Include="Commands\xtgl\groupdel.html" />
+    <Content Include="Commands\xtgl\groupmod.html" />
+    <Content Include="Commands\xtgl\halt.html" />
+    <Content Include="Commands\xtgl\id.html" />
+    <Content Include="Commands\xtgl\kill.html" />
+    <Content Include="Commands\xtgl\last.html" />
+    <Content Include="Commands\xtgl\lastb.html" />
+    <Content Include="Commands\xtgl\login.html" />
+    <Content Include="Commands\xtgl\logname.html" />
+    <Content Include="Commands\xtgl\logout.html" />
+    <Content Include="Commands\xtgl\logrotate.html" />
+    <Content Include="Commands\xtgl\newgrp.html" />
+    <Content Include="Commands\xtgl\nice.html" />
+    <Content Include="Commands\xtgl\procinfo.html" />
+    <Content Include="Commands\xtgl\ps.html" />
+    <Content Include="Commands\xtgl\pstree.html" />
+    <Content Include="Commands\xtgl\reboot.html" />
+    <Content Include="Commands\xtgl\renice.html" />
+    <Content Include="Commands\xtgl\rlogin.html" />
+    <Content Include="Commands\xtgl\rsh.html" />
+    <Content Include="Commands\xtgl\rwho.html" />
+    <Content Include="Commands\xtgl\screen.html" />
+    <Content Include="Commands\xtgl\shutdown.html" />
+    <Content Include="Commands\xtgl\skill.html" />
+    <Content Include="Commands\xtgl\sleep.html" />
+    <Content Include="Commands\xtgl\sliplogin.html" />
+    <Content Include="Commands\xtgl\su.html" />
+    <Content Include="Commands\xtgl\sudo.html" />
+    <Content Include="Commands\xtgl\suspend.html" />
+    <Content Include="Commands\xtgl\swatch.html" />
+    <Content Include="Commands\xtgl\tload.html" />
+    <Content Include="Commands\xtgl\top.html" />
+    <Content Include="Commands\xtgl\uname.html" />
+    <Content Include="Commands\xtgl\useradd.html" />
+    <Content Include="Commands\xtgl\userconf.html" />
+    <Content Include="Commands\xtgl\userdel.html" />
+    <Content Include="Commands\xtgl\usermod.html" />
+    <Content Include="Commands\xtgl\vlock.html" />
+    <Content Include="Commands\xtgl\w.html" />
+    <Content Include="Commands\xtgl\who.html" />
+    <Content Include="Commands\xtgl\whoami.html" />
+    <Content Include="Commands\xtgl\whois.html" />
+    <Content Include="Commands\xtsz\alias.html" />
+    <Content Include="Commands\xtsz\apmd.html" />
+    <Content Include="Commands\xtsz\aumix.html" />
+    <Content Include="Commands\xtsz\bind.html" />
+    <Content Include="Commands\xtsz\chkconfig.html" />
+    <Content Include="Commands\xtsz\chroot.html" />
+    <Content Include="Commands\xtsz\clear.html" />
+    <Content Include="Commands\xtsz\clock.html" />
+    <Content Include="Commands\xtsz\crontab.html" />
+    <Content Include="Commands\xtsz\declare.html" />
+    <Content Include="Commands\xtsz\depmod.html" />
+    <Content Include="Commands\xtsz\dircolors.html" />
+    <Content Include="Commands\xtsz\dmesg.html" />
+    <Content Include="Commands\xtsz\enable.html" />
+    <Content Include="Commands\xtsz\eval.html" />
+    <Content Include="Commands\xtsz\export.html" />
+    <Content Include="Commands\xtsz\fbset.html" />
+    <Content Include="Commands\xtsz\grpconv.html" />
+    <Content Include="Commands\xtsz\grpunconv.html" />
+    <Content Include="Commands\xtsz\hwclock.html" />
+    <Content Include="Commands\xtsz\insmod.html" />
+    <Content Include="Commands\xtsz\kbdconfig.html" />
+    <Content Include="Commands\xtsz\lilo.html" />
+    <Content Include="Commands\xtsz\liloconfig.html" />
+    <Content Include="Commands\xtsz\lsmod.html" />
+    <Content Include="Commands\xtsz\minfo.html" />
+    <Content Include="Commands\xtsz\mkkickstart.html" />
+    <Content Include="Commands\xtsz\modinfo.html" />
+    <Content Include="Commands\xtsz\modprobe.html" />
+    <Content Include="Commands\xtsz\mouseconfig.html" />
+    <Content Include="Commands\xtsz\ntsysv.html" />
+    <Content Include="Commands\xtsz\passwd.html" />
+    <Content Include="Commands\xtsz\pwconv.html" />
+    <Content Include="Commands\xtsz\pwunconv.html" />
+    <Content Include="Commands\xtsz\rdate.html" />
+    <Content Include="Commands\xtsz\reset.html" />
+    <Content Include="Commands\xtsz\resize.html" />
+    <Content Include="Commands\xtsz\rmmod.html" />
+    <Content Include="Commands\xtsz\rpm.html" />
+    <Content Include="Commands\xtsz\set.html" />
+    <Content Include="Commands\xtsz\setconsole.html" />
+    <Content Include="Commands\xtsz\setenv.html" />
+    <Content Include="Commands\xtsz\setup.html" />
+    <Content Include="Commands\xtsz\sndconfig.html" />
+    <Content Include="Commands\xtsz\SVGAText Mode.html" />
+    <Content Include="Commands\xtsz\timeconfig.html" />
+    <Content Include="Commands\xtsz\ulimit.html" />
+    <Content Include="Commands\xtsz\unalias.html" />
+    <Content Include="Commands\xtsz\unset.html" />
+    <Content Include="Common\ReadMe.txt" />
+    <None Include="Package.StoreAssociation.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataModel\LinuxCommands.db" />
+    <None Include="DataModel\SampleData.json" />
+    <None Include="packages.config" />
+    <PRIResource Include="Strings\zh-cn\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.VCLibs, version=12.0">
+      <Name>Microsoft Visual C++ 2013 Runtime Package for Windows Phone</Name>
+    </SDKReference>
+    <SDKReference Include="SQLite.WP81, Version=3.8.10.2">
+      <Name>SQLite for Windows Phone 8.1</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetPlatformIdentifier)' == '' ">
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets" Label="MultilingualAppToolkit" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>显示<span class="args">UUCP</span>目前的状况。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>uustat [<span class="args">-aeiKmMNpqQRv</span>][<span class="args">-B</span>&lt;行数&gt;][<span class="args">-c</span>&lt;指令&gt;][<span class="args">-C</span>&lt;指令&gt;][<span class="args">-I</span>&lt;配置文件&gt;][<span class="args">-k</span>&lt;工作&gt;][<span class="args">-o</span>&lt;小时&gt;][<span class="args">-r</span>&lt;工作&gt;][<span class="args">-s</span>&lt;主机&gt;][<span class="args">-S</span>&lt;主机&gt;][<span class="args">-u</span>&lt;用户&gt;][<span class="args">-U</span>&lt;用户&gt;][<span class="args">-W</span>&lt;附注&gt;][<span class="args">-y</span>&lt;小时&gt;][<span class="args">-x</span>&lt;层级&gt;][<span class="args">--help</span>]<br />
+  <br />
+</p>
+<div  class="category">补充说明：</div>
+<p>执行<span class="args">uucp</span>与<span class="args">uux</span>指令后，会先将工作送到队列，再由<span class="args">uucico</span>来执行工作。<span class="args">uustat</span>可显示，删除或启动队列中等待执行的工作。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>  <span class="args">-a</span>或<span class="args">-all   </span>显示全部的<span class="args">UUCP</span>工作。<br />
+    
+  <span class="args">-B</span>&lt;行数&gt;或<span class="args">--mail-lines</span>&lt;行数&gt;   与<span class="args">-M</span>或<span class="args">-N</span>参数一并使用，用来指定邮件中要包含多少行的信息。<br />
+    
+  <span class="args">-c</span>&lt;指令&gt;或<span class="args">--command</span>&lt;指令&gt;   显示与&lt;指令&gt;有关的工作。<br />
+    
+  <span class="args">-C</span>&lt;指令&gt;或<span class="args">--not-command</span>&lt;指令&gt;   显示与&lt;指令&gt;无关的工作。<br />
+    
+  <span class="args">-e</span>或<span class="args">--executions   </span>仅显示待执行的工作。<br />
+    
+  <span class="args">-i</span>或<span class="args">--prompt   </span>针对队列中的每项工作，询问使用是否要删除工作。<br />
+    
+  <span class="args">-I</span>&lt;配置文件&gt;或<span class="args">--config</span>&lt;配置文件&gt;   指定配置文件。<br />
+    
+  <span class="args">-k</span>&lt;工作&gt;或<span class="args">--kill</span>&lt;工作&gt;   删除指定的工作。<br />
+    
+  <span class="args">-m</span>或<span class="args">--status   </span>删除全部的工作。<br />
+    
+  <span class="args">-M</span>或<span class="args">-mail   </span>将状态信息邮寄给<span class="args">UUCP</span>管理员。<br />
+    
+  <span class="args">-N</span>或<span class="args">--notify   </span>将状态信息分别邮寄给提出该项工作的用户。<br />
+    
+  <span class="args">-o</span>&lt;小时&gt;或<span class="args">--older-than</span>&lt;小时&gt;   显示超过指定时数的工作。<br />
+    
+  <span class="args">-p</span>或<span class="args">--ps   </span>显示负责<span class="args">UUCP</span>锁定的程序。<br />
+    
+  <span class="args">-q</span>或<span class="args">--list   </span>显示每台远端主机上所要执行工作的状态。<br />
+    
+  <span class="args">-Q</span>或<span class="args">--no-list   </span>不显示工作。<br />
+    
+  <span class="args">-r</span>&lt;工作&gt;或<span class="args">--rejuvenate</span>&lt;工作&gt;   重新启动指定的工作。<br />
+    
+  <span class="args">-R</span>或<span class="args">--rejuvenate-all   </span>重新启动全部的工作。<br />
+    
+  <span class="args">-s</span>&lt;主机&gt;或<span class="args">--system</span>&lt;主机&gt;   显示与&lt;主机&gt;有关的工作。<br />
+    
+  <span class="args">-S</span>&lt;主机&gt;或<span class="args">--not-system</span>&lt;主机&gt;   显示与&lt;主机&gt;无关的工作。<br />
+    
+  <span class="args">-v</span>或<span class="args">--version   </span>显示版本信息。<br />
+    
+  <span class="args">-u</span>&lt;用户&gt;或<span class="args">--user</span>&lt;用户&gt;   显示与&lt;用户&gt;有关的工作。<br />
+    
+  <span class="args">-U</span>&lt;用户&gt;或<span class="args">--not-user</span>&lt;用户&gt;   显示与&lt;用户&gt;无关的工作。<br />
+    
+  <span class="args">-W</span>&lt;附注&gt;或<span class="args">--comment</span>&lt;附注&gt;   要放在邮件信息中的附注。<br />
+    
+  <span class="args">-y</span>&lt;小时&gt;或<span class="args">--younger-than</span>&lt;小时&gt;   显示低于指定时数的工作。<br />
+    
+  <span class="args">-x</span>&lt;层级&gt;或<span class="args">--debug</span>&lt;层级&gt;   指定排错层级。<br />
+    
+<span class="args">--help</span>   显示帮助。</p>
+<div  class="category">示例：</div>
+<code>
+抱歉暂无示例。
+</code>
+</body></html>

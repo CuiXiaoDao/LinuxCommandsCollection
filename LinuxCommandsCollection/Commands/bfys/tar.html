@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>备份文件。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>tar [<span class="args">-ABcdgGhiklmMoOpPrRsStuUvwWxzZ</span>][<span class="args">-b</span> &lt;区块数目&gt;][<span class="args">-C</span> &lt;目的目录&gt;][<span class="args">-f</span> &lt;备份文件&gt;][<span class="args">-F</span> &lt;<span class="args">Script</span>文件&gt;][<span class="args">-K</span> &lt;文件&gt;][<span class="args">-L</span> &lt;媒体容量&gt;][<span class="args">-N</span> &lt;日期时间&gt;][<span class="args">-T</span> &lt;范本文件&gt;][<span class="args">-V</span> &lt;卷册名称&gt;][<span class="args">-X</span> &lt;范本文件&gt;][<span class="args">-</span>&lt;设备编号&gt;&lt;存储密度&gt;][<span class="args">--after-date=</span>&lt;日期时间&gt;][<span class="args">--atime-preserve</span>][<span class="args">--backuup=</span>&lt;备份方式&gt;][<span class="args">--checkpoint</span>][<span class="args">--concatenate</span>][<span class="args">--confirmation</span>][<span class="args">--delete</span>][<span class="args">--exclude=</span>&lt;范本样式&gt;][<span class="args">--force-local</span>][<span class="args">--group=</span>&lt;群组名称&gt;][<span class="args">--help</span>][<span class="args">--ignore-failed-read</span>][<span class="args">--new-volume-script=</span>&lt;<span class="args">Script</span>文件&gt;][<span class="args">--newer-mtime</span>][<span class="args">--no-recursion</span>][<span class="args">--null</span>][<span class="args">--numeric-owner</span>][<span class="args">--owner=</span>&lt;用户名称&gt;][<span class="args">--posix</span>][<span class="args">--erve</span>][<span class="args">--preserve-order</span>][<span class="args">--preserve-permissions</span>][<span class="args">--record-size=</span>&lt;区块数目&gt;][<span class="args">--recursive-unlink</span>][<span class="args">--remove-files</span>][<span class="args">--rsh-command=</span>&lt;执行指令&gt;][<span class="args">--same-owner</span>][<span class="args">--suffix=</span>&lt;备份字尾字符串&gt;][<span class="args">--totals</span>][<span class="args">--use-compress-program=</span>&lt;执行指令&gt;][<span class="args">--version</span>][<span class="args">--volno-file=</span>&lt;编号文件&gt;][文件或目录...]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">tar</span>是用来建立，还原备份文件的工具程序，它可以加入，解开备份文件内的文件。<br />
+</p>
+
+<div  class="category">参　数：</div>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tbody>
+    <tr>
+      <td>   <span class="args">-A</span>或<span class="args">--catenate   </span>新增温暖件到已存在的备份文件。<br />
+          
+        <span class="args">-b</span>&lt;区块数目&gt;或<span class="args">--blocking-factor=</span>&lt;区块数目&gt;   设置每笔记录的区块数目，每个区块大小为12Bytes。<br />
+          
+        <span class="args">-B</span>或<span class="args">--read-full-records</span>   读取数据时重设区块大小。<br />
+          
+        <span class="args">-c</span>或<span class="args">--create   </span>建立新的备份文件。<br />
+          
+        <span class="args">-C</span>&lt;目的目录&gt;或<span class="args">--directory=</span>&lt;目的目录&gt;   切换到指定的目录。<br />
+          
+        <span class="args">-d</span>或<span class="args">--diff</span>或<span class="args">--compare   </span>对比备份文件内和文件系统上的文件的差异。<br />
+          
+        <span class="args">-f</span>&lt;备份文件&gt;或<span class="args">--file=</span>&lt;备份文件&gt;   指定备份文件。<br />
+          
+        <span class="args">-F</span>&lt;<span class="args">Script</span>文件&gt;或<span class="args">--info-script=</span>&lt;<span class="args">Script</span>文件&gt;   每次更换磁带时，就执行指定的<span class="args">Script</span>文件。<br />
+          
+        <span class="args">-g</span>或<span class="args">--listed-incremental   </span>处理<span class="args">GNU</span>格式的大量备份。<br />
+          
+        <span class="args">-G</span>或<span class="args">--incremental   </span>处理旧的<span class="args">GNU</span>格式的大量备份。<br />
+          
+        <span class="args">-h</span>或<span class="args">--dereference   </span>不建立符号连接，直接复制该连接所指向的原始文件。<br />
+          
+        <span class="args">-i</span>或<span class="args">--ignore-zeros   </span>忽略备份文件中的0 <span class="args">Byte</span>区块，也就是EOF。<br />
+          
+        <span class="args">-k</span>或<span class="args">--keep-old-files</span>   解开备份文件时，不覆盖已有的文件。<br />
+          
+        <span class="args">-K</span>&lt;文件&gt;或<span class="args">--starting-file=</span>&lt;文件&gt;   从指定的文件开始还原。<br />
+          
+        <span class="args">-l</span>或<span class="args">--one-file-system</span>   复制的文件或目录存放的文件系统，必须与<span class="args">tar</span>指令执行时所处的文件系统相同，否则不予复制。<br />
+          
+        <span class="args">-L</span>&lt;媒体容量&gt;或<span class="args">-tape-length=</span>&lt;媒体容量&gt;   设置存放每体的容量，单位以1024 <span class="args">Bytes</span>计算。<br />
+          
+        <span class="args">-m</span>或<span class="args">--modification-time   </span>还原文件时，不变更文件的更改时间。<br />
+          
+        <span class="args">-M</span>或<span class="args">--multi-volume   </span>在建立，还原备份文件或列出其中的内容时，采用多卷册模式。<br />
+          
+        <span class="args">-N</span>&lt;日期格式&gt;或<span class="args">--newer=</span>&lt;日期时间&gt;   只将较指定日期更新的文件保存到备份文件里。<br />
+          
+        <span class="args">-o</span>或<span class="args">--old-archive</span>或<span class="args">--portability   </span>将资料写入备份文件时使用<span class="args">V7</span>格式。<br />
+          
+        <span class="args">-O</span>或<span class="args">--stdout   </span>把从备份文件里还原的文件输出到标准输出设备。<br />
+          
+        <span class="args">-p</span>或<span class="args">--same-permissions   </span>用原来的文件权限还原文件。<br />
+          
+        <span class="args">-P</span>或<span class="args">--absolute-names   </span>文件名使用绝对名称，不移除文件名称前的&quot;/&quot;号。<br />
+          
+        <span class="args">-r</span>或<span class="args">--append   </span>新增文件到已存在的备份文件的结尾部分。<br />
+          
+        <span class="args">-R</span>或<span class="args">--block-number   </span>列出每个信息在备份文件中的区块编号。<br />
+          
+        <span class="args">-s</span>或<span class="args">--same-order   </span>还原文件的顺序和备份文件内的存放顺序相同。<br />
+          
+        <span class="args">-S</span>或<span class="args">--sparse   </span>倘若一个文件内含大量的连续0字节，则将此文件存成稀疏文件。<br />
+          
+        <span class="args">-t</span>或<span class="args">--list   </span>列出备份文件的内容。<br />
+          
+        <span class="args">-T</span>&lt;范本文件&gt;或<span class="args">--files-from=</span>&lt;范本文件&gt;   指定范本文件，其内含有一个或多个范本样式，让<span class="args">tar</span>解开或建立符合设置条件的文件。<br />
+          
+        <span class="args">-u</span>或<span class="args">--update   </span>仅置换较备份文件内的文件更新的文件。<br />
+          
+        <span class="args">-U</span>或<span class="args">--unlink-first   </span>解开压缩文件还原文件之前，先解除文件的连接。<br />
+          
+        <span class="args">-v</span>或<span class="args">--verbose   </span>显示指令执行过程。<br />
+          
+        <span class="args">-V</span>&lt;卷册名称&gt;或<span class="args">--label=</span>&lt;卷册名称&gt;   建立使用指定的卷册名称的备份文件。<br />
+          
+        <span class="args">-w</span>或<span class="args">--interactive   </span>遭遇问题时先询问用户。<br />
+          
+        <span class="args">-W</span>或<span class="args">--verify   </span>写入备份文件后，确认文件正确无误。<br />
+          
+        <span class="args">-x</span>或<span class="args">--extract</span>或<span class="args">--get  </span>从备份文件中还原文件。<br />
+          
+        <span class="args">-X</span>&lt;范本文件&gt;或<span class="args">--exclude-from=</span>&lt;范本文件&gt;  指定范本文件，其内含有一个或多个范本样式，让<span class="args">ar</span>排除符合设置条件的文件。<br />
+          
+        <span class="args">-z</span>或<span class="args">--gzip</span>或<span class="args">--ungzip   </span>通过<span class="args">gzip</span>指令处理备份文件。<br />
+          
+        <span class="args">-Z</span>或<span class="args">--compress</span>或<span class="args">--uncompress   </span>通过<span class="args">compress</span>指令处理备份文件。<br />
+          
+        <span class="args">-</span>&lt;设备编号&gt;&lt;存储密度&gt;   设置备份用的外围设备编号及存放数据的密度。<br />
+          
+        <span class="args">--after-date=</span>&lt;日期时间&gt;   此参数的效果和指定&quot;-N&quot;参数相同。<br />
+          
+        <span class="args">--atime-preserve   </span>不变更文件的存取时间。<br />
+          
+        <span class="args">--backup=</span>&lt;备份方式&gt;或<span class="args">--backup   </span>移除文件前先进行备份。<br />
+          
+        <span class="args">--checkpoint</span>   读取备份文件时列出目录名称。<br />
+          
+        <span class="args">--concatenate</span>   此参数的效果和指定&quot;-A&quot;参数相同。<br />
+          
+        <span class="args">--confirmation</span>   此参数的效果和指定&quot;-w&quot;参数相同。<br />
+          
+        <span class="args">--delete</span>   从备份文件中删除指定的文件。<br />
+          
+        <span class="args">--exclude=</span>&lt;范本样式&gt;   排除符合范本样式的问家。<br />
+          
+        <span class="args">--group=</span>&lt;群组名称&gt;   把加入设备文件中的文件的所属群组设成指定的群组。<br />
+          
+        <span class="args">--help</span>   在线帮助。<br />
+          
+        <span class="args">--ignore-failed-read</span>   忽略数据读取错误，不中断程序的执行。<br />
+          
+        <span class="args">--new-volume-script=</span>&lt;<span class="args">Script</span>文件&gt;   此参数的效果和指定&quot;-F&quot;参数相同。<br />
+          
+        <span class="args">--newer-mtime   </span>只保存更改过的文件。<br />
+          
+        <span class="args">--no-recursion   </span>不做递归处理，也就是指定目录下的所有文件及子目录不予处理。<br />
+          
+        <span class="args">--null</span>   从<span class="args">null</span>设备读取文件名称。<br />
+          
+        <span class="args">--numeric-owner   </span>以用户识别码及群组识别码取代用户名称和群组名称。<br />
+          
+        <span class="args">--owner=</span>&lt;用户名称&gt;   把加入备份文件中的文件的拥有者设成指定的用户。<br />
+          
+        <span class="args">--posix</span>   将数据写入备份文件时使用<span class="args">POSIX</span>格式。<br />
+          
+        <span class="args">--preserve</span>      此参数的效果和指定&quot;-ps&quot;参数相同。<br />
+          
+        <span class="args">--preserve-order      </span>此参数的效果和指定&quot;-A&quot;参数相同。<br />
+          
+        <span class="args">--preserve-permissions      </span>此参数的效果和指定&quot;-p&quot;参数相同。<br />
+          
+        <span class="args">--record-size=</span>&lt;区块数目&gt;      此参数的效果和指定&quot;-b&quot;参数相同。<br />
+          
+        <span class="args">--recursive-unlink   </span>解开压缩文件还原目录之前，先解除整个目录下所有文件的连接。<br />
+          
+        <span class="args">--remove-files   </span>文件加入备份文件后，就将其删除。<br />
+          
+        <span class="args">--rsh-command=</span>&lt;执行指令&gt;   设置要在远端主机上执行的指令，以取代<span class="args">rsh</span>指令。<br />
+          
+        <span class="args">--same-owner   </span>尝试以相同的文件拥有者还原问家你。<br />
+          
+        <span class="args">--suffix=</span>&lt;备份字尾字符串&gt;   移除文件前先行备份。<br />
+          
+        <span class="args">--totals</span>   备份文件建立后，列出文件大小。<br />
+          
+        <span class="args">--use-compress-program=</span>&lt;执行指令&gt;   通过指定的指令处理备份文件。<br />
+          
+        <span class="args">--version</span>   显示版本信息。<br />
+          
+      <span class="args">--volno-file=</span>&lt;编号文件&gt;   使用指定文件内的编号取代预设的卷册编号。</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<div  class="category">示例：</div>
+<code>
+将文件全部打包成tar包：
+tar -cvf log.tar log2012.log    仅打包，不压缩！ 
+tar -zcvf log.tar.gz log2012.log   打包后，以 gzip 压缩 
+tar -zcvf log.tar.bz2 log2012.log  打包后，以 bzip2 压缩 
+
+在选项f之后的文件档名是自己取的，我们习惯上都用 .tar 来作为辨识。 如果加z选项，则以.tar.gz或.tgz来代表gzip压缩过的tar包；如果加j选项，则以.tar.bz2来作为tar包名。
+
+查阅上述tar包内有哪些文件：
+tar -ztvf log.tar.gz
+
+由于我们使用 gzip 压缩的log.tar.gz，所以要查阅log.tar.gz包内的文件时，就得要加上z这个选项了。
+
+将tar包解压缩：
+tar -zxvf /opt/soft/test/log.tar.gz
+
+在预设的情况下，我们可以将压缩档在任何地方解开的
+
+只将tar内的部分文件解压出来：
+tar -zxvf /opt/soft/test/log30.tar.gz log2013.log
+
+我可以透过tar -ztvf来查阅 tar 包内的文件名称，如果单只要一个文件，就可以透过这个方式来解压部分文件！
+
+文件备份下来，并且保存其权限：
+tar -zcvpf log31.tar.gz log2014.log log2015.log log2016.log
+
+这个-p的属性是很重要的，尤其是当您要保留原本文件的属性时。
+
+在文件夹当中，比某个日期新的文件才备份：
+tar -N "2012/11/13" -zcvf log17.tar.gz test
+
+备份文件夹内容是排除部分文件：
+tar --exclude scf/service -zcvf scf.tar.gz scf/*
+
+其实最简单的使用 tar 就只要记忆底下的方式即可：
+压　缩：tar -jcv -f filename.tar.bz2 要被压缩的文件或目录名称
+查　询：tar -jtv -f filename.tar.bz2
+解压缩：tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录
+
+</code>
+</body></html>

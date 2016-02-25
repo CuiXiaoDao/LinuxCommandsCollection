@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>mount </p>
+<div  class="category">语　　法：</div>
+<p>mount [<span class="args">-hV</span>] <br />
+  　　
+  mount -a [<span class="args">-fFnrsvw</span>] [<span class="args">-t</span> vfstype] <br />
+  　　
+  mount [<span class="args">-fnrsvw</span>] [<span class="args">-o</span>   options [,...]] device | dir <br />
+  　　
+mount [<span class="args">-fnrsvw</span>] [<span class="args">-t</span> vfstype] [<span class="args">-o</span> options]   device dir </p>
+<div  class="category">补充说明：</div>
+<p>将某个档案的内容解读成档案系统，然后将其挂在目录的某个位置之上。当这个命令执行成功后，直到我们使用 <span class="args">umnount   </span>将这个档案系统移除为止，这个命令之下的所有档案将暂时无法被调用。 <br />
+  　　
+  <br />
+  　　
+这个命令可以被用来挂上任何的档案系统，你甚至可以用 <span class="args">-o loop   </span>选项将某个一般的档案当成硬盘机分割挂上系统。这个功能对于 ramdisk,<span class="args">romdisk </span>或是 <span class="args">ISO 9660 </span>的影像档之解读非常实用。</p>
+
+<div  class="category">参　　数：</div>
+<p>　　-V <br />
+  　　
+  <br />
+  　　
+  显示程序版本 <br />
+  　　
+  -h <br />
+  　　
+  <br />
+  　　
+  显示辅助讯息 <br />
+  　　
+  -v <br />
+  　　
+  <br />
+  　　
+  显示较讯息，通常和 <span class="args">-f </span>用来除错。 <br />
+  　　
+  -a <br />
+  　　
+  将 /etc/<span class="args">fstab </span>中定义的所有档案系统挂上。 <br />
+  　　
+  <br />
+  　　
+  -F <br />
+  　　
+  这个命令通常和 <span class="args">-a </span>一起使用，它会为每一个 <span class="args">mount </span>的动作产生一个行程负责执行。在系统需要挂上大量 <span class="args">NFS   </span>档案系统时可以加快挂上的动作。 <br />
+  　　
+  <br />
+  　　
+  -f <br />
+  　　
+  通常用在除错的用途。它会使 <span class="args">mount   </span>并不执行实际挂上的动作，而是模拟整个挂上的过程。通常会和 <span class="args">-v </span>一起使用。 <br />
+  　　
+  <br />
+  　　
+  -n <br />
+  　　
+  一般而言，<span class="args">mount </span>在挂上后会在   /etc/<span class="args">mtab </span>中写入一笔资料。但在系统中没有可写入档案系统存在的情况下可以用这个选项取消这个动作。 <br />
+  　　
+  <br />
+  　　
+  -s-r <br />
+  　　
+  等于   -o ro <br />
+  　　
+  <br />
+  　　
+  -w <br />
+  　　
+  等于 -o rw <br />
+  　　
+  <br />
+  　　
+  -L <br />
+  　　
+  将含有特定标签的硬盘分割挂上。 <br />
+  　　
+  <br />
+  　　
+  -U <br />
+  　　
+  将档案分割序号为 的档案系统挂下。<span class="args">-L </span>和 <span class="args">-U </span>必须在/proc/<span class="args">partition </span>这种档案存在时才有意义。 <br />
+  　　
+  <br />
+  　　
+  -t <br />
+  　　
+  指定档案系统的型态，通常不必指定。<span class="args">mount </span>会自动选择正确的型态。 <br />
+  　　
+  <br />
+  　　
+  -o async <br />
+  　　
+  打开非同步模式，所有的档案读写动作都会用非同步模式执行。 <br />
+  　　
+  <br />
+  　　
+  -o sync <br />
+  　　
+  在同步模式下执行。 <br />
+  　　
+  <br />
+  　　
+  -o atime <br />
+  　　
+  -o noatime <br />
+  　　
+  当 <span class="args">atime   </span>打开时，系统会在每次读取档案时更新档案的『上一次调用时间』。当我们使用 <span class="args">flash </span>档案系统时可能会选项把这个选项关闭以减少写入的次数。 <br />
+  　　
+  <br />
+  　　
+  -o auto <br />
+  　　
+  -o noauto <br />
+  　　
+  打开/关闭自动挂上模式。 <br />
+  　　
+  <br />
+  　　
+  -o defaults <br />
+  　　
+  使用预设的选项 rw, suid, dev, exec, auto, nouser, and async. <br />
+  　　
+  <br />
+  　　
+  -o dev <br />
+  　　
+  -o nodev-o exec <br />
+  　　
+  -o noexec <br />
+  　　
+  允许执行档被执行。 <br />
+  　　
+  <br />
+  　　
+  -o suid <br />
+  　　
+  -o nosuid <br />
+  　　
+  允许执行档在 <span class="args">root </span>权限下执行。 <br />
+  　　
+  <br />
+  　　
+  -o user <br />
+  　　
+  -o nouser <br />
+  　　
+  使用者可以执行 mount/<span class="args">umount </span>的动作。 <br />
+  　　
+  <br />
+  　　
+  -o remount <br />
+  　　
+  将一个已经挂下的档案系统重新用不同的方式挂上。例如原先是唯读的系统，现在用可读写的模式重新挂上。 <br />
+  　　
+  <br />
+  　　
+  -o ro <br />
+  　　
+  用唯读模式挂上。 <br />
+  　　
+  <br />
+  　　
+  -o rw <br />
+  　　
+  用可读写模式挂上。 <br />
+  　　
+  <br />
+  　　
+  -o loop= <br />
+  　　
+  使用   <span class="args">loop </span>模式用来将一个档案当成硬盘分割挂上系统。 <br />
+  　　
+  <br />
+  　　
+  范例 <br />
+  　　
+  <br />
+  　　
+  将 /dev/<span class="args">hda1 </span>挂在 /<span class="args">mnt </span>之下。 <br />
+  　　
+  <br />
+  　　 
+  #mount /dev/hda1 /mnt <br />
+  　　 
+  <br />
+  　　
+  将 /dev/<span class="args">hda1 </span>用唯读模式挂在 /<span class="args">mnt </span>之下。 <br />
+  　　
+  <br />
+  　　 
+  #mount -o ro /dev/hda1 /mnt <br />
+  　　 
+  <br />
+  　　
+  将 /tmp/image<span class="args">.iso </span>这个光碟的   <span class="args">image </span>档使用 <span class="args">loop </span>模式挂在 /mnt/<span class="args">cdrom</span>之下。用这种方法可以将一般网络上可以找到的 <span class="args">Linux </span>光 碟 <span class="args">ISO   </span>档在不烧录成光碟的情况下检视其内容。 <br />
+  　　
+  <br />
+  　　 
+  #mount -o loop /tmp/image.iso /mnt/cdrom <br />
+  　　
+相关命令umount</p>
+<div  class="category">示例：</div>
+<code>
+mount -t auto /dev/cdrom /mnt/cdrom
+mount: mount point /mnt/cdrom does not exist           /mnt/cdrom目录不存在，需要先创建。
+
+cd /mnt
+-bash: cd: /mnt: No such file or directory
+
+mkdir -p /mnt/cdrom    创建/mnt/cdrom目录
+ls
+bin   dev  home    lib         media  mnt  proc  sbin     srv  tmp  var
+boot  etc  initrd  lost+found  misc   opt  root  selinux  sys  usr
+
+mount -t auto /dev/cdrom /mnt/cdrom     挂载cdrom
+mount: block device /dev/cdrom is write-protected, mounting read-only     挂载成功
+
+ll /mnt/cdrom    查看cdrom里面内容
+total 859
+dr-xr-xr-x  4 root root   2048 Sep  4  2005 CentOS
+-r--r--r--  2 root root   8859 Mar 19  2005 centosdocs-man.css
+-r--r--r--  9 root root  18009 Mar  1  2005 GPL
+dr-xr-xr-x  2 root root 241664 May  7 02:32 headers
+dr-xr-xr-x  4 root root   2048 May  7 02:23 images
+dr-xr-xr-x  2 root root   4096 May  7 02:23 isolinux
+dr-xr-xr-x  2 root root  18432 May  2 18:50 NOTES
+-r--r--r--  2 root root   5443 May  7 01:49 RELEASE-NOTES-en.html
+dr-xr-xr-x  2 root root   2048 May  7 02:34 repodata
+-r--r--r--  9 root root   1795 Mar  1  2005 rpm-GPG-KEY
+-r--r--r--  2 root root   1795 Mar  1  2005 RPM-GPG-KEY-centos4
+-r--r--r--  1 root root 571730 May  7 01:39 yumgroups.xml
+</code>
+</body></html>

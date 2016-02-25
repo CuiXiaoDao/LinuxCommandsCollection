@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p><span class="args">.bz2</span>文件的解压缩程序。<br />
+  <br />
+</p>
+<div  class="category">语　　法：</div>
+<p>bunzip2 [<span class="args">-fkLsvV</span>][<span class="args">.bz2</span>压缩文件]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">bunzip2</span>可解压缩<span class="args">.bz2</span>格式的压缩文件。<span class="args">bunzip2</span>实际上是<span class="args">bzip2</span>的符号连接，执行<span class="args">bunzip2</span>与<span class="args">bzip2 -d</span>的效果相同。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p><span class="args">-f</span>或<span class="args">--force 　</span>解压缩时，若输出的文件与现有文件同名时，预设不会覆盖现有的文件。若要覆盖，请使用此参数。 <br />
+  <span class="args">-k</span>或<span class="args">--keep 　</span>在解压缩后，预设会删除原来的压缩文件。若要保留压缩文件，请使用此参数。 <br />
+  <span class="args">-s</span>或<span class="args">--small 　</span>降低程序执行时，内存的使用量。 <br />
+  <span class="args">-v</span>或<span class="args">--verbose 　</span>解压缩文件时，显示详细的信息。 <br />
+-l,--license,<span class="args">-V</span>或<span class="args">--version 　</span>显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+将/opt目录下的etc.zip、var.zip和backup.zip进行压缩，设置压缩率为最高，同时在压缩完毕后不删除原始文件，显示压缩过程的详细信息。
+bzip2 -9vk /opt/etc.zip /opt/var.zip /opt/backup.zip
+
+</code>
+</body></html>

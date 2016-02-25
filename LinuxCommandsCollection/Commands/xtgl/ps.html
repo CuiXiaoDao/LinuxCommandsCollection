@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>报告程序状况。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>ps [<span class="args">-aAcdefHjlmNVwy</span>][<span class="args">acefghLnrsSTuvxX</span>][<span class="args">-C</span> &lt;指令名称&gt;][<span class="args">-g</span> &lt;群组名称&gt;][<span class="args">-G</span> &lt;群组识别码&gt;][<span class="args">-p</span> &lt;程序识别码&gt;][<span class="args">p</span> &lt;程序识别码&gt;][<span class="args">-s</span> &lt;阶段作业&gt;][<span class="args">-t</span> &lt;终端机编号&gt;][<span class="args">t</span> &lt;终端机编号&gt;][<span class="args">-u</span> &lt;用户识别码&gt;][<span class="args">-U</span> &lt;用户识别码&gt;][<span class="args">U</span> &lt;用户名称&gt;][<span class="args">-</span>&lt;程序识别码&gt;][<span class="args">--cols</span> &lt;每列字符数&gt;][<span class="args">--columns</span> &lt;每列字符数&gt;][<span class="args">--cumulative</span>][<span class="args">--deselect</span>][<span class="args">--forest</span>][<span class="args">--headers</span>][<span class="args">--help</span>][<span class="args">--info</span>][<span class="args">--lines</span> &lt;显示列数&gt;][<span class="args">--no-headers</span>][<span class="args">--group</span> &lt;群组名称&gt;][<span class="args">-Group</span> &lt;群组识别码&gt;][<span class="args">--pid</span> &lt;程序识别码&gt;][<span class="args">--rows</span> &lt;显示列数&gt;][<span class="args">--sid</span> &lt;阶段作业&gt;][<span class="args">--tty</span> &lt;终端机编号&gt;][<span class="args">--user</span> &lt;用户名称&gt;][<span class="args">--User</span> &lt;用户识别码&gt;][<span class="args">--version</span>][<span class="args">--width</span> &lt;每列字符数&gt;]<br />
+  <br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">ps</span>是用来报告程序执行状况的指令，您可以搭配<span class="args">kill</span>指令随时中断，删除不必要的程序。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>　<span class="args">-a 　</span>显示所有终端机下执行的程序，除了阶段作业领导者之外。 <br />
+  　
+  <span class="args">a</span> 　显示现行终端机下的所有程序，包括其他用户的程序。 <br />
+  　
+  <span class="args">-A</span> 　显示所有程序。 <br />
+  　
+  <span class="args">-c</span> 　显示<span class="args">CLS</span>和<span class="args">PRI</span>栏位。 <br />
+  　
+  <span class="args">c</span> 　列出程序时，显示每个程序真正的指令名称，而不包含路径，参数或常驻服务的标示。 <br />
+  　
+  <span class="args">-C</span>&lt;指令名称&gt; 　指定执行指令的名称，并列出该指令的程序的状况。 <br />
+  　
+  <span class="args">-d</span> 　显示所有程序，但不包括阶段作业领导者的程序。 <br />
+  　
+  <span class="args">-e</span> 　此参数的效果和指定&quot;A&quot;参数相同。 <br />
+  　
+  <span class="args">e</span> 　列出程序时，显示每个程序所使用的环境变量。 <br />
+  　
+  <span class="args">-f</span> 　显示UID,PPIP,<span class="args">C</span>与<span class="args">STIME</span>栏位。 <br />
+  　
+  <span class="args">f</span> 　用<span class="args">ASCII</span>字符显示树状结构，表达程序间的相互关系。 <br />
+  　
+  <span class="args">-g</span>&lt;群组名称&gt; 　此参数的效果和指定&quot;-G&quot;参数相同，当亦能使用阶段作业领导者的名称来指定。 <br />
+  　
+  <span class="args">g</span> 　显示现行终端机下的所有程序，包括群组领导者的程序。 <br />
+  　
+  <span class="args">-G</span>&lt;群组识别码&gt; 　列出属于该群组的程序的状况，也可使用群组名称来指定。 <br />
+  　
+  <span class="args">h</span> 　不显示标题列。 <br />
+  　
+  <span class="args">-H</span> 　显示树状结构，表示程序间的相互关系。 <br />
+  　
+  <span class="args">-j</span>或<span class="args">j 　</span>采用工作控制的格式显示程序状况。 <br />
+  　
+  <span class="args">-l</span>或<span class="args">l 　</span>采用详细的格式来显示程序状况。 <br />
+  　
+  <span class="args">L</span> 　列出栏位的相关信息。 <br />
+  　
+  <span class="args">-m</span>或<span class="args">m 　</span>显示所有的执行绪。 <br />
+  　
+  <span class="args">n</span> 　以数字来表示<span class="args">USER</span>和<span class="args">WCHAN</span>栏位。 <br />
+  　
+  <span class="args">-N</span> 　显示所有的程序，除了执行<span class="args">ps</span>指令终端机下的程序之外。 <br />
+  　
+  <span class="args">-p</span>&lt;程序识别码&gt; 　指定程序识别码，并列出该程序的状况。 <br />
+  　
+  <span class="args">p</span>&lt;程序识别码&gt; 　此参数的效果和指定&quot;-p&quot;参数相同，只在列表格式方面稍有差异。 <br />
+  　
+  <span class="args">r</span> 　只列出现行终端机正在执行中的程序。 <br />
+  　
+  <span class="args">-s</span>&lt;阶段作业&gt; 　指定阶段作业的程序识别码，并列出隶属该阶段作业的程序的状况。 <br />
+  　
+  <span class="args">s</span> 　采用程序信号的格式显示程序状况。 <br />
+  　
+  <span class="args">S</span> 　列出程序时，包括已中断的子程序资料。 <br />
+  　
+  <span class="args">-t</span>&lt;终端机编号&gt; 　指定终端机编号，并列出属于该终端机的程序的状况。 <br />
+  　
+  <span class="args">t</span>&lt;终端机编号&gt; 　此参数的效果和指定&quot;-t&quot;参数相同，只在列表格式方面稍有差异。 <br />
+  　
+  <span class="args">-T</span> 　显示现行终端机下的所有程序。 <br />
+  　
+  <span class="args">-u</span>&lt;用户识别码&gt; 　此参数的效果和指定&quot;-U&quot;参数相同。 <br />
+  　
+  <span class="args">u</span> 　以用户为主的格式来显示程序状况。 <br />
+  　
+  <span class="args">-U</span>&lt;用户识别码&gt; 　列出属于该用户的程序的状况，也可使用用户名称来指定。 <br />
+  　
+  <span class="args">U</span>&lt;用户名称&gt; 　列出属于该用户的程序的状况。 <br />
+  　
+  <span class="args">v</span> 　采用虚拟内存的格式显示程序状况。 <br />
+  　
+  <span class="args">-V</span>或<span class="args">V 　</span>显示版本信息。 <br />
+  　
+  <span class="args">-w</span>或<span class="args">w 　</span>采用宽阔的格式来显示程序状况。　 <br />
+  　
+  <span class="args">x</span> 　显示所有程序，不以终端机来区分。 <br />
+  　
+  <span class="args">X</span> 　采用旧式的<span class="args">Linux i386</span>登陆格式显示程序状况。 <br />
+  　
+  <span class="args">-y</span> 　配合参数&quot;-l&quot;使用时，不显示F(flag)栏位，并以<span class="args">RSS</span>栏位取代<span class="args">ADDR</span>栏位　。 <br />
+  　
+  <span class="args">-</span>&lt;程序识别码&gt; 　此参数的效果和指定&quot;p&quot;参数相同。 <br />
+  　
+  <span class="args">--cols</span>&lt;每列字符数&gt; 　设置每列的最大字符数。 <br />
+  　
+  <span class="args">--columns</span>&lt;每列字符数&gt; 　此参数的效果和指定&quot;--cols&quot;参数相同。 <br />
+  　
+  <span class="args">--cumulative</span> 　此参数的效果和指定&quot;S&quot;参数相同。 <br />
+  　
+  <span class="args">--deselect</span> 　此参数的效果和指定&quot;-N&quot;参数相同。 <br />
+  　
+  <span class="args">--forest</span> 　此参数的效果和指定&quot;f&quot;参数相同。 <br />
+  　
+  <span class="args">--headers</span> 　重复显示标题列。 <br />
+  　
+  <span class="args">--help</span> 　在线帮助。 <br />
+  　
+  <span class="args">--info</span> 　显示排错信息。 <br />
+  　
+  <span class="args">--lines</span>&lt;显示列数&gt; 　设置显示画面的列数。 <br />
+  　
+  <span class="args">--no-headers 　</span>此参数的效果和指定&quot;h&quot;参数相同，只在列表格式方面稍有差异。 <br />
+  　
+  <span class="args">--group</span>&lt;群组名称&gt; 　此参数的效果和指定&quot;-G&quot;参数相同。 <br />
+  　
+  <span class="args">--Group</span>&lt;群组识别码&gt; 　此参数的效果和指定&quot;-G&quot;参数相同。 <br />
+  　
+  <span class="args">--pid</span>&lt;程序识别码&gt; 　此参数的效果和指定&quot;-p&quot;参数相同。 <br />
+  　
+  <span class="args">--rows</span>&lt;显示列数&gt; 　此参数的效果和指定&quot;--lines&quot;参数相同。 <br />
+  　
+  <span class="args">--sid</span>&lt;阶段作业&gt; 　此参数的效果和指定&quot;-s&quot;参数相同。 <br />
+  　
+  <span class="args">--tty</span>&lt;终端机编号&gt; 　此参数的效果和指定&quot;-t&quot;参数相同。 <br />
+  　
+  <span class="args">--user</span>&lt;用户名称&gt; 　此参数的效果和指定&quot;-U&quot;参数相同。 <br />
+  　
+  <span class="args">--User</span>&lt;用户识别码&gt; 　此参数的效果和指定&quot;-U&quot;参数相同。 <br />
+  　
+  <span class="args">--version</span> 　此参数的效果和指定&quot;-V&quot;参数相同。 <br />
+  　
+<span class="args">--widty</span>&lt;每列字符数&gt; 　此参数的效果和指定&quot;-cols&quot;参数相同。</p>
+<div  class="category">示例：</div>
+<code>
+将目前属于您自己这次登入的 PID 与相关信息列示出来
+[root@linux ~]# ps -l 
+
+列出目前所有的正在内存当中的程序
+[root@linux ~]# ps aux 
+</code>
+</body></html>

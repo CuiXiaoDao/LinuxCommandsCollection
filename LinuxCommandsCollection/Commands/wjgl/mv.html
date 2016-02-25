@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>移动或更名现有的文件或目录。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>mv [<span class="args">-bfiuv</span>][<span class="args">--help</span>][<span class="args">--version</span>][<span class="args">-S</span> &lt;附加字尾&gt;][<span class="args">-V</span> &lt;方法&gt;][源文件或目录][目标文件或目录]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">mv</span>可移动文件或目录，或是更改文件或目录的名称。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>　 <span class="args">-b</span>或<span class="args">--backup 　</span>若需覆盖文件，则覆盖前先行备份。 <br />
+  　
+  <span class="args">-f</span>或<span class="args">--force 　</span>若目标文件或目录与现有的文件或目录重复，则直接覆盖现有的文　件或目录。 <br />
+  　
+  <span class="args">-i</span>或<span class="args">--interactive 　</span>覆盖前先行询问用户。 <br />
+  　
+  <span class="args">-S</span>&lt;附加字尾&gt;或<br />
+  　
+  <span class="args">--suffix=</span>&lt;附加字尾&gt; 　与<span class="args">-b</span>参数一并使用，可指定备份文件的所要附加的字尾。 <br />
+  　
+  <span class="args">-u</span>或<span class="args">--update 　</span>在移动或更改文件名时，若目标文件已存在，且其文件日期比源文件新，则不覆盖目标文件。 <br />
+  　
+  <span class="args">-v</span>或<span class="args">--verbose 　</span>执行时显示详细的信息。 <br />
+  　
+  <span class="args">-V=</span>&lt;方法&gt;或<br />
+  　
+  <span class="args">--version-control=</span>&lt;方法&gt; 　与<span class="args">-b</span>参数一并使用，可指定备份的方法。 <br />
+  　
+  <span class="args">--help</span> 　显示帮助。 <br />
+  　
+<span class="args">--version</span> 　显示版本信息。</p>
+<div  class="category">示例：</div>
+<code>
+将文件ex3改名为new1
+mv ex3 new1
+
+将目录/usr/men中的所有文件移到当前目录（用.表示）中：
+mv /usr/men/* .
+</code>
+</body></html>

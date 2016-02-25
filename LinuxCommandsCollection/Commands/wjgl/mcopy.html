@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>复制<span class="args">MS-DOS</span>文件。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>mcopy [<span class="args">-bnmpQt</span>/][源文件][目标文件或目录]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">mcopy</span>为<span class="args">mtools</span>工具指令，可在<span class="args">MS-DOS</span>文件系统中复制文件或是在<span class="args">MS-DOS</span>与<span class="args">Linux</span>的文件系统之间复制文件。<span class="args">mcopy</span>会<span class="args">MS-DOS</span>磁盘驱动器代号出现的位置来判断如何复制文件。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>   <span class="args">-b</span> 　批处理模式。 <br />
+    
+  <span class="args">-n</span> 　覆盖其他文件时，不需进行确认而直接覆盖。 <br />
+    
+  <span class="args">-m</span> 　将源文件修改时间设为目标文件的修改时间。 <br />
+    
+  <span class="args">-p</span> 　将源文件属性设为目标文件的属性。 <br />
+    
+  <span class="args">-Q</span> 　复制多个文件时，若发生错误，则立即结束程序。 <br />
+    
+  <span class="args">-t</span> 　转换文本文件。 <br />
+    
+-/ 　复制子目录以及其中的所有文件。</p>
+<div  class="category">示例：</div>
+<code>
+mcopy a:autoexec.bat . 将 A 槽磁片根目录中的 autoexec.bat 复制到目前工作目录之下。
+</code>
+</body></html>

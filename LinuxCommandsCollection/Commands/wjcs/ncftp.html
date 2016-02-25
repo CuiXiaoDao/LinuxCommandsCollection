@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>传输文件。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>ncftp [主机或<span class="args">IP</span>地址]<br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">FTP</span>让用户得以下载存放于服务器主机的文件，也能将文件上传到远端主机放置。<span class="args">NcFTP</span>是文字模式<span class="args">FTP</span>程序的佼佼者，它具备多样特色， 包括显示传输速率，下载进度，自动续传，标住书签，可通过防火墙和代理服务器等。</p>
+
+<div  class="category">参　　数：</div>
+<p>&nbsp;</p>
+<div  class="category">示例：</div>
+<code>
+将本地/etc/目录内的所有文件和目录，上传到FTP服务器的flv/games/目录内(如果不存在flv/games/目录则自动创建)。
+/usr/local/ncftp/bin/ncftpput -u koumm -p koumm -P 21 -m -R 192.168.162.137  flv/games/ /etc/*
+</code>
+</body></html>

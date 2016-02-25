@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>关闭系统。<br />
+  <br />
+</p>
+<div  class="category">语　　法：</div>
+<p>halt [<span class="args">-dfinpw</span>]<br />
+  <br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">halt</span>会先检测系统的<span class="args">runlevel</span>。若<span class="args">runlevel</span>为<span class="args">0</span>或<span class="args">6</span>，则关闭系统，否则即调用<span class="args">shutdown</span>来关闭系统。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p> <span class="args">-d 　</span>不要在<span class="args">wtmp</span>中记录。 <br />
+    
+  <span class="args">-f</span> 　不论目前的<span class="args">runlevel</span>为何，不调用<span class="args">shutdown</span>即强制关闭系统。 <br />
+    
+  <span class="args">-i</span> 　在<span class="args">halt</span>之前，关闭全部的网络界面。 <br />
+    
+  <span class="args">-n 　halt</span>前，不用先执行sync。 <br />
+    
+  <span class="args">-p 　halt</span>之后，执行poweroff。 <br />
+    
+<span class="args">-w</span> 　仅在<span class="args">wtmp</span>中记录，而不实际结束系统。</p>
+<div  class="category">示例：</div>
+<code>
+halt -p     //关闭系统后关闭电源。
+halt -d     //关闭系统，但不留下纪录。
+</code>
+</body></html>

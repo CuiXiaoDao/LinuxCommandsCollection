@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div  class="category">功能说明：</div>
+<p>多重视窗管理程序。<br />
+</p>
+<div  class="category">语　　法：</div>
+<p>screen [<span class="args">-AmRvx</span> -ls -wipe][<span class="args">-d</span> &lt;作业名称&gt;][<span class="args">-h</span> &lt;行数&gt;][<span class="args">-r</span> &lt;作业名称&gt;][<span class="args">-s</span> &lt;shell&gt;][<span class="args">-S</span> &lt;作业名称&gt;]<br />
+  <br />
+</p>
+<div  class="category">补充说明：</div>
+<p><span class="args">screen</span>为多重视窗管理程序。此处所谓的视窗，是指一个全屏幕的文字模式画面。通常只有在使用<span class="args">telnet</span>登入主机或是使用老式的终端机时，才有可能用到<span class="args">screen</span>程序。<br />
+</p>
+
+<div  class="category">参　　数：</div>
+<p>　<span class="args">-A 　</span>将所有的视窗都调整为目前终端机的大小。 <br />
+  　
+  <span class="args">-d</span>&lt;作业名称&gt; 　将指定的<span class="args">screen</span>作业离线。 <br />
+  　
+  <span class="args">-h</span>&lt;行数&gt; 　指定视窗的缓冲区行数。 <br />
+  　
+  <span class="args">-m</span> 　即使目前已在作业中的<span class="args">screen</span>作业，仍强制建立新的<span class="args">screen</span>作业。 <br />
+  　
+  <span class="args">-r</span>&lt;作业名称&gt; 　恢复离线的<span class="args">screen</span>作业。 <br />
+  　
+  <span class="args">-R</span> 　先试图恢复离线的作业。若找不到离线的作业，即建立新的<span class="args">screen</span>作业。 <br />
+  　
+  <span class="args">-s</span>&lt;shell&gt; 　指定建立新视窗时，所要执行的shell。 <br />
+  　
+  <span class="args">-S</span>&lt;作业名称&gt; 　指定<span class="args">screen</span>作业的名称。 <br />
+  　
+  <span class="args">-v</span> 　显示版本信息。 <br />
+  　
+  <span class="args">-x</span> 　恢复之前离线的<span class="args">screen</span>作业。 <br />
+  　
+  <span class="args">-ls</span>或<span class="args">--list 　</span>显示目前所有的<span class="args">screen</span>作业。 <br />
+  　
+<span class="args">-wipe</span> 　检查目前所有的<span class="args">screen</span>作业，并删除已经无法使用的<span class="args">screen</span>作业。</p>
+<div  class="category">示例：</div>
+<code>
+screen -S yourname -> 新建一个叫yourname的session
+screen -ls -> 列出当前所有的session
+screen -r yourname -> 回到yourname这个session
+screen -d yourname -> 远程detach某个session
+screen -d -r yourname -> 结束当前session并回到
+</code>
+</body></html>

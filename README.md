@@ -4,7 +4,7 @@
 
 应用的UI、代码由本人完成，资料源于互联网。
 
-由于WP越来越微弱，此应用已弃疗。
+[微软官方应用市场下载](https://www.microsoft.com/en-us/store/p/linux%e5%91%bd%e4%bb%a4%e9%9b%86/9nblggh3m5rw/)
 
 <figure class="half">
   <img src="./UI/1.png" width=300/>
